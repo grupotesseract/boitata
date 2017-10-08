@@ -13,10 +13,14 @@
     <body>
 
         @include ('menu-principal')
-        @include ('home.video')
-        @include ('home.trabalhos_recentes')
-        @include ('home.motion')
-        @include ('home.editorial')
+
+        @include ('pagina-inicial.video')
+        @include ('pagina-inicial.trabalhos_recentes')
+        @include ('pagina-inicial.motion')
+        @include ('pagina-inicial.editorial')
+
+        @include ('footer')
+
 
     </body>
 </html>
