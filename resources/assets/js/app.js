@@ -7,3 +7,5 @@
 
 require('./bootstrap');
 
+require('./tesseract');
+
