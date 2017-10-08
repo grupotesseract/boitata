@@ -8,6 +8,11 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// FontAwesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
 // Custom scss's..
 @import "tesseract";
+
+@import "responsivo";
 

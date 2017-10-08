@@ -7,3 +7,19 @@ video {
   width: 100%;
   height: auto;
 }
+
+nav#menu-principal {
+
+    li~li {
+        margin-left: 3rem;
+    }
+
+    li.wrapper-social-media-menu {
+        display: flex;
+        margin-left: 5rem;
+    }
+}
+
+
+
+
