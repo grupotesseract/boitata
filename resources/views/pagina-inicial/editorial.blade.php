@@ -1,4 +1,4 @@
 
-<section id="#secao-editorial">
-    <h3>SEÇÃO EDITORIAL</h3>
+<section id="secao-editorial">
+    <h3>editorial</h3>
 </section>
