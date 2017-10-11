@@ -1,4 +1,4 @@
 
-<section id="#secao-trabalhos-recentes">
-    <h3>SEÇÃO TRABALHOS RECENTES</h3>
+<section id="secao-trabalhos-recentes">
+    <h3>trabalhos recentes</h3>
 </section>
