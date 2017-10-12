@@ -1,5 +1,6 @@
 
 body {
+    font-family: 'Nunito', sans-serif;
     background: #cdcdcd;
 }
 
@@ -10,9 +11,16 @@ video {
 }
 
 nav#menu-principal {
+    font-family: 'Nunito', sans-serif;
+    border-color: #939598;
+    box-shadow: #939598 0px 0px 0px 1px;
 
     li~li {
         margin-left: 3rem;
+    }
+
+    a {
+        color: #222;
     }
 
     li.wrapper-social-media-menu {
