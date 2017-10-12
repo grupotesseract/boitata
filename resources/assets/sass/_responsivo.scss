@@ -40,4 +40,18 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+    nav#menu-principal {
+        font-family: 'Nunito', sans-serif;
+        border-color: #939598;
+        box-shadow: #939598 0px 0px 0px 1px;
+
+        li~li {
+            margin-left: 3rem;
+        }
+
+        li.wrapper-social-media-menu {
+            display: flex;
+            margin-left: 5rem;
+        }
+    }
 }
