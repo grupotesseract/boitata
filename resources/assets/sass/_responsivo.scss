@@ -4,7 +4,7 @@
 */
 
 /* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+@media only screen and (max-width: 767px) {
     video {
       width: 100%;
       height: auto;
@@ -12,6 +12,12 @@
 
     nav#menu-principal {
 
+        /** Escondendo a animacao do menu no mobile **/
+        div.esconde-borda, img.borda-menu-principal { 
+            display:none;
+        }
+
+        /** Escondendo a margem dos itens do menu no mobile **/
         li~li {
             margin-left: 0rem;
         }
@@ -23,27 +29,30 @@
     }
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-}
-
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    nav#menu-principal {
+        /** Escondendo a animacao do menu no mobile **/
+        div.esconde-borda {
+            display:block;
+            margin-top: 0px;
+        }
+        img.borda-menu-principal { 
+            display:block;
+            margin-top: 9px;
+        }
 
+        li~li {
+            margin-left: 1.5rem;
+        }
+    }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width: 1201px) {
 
     nav#menu-principal {
-        font-family: 'Nunito', sans-serif;
-        border-color: #939598;
-        box-shadow: #939598 0px 0px 0px 1px;
 
         li~li {
             margin-left: 3rem;

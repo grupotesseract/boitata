@@ -13,3 +13,5 @@ npm-debug.log
 /_ide_helper.php
 .*.swp
 laradock
+public/css/app.css
+public/js/app.js
