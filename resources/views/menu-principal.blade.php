@@ -2,7 +2,9 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">
-            <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,h_55/v1507448078/logo-tesseract-cubo-preto-borda_gluk0r.png" alt="Logo Boitatá">
+            <img class="borda-menu-principal escondida" src="/borda-menu-principal.png" alt="Logo Boitatá">
+            <div class="esconde-borda"></div>
+            <img class="logo-menu-principal escondida" src="/logo-menu-principal.png" alt="Logo Boitatá">
           </a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
