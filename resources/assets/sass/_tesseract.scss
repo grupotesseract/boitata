@@ -5,12 +5,17 @@ body {
 }
 
 video {
+  margin-top: 51px;
   width: 100%;
   height: auto;
   float:left;
 }
 
 nav#menu-principal {
+
+    // escondendo logo inicialmente
+    a.navbar-brand { display:none; }
+
     font-family: 'Nunito', sans-serif;
     border-color: #939598;
     box-shadow: #939598 0px 0px 0px 1px;
