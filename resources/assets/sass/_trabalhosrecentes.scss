@@ -1,0 +1,51 @@
+
+#secao-trabalhos-recentes {
+    
+    .borda-top > img {
+        margin-top:-42px;
+    }
+    
+    .texto-vertical {
+        transform: rotate(270deg);
+        margin-top: 4em;
+        font-weight: bold;
+        font-size: 3.0em;
+        height: 50px;
+        width: 100px;
+        float: right;
+        margin-right: -30px;
+        line-height: 35px;
+
+        span {
+            margin-left: 75px;
+        }
+    }
+
+
+    #tesseract-carousel {
+        max-width: 800px;
+
+        ol.carousel-indicators {
+            left: 95%;
+            bottom: 35px;
+        }
+
+        div.item  {
+            
+            border: 4px solid white;
+
+            > img {
+                width:100%;
+                max-width: 800px;
+                height:auto;
+            }
+        }
+
+        div.carousel-inner {
+            &:after {
+                content: url('/borda-inferior-caroulsel.png');
+            }
+        }
+
+    }
+}
