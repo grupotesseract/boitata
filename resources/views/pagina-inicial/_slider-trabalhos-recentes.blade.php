@@ -12,11 +12,11 @@
       <div class="item active">
         <img src="/dummy-trab-recente.png" alt="Imagem1">
       </div>
-
-      <div class="item">
-        <img src="/dummy-trab-recente.png" alt="Imagem2">
-      </div>
   
+      <div class="item">
+        <img src="/dummy-trab-recente2.png" alt="Imagem2">
+      </div>
+
     </div>
 
     <!-- Left and right controls -->

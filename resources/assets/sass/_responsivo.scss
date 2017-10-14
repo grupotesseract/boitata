@@ -38,6 +38,7 @@
             display:block;
             margin-top: 0px;
         }
+
         img.borda-menu-principal { 
             display:block;
             margin-top: 9px;
@@ -45,6 +46,20 @@
 
         li~li {
             margin-left: 1.5rem;
+        }
+    }
+
+    #secao-trabalhos-recentes {
+        #tesseract-carousel {
+            max-width: 630px;
+            width: 630px;
+
+            /** Imagem contendo a borda do slider **/
+            &::before {
+                content: url('/teste-container-caroulsel-md.png');
+                position: absolute;
+                bottom: -68px;
+            }
         }
     }
 }
