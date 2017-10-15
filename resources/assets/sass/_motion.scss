@@ -7,8 +7,21 @@
     background-repeat: no-repeat;
     background-position: 35%;
 
+
+    > h3 {
+        text-align: right;
+        width: 30%;
+        margin: auto;
+        font-weight: 800;
+        font-size: 3.2em;
+    }
+
     div.borda-top {
-        margin-top: -5px;
+        background-image: url('/borda-motion-top.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 160px;
+        margin-top: -20px;
     }
 
     div#container-youtube-motion {
@@ -16,6 +29,14 @@
     
         iframe {
             border: 5px white solid;
+            width: 550px;
+            max-width: 550px;
         }
     }
+
+    div#container-texto-motion {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
 }

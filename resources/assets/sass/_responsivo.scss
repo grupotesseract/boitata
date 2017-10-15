@@ -39,8 +39,8 @@
         }
 
         #tesseract-carousel {
-            max-width: 300px;
-            width: 300px;
+            max-width: 290px;
+            width: 290px;
 
             //Imagem contendo a borda do slider
             &::before {
@@ -84,8 +84,43 @@ s
             }
 
         }
-        
     }
+
+
+    #secao-motion {
+        background-position: 35%;
+
+        > h3 {
+            text-align: left;
+            margin: 15px;
+            font-weight: 800;
+            font-size: 3.2em;
+        }
+
+        div.borda-top {
+            height: 100px;
+            margin-top: -20px;
+        }
+
+        div#container-youtube-motion {
+            margin-bottom:1em;
+            iframe {
+                width: 290px;
+                max-width: 290px;
+            }
+        }
+
+        div#container-texto-motion {
+            margin-left: 0;
+            padding-left: 15px;
+        }
+
+
+
+    }
+
+
+
 
 }
 
