@@ -3,12 +3,8 @@
  * @author zord / stackoverflow
 */
 
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width: 768px) {
-    video {
-      width: 100%;
-      height: auto;
-    }
+/* Até antes de tablet */ 
+@media only screen and (max-width: 767px) {
 
     nav#menu-principal {
 
@@ -33,24 +29,27 @@
 
         .texto-vertical {
             transform: none;
-            margin-top: 1em;
-            height: 80px;
+            height: 60px;
+            line-height:25px;
+            width: 290px;
+            font-size: 2.5em;
             float: none;
+            margin: 1em auto 0 auto;
         }
 
         #tesseract-carousel {
             max-width: 290px;
             width: 290px;
+            margin: auto;
 
-            //Imagem contendo a borda do slider
+            //Escondendo imagem das bordas do caroulsel
             &::before {
                 content: '';
             }
-s
+
             // as bolinhas indicando qual slide ativo
             ol.carousel-indicators {
-                left: 95%;
-                bottom: -45px;
+                left: 10%;
             }
 
             //Os slides em sí
@@ -93,8 +92,7 @@ s
         > h3 {
             text-align: left;
             margin: 15px;
-            font-weight: 800;
-            font-size: 3.2em;
+            font-size: 2.5em;
         }
 
         div.borda-top {
@@ -120,12 +118,51 @@ s
     }
 
 
+    #secao-editorial {
+        background: #BBCBD3;
+        background: linear-gradient(to right, #BBCBD3 , white 30%, #BACAD2);
+        color: #179A62;
+        background-image: url('/bg_secao_editorial.png');
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position:70%;
+
+        div.borda-top {
+            height: 65px;
+        }
+
+        div.container-editorial {
+            margin-top: 2em;
+
+            .container-texto {
+                h3 {
+                    margin: 0 0 15px;
+                    font-size: 2.5em;
+                }
+            }
+
+            div.container-item-editorial {
+                img {
+                    width: 100%;
+                }
+            }
+
+            div.bottom-editorial {
+                background-image: url('/rodape_fotos_editorial.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width:100%;
+            }
+
+        }
+
+    }
 
 
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+/* Tablets e alguns Celulares */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
     
     nav#menu-principal {
         /** Escondendo a animacao do menu no mobile **/
@@ -149,17 +186,21 @@ s
             max-width: 630px;
             width: 630px;
 
-            /** Imagem contendo a borda do slider **/
+            /** Escondendo Imagem contendo a borda do slider **/
             &::before {
-                content: url('/teste-container-caroulsel-md.png');
-                position: absolute;
-                bottom: -68px;
+                content: '';
             }
+
+            // as bolinhas indicando qual slide ativo
+            ol.carousel-indicators {
+                left: 5%;
+            }
+            
         }
     }
 }
 
-/* Large Devices, Wide Screens */
+/* Desktop ad infinitum */
 @media only screen and (min-width: 1201px) {
 
     nav#menu-principal {
@@ -173,4 +214,18 @@ s
             margin-left: 5rem;
         }
     }
+
+    #tesseract-carousel {
+        max-width: 630px;
+        width: 630px;
+
+        /** Imagem contendo a borda do slider **/
+        &::before {
+            content: url('/teste-container-caroulsel-md.png');
+            position: absolute;
+            bottom: -68px;
+        }
+
+    }
+    
 }

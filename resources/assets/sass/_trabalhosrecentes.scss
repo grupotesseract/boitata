@@ -3,10 +3,9 @@
     background-color:black;
     color: #5EC5DE;
     padding: 0em 0em 10em 0em;
-    
-    .borda-top > img {
-        margin-top:0px;
-    }
+    background-image: url('/bg_trabalhos_recentes.png');
+    background-repeat: no-repeat;
+    background-size:contain;
     
     .texto-vertical {
         transform: rotate(270deg);

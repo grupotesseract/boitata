@@ -3,4 +3,46 @@
     background: #BBCBD3;
     background: linear-gradient(to right, #BBCBD3 , white 30%, #BACAD2);
     color: #179A62;
+    background-image: url('/bg_secao_editorial.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:70%;
+
+    div.borda-top {
+        background-image: url('/borda-editorial-top.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 184px;
+        margin-top: -10px;
+        width: 100%;
+        float: right;
+    }
+
+    div.container-editorial {
+        margin-top: 12em;
+
+        .container-texto {
+            h3 {
+                width: 160px;
+                margin: auto;
+                font-size: 3em;
+                font-weight: 800;
+            }
+        }
+
+        div.container-item-editorial {
+            img {
+                width: 100%;
+            }
+        }
+
+        div.bottom-editorial {
+            background-image: url('/rodape_fotos_editorial.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:100%;
+        }
+
+    }
+
 }
