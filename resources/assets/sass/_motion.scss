@@ -1,14 +1,21 @@
 
 #secao-motion {
-    
-    .borda-top > img {
-        margin-top: -7px;
-    }
-    
-    .texto-vertical {
-        transform: rotate(270deg);
-        margin-left: 2.8em;
-        margin-top: 3em;
+    background-color: #970f21;
+    color: white;
+    background-image: url('/bg_secao_motion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 35%;
+
+    div.borda-top {
+        margin-top: -5px;
     }
 
+    div#container-youtube-motion {
+        margin-bottom: 5em;
+    
+        iframe {
+            border: 5px white solid;
+        }
+    }
 }
