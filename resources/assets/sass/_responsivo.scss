@@ -1,7 +1,10 @@
 /*********
- * Arquivo para centralizar as media queries e facilitar a vida, (talvez)
- * @author zord / stackoverflow
-*/
+ * Aqui ficam os estilos e gambiarras de responsividade
+ * Media queries divididas em:
+ * menor que 767px
+ * entre 768px e 1200px
+ * maior que 1201px
+ */
 
 /* Até antes de tablet */ 
 @media only screen and (max-width: 767px) {
@@ -113,19 +116,10 @@
             padding-left: 15px;
         }
 
-
-
     }
 
 
     #secao-editorial {
-        background: #BBCBD3;
-        background: linear-gradient(to right, #BBCBD3 , white 30%, #BACAD2);
-        color: #179A62;
-        background-image: url('/bg_secao_editorial.png');
-        background-repeat: no-repeat;
-        background-size:contain;
-        background-position:70%;
 
         div.borda-top {
             height: 65px;
@@ -146,19 +140,8 @@
                     width: 100%;
                 }
             }
-
-            div.bottom-editorial {
-                background-image: url('/rodape_fotos_editorial.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                width:100%;
-            }
-
         }
-
     }
-
-
 }
 
 /* Tablets e alguns Celulares */

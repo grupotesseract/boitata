@@ -11,8 +11,11 @@
 // FontAwesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-// Custom scss's..
+
+//=== CUSTOM STYLES
 @import "tesseract";
+
+@import "menuprincipal";
 
 @import "trabalhosrecentes";
 
@@ -21,4 +24,6 @@
 @import "editorial";
 
 @import "responsivo";
+
+@import "animacoes";
 
