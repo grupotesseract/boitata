@@ -14,7 +14,7 @@
       </div>
   
       <div class="item">
-        <img src="/dummy-trab-recente2.png" alt="Imagem2">
+        <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,g_center,h_450,w_800/v1508033622/boitata_projetos_recentes_preambulo_2.jpg" alt="Imagem2">
       </div>
 
     </div>
