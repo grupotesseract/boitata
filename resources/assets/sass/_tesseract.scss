@@ -1,3 +1,6 @@
+/*********
+ * Aqui ficam os estilos gerais
+ */
 
 body {
     font-family: 'Nunito', sans-serif;
@@ -11,105 +14,17 @@ video {
   float:left;
 }
 
-nav#menu-principal {
-    div.esconde-borda {
-        position:fixed;
-        top: 0px;
-        height:68px;
-        background: white;
-        width:260px;
-    }
-
-    // escondendo logo inicialmente
-    img.logo-menu-principal { 
-        &.escondida {
-            opacity:0;
-            display:none;
-        }
-        display:block;
-        position:fixed;
-        top: 0px;
-    }
-
-    img.borda-menu-principal { 
-        &.escondida {
-            margin-top:-100px;
-        }
-        margin-top:9px;
-        display:block;
-        position:fixed;
-        top: 0px;
-    }
-
-    div.navbar-collapse {
-        border-color: transparent;
-    }
-
-
-    font-family: 'Nunito', sans-serif;
-    border-color: #939598;
-    box-shadow: #939598 0px 0px 0px 1px;
-    padding: 9px 0px;
-
-    li~li {
-        margin-left: 3rem;
-    }
-
-    a {
-        color: #222;
-    }
-
-    li.wrapper-social-media-menu {
-        display: flex;
-        margin-left: 5rem;
-    }
-}
-
 body > section {
     width: 100%;
     min-height:20vh;
     float:left;
 }
 
-
 footer {
  //   background: url(http://res.cloudinary.com/tesseract/image/upload/c_scale,w_1920/v1507773243/Rodap%C3%A9_do_site_rs23n7.png);
 
     height: 80px;
     width: 100%;
-}
-
-.play-animacao-borda {
-    -webkit-animation-name: desce_borda; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.8s; /* Safari 4.0 - 8.0 */
-    animation-name: desce_borda;
-    animation-duration: 0.8s;
-}
-
-.play-animacao-logo {
-    -webkit-animation-name: fade_in_logo; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
-    animation-name: fade_in_logo;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade_in_logo {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes desce_borda {
-    from {
-        margin-top: -100px;
-    }
-    to {
-        display:block;
-        margin-top: -14px;
-    }
 }
 
 
