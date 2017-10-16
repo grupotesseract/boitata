@@ -1,0 +1,76 @@
+
+#secao-trabalhos-recentes {
+    background-color:black;
+    color: #5EC5DE;
+    padding: 0em 0em 10em 0em;
+    
+    .borda-top > img {
+        margin-top:0px;
+    }
+    
+    .texto-vertical {
+        transform: rotate(270deg);
+        margin-top: 4em;
+        font-weight: bold;
+        font-size: 3.0em;
+        height: 50px;
+        width: 100px;
+        float: right;
+        margin-right: -30px;
+        line-height: 35px;
+
+        span {
+            margin-left: 75px;
+        }
+    }
+
+    #tesseract-carousel {
+        max-width: 800px;
+        width: 800px;
+
+        //Imagem contendo a borda do slider
+        &::before {
+            width: 100px;
+            content: url('/teste-container-caroulsel.png');
+            position: absolute;
+            bottom: -80px;
+        }
+
+        // as bolinhas indicando qual slide ativo
+        ol.carousel-indicators {
+            left: 95%;
+            bottom: -45px;
+        }
+
+        //Os slides em sí
+        div.item  {
+            border: 4px solid white;
+
+            > img {
+                width:100%;
+                max-width: 800px;
+                height:auto;
+            }
+        }
+
+    /** Tentativa de por a borda nº 1
+        div.borda-caroulsel {
+            background-image: url('/teste-container-caroulsel.png');
+            width: 950px;
+            height: 535px;
+            position: absolute;
+            top: 20px;
+        } **/
+
+        .carousel-caption {
+            color: black;
+            text-align: left;
+            position: absolute;
+            bottom: -78px;
+            left: 25px;
+            text-shadow: none;
+            font-weight: 300;
+        }
+
+    }
+}
