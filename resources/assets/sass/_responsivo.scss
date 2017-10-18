@@ -9,6 +9,11 @@
 /* Até antes de tablet */ 
 @media only screen and (max-width: 767px) {
 
+    footer {
+        background-position: 80% bottom;
+        min-height: 240px;
+    }
+
     nav#menu-principal {
 
         /** Escondendo a animacao do menu no mobile **/
@@ -183,7 +188,7 @@
     }
 }
 
-/* Desktop ad infinitum */
+/* Desktop */
 @media only screen and (min-width: 1201px) {
 
     nav#menu-principal {
@@ -211,4 +216,18 @@
 
     }
     
+    footer {
+        min-height: 320px;
+        background-position: 85% bottom;
+    }
+
 }
+
+/* Desktop HD */
+@media only screen and (min-width: 1400px) {
+    footer {
+        min-height: 320px;
+        background-position: 100% bottom;
+    }
+}
+

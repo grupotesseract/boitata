@@ -21,11 +21,25 @@ body > section {
 }
 
 footer {
- //   background: url(http://res.cloudinary.com/tesseract/image/upload/c_scale,w_1920/v1507773243/Rodap%C3%A9_do_site_rs23n7.png);
-
-    height: 80px;
+    background-size:cover;
+    background-repeat:no-repeat;
     width: 100%;
+    float:left;
+    position:relative;
+    background-position: 80% bottom;
+    min-height: 240px;
 }
 
-
-
+footer #infos-rodape {
+    bottom: 1em;
+    font-size:1.6em;
+    position:absolute;
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 0 0.3em 0 0.3em;
+        i.fa {
+            font-size: 1.2em;
+        }
+    }
+}
