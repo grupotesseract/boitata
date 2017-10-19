@@ -11,10 +11,18 @@
 
       <div class="item active">
         <img src="/dummy-trab-recente.png" alt="Imagem1">
+        <div class="carousel-caption">
+          <h3>Texto do slider?</h3>
+        </div>
+
       </div>
   
       <div class="item">
         <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,g_center,h_450,w_800/v1508033622/boitata_projetos_recentes_preambulo_2.jpg" alt="Imagem2">
+        <div class="carousel-caption">
+          <h3>Texto do slider?</h3>
+        </div>
+
       </div>
 
     </div>

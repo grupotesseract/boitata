@@ -9,9 +9,26 @@
 /* Até antes de tablet */ 
 @media only screen and (max-width: 767px) {
 
+    
     footer {
         background-position: 80% bottom;
         min-height: 240px;
+
+        #infos-rodape {
+            font-size:1.25em;
+            position:absolute;
+            a {
+                i.fa {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        
+        div.wrapper-social-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
     }
 
     nav#menu-principal {
@@ -145,6 +162,10 @@
                     width: 100%;
                 }
             }
+
+            div#fix-altura-mobile {
+                min-height:200px;
+            }
         }
     }
 }
@@ -186,10 +207,30 @@
             
         }
     }
+
+    #secao-editorial {
+        min-height: 780px;
+
+        div.container-editorial {
+            div.container-item-editorial {
+                h4 {
+                    margin-top: -30px;
+                    margin-left: 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        div#fix-altura-mobile {
+            min-height:200px;
+        }
+        
+    }
+
 }
 
 /* Desktop */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1399px) {
 
     nav#menu-principal {
 
@@ -215,6 +256,11 @@
         }
 
     }
+
+    #secao-editorial {
+        min-height: 700px;
+    }
+    
     
     footer {
         min-height: 320px;
@@ -230,4 +276,3 @@
         background-position: 100% bottom;
     }
 }
-

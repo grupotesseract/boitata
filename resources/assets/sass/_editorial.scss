@@ -1,12 +1,10 @@
 
 #secao-editorial {
-    background: #BBCBD3;
-    background: linear-gradient(to right, #BBCBD3 , white 30%, #BACAD2);
     color: #179A62;
-    background-image: url('/bg_secao_editorial.png');
+    background-image: url(/bg_secao_editorial.png), linear-gradient(to right, #BBCBD3, white 30%, #BACAD2);
     background-repeat: no-repeat;
-    background-size:contain;
-    background-position:70%;
+    background-size: contain;
+    min-height: 950px;
 
     div.borda-top {
         background-image: url('/borda-editorial-top.png');
@@ -31,8 +29,21 @@
         }
 
         div.container-item-editorial {
+            margin-bottom:30px;
+
             img {
                 width: 100%;
+                max-width:450px;
+                box-shadow: 4px 4px black;
+            }
+
+            h4 {
+                font-size: 1em;
+                color: white;
+                margin-top: -35px;
+                margin-left: 15px;
+                max-width: 90%;
+                text-align:left;
             }
         }
 
