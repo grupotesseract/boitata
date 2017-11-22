@@ -60,11 +60,17 @@ class TrabalhoRecenteController extends AppBaseController
     {
         $input = $request->all();
 
-        dd($input, $this->fotosRepository);
-
         $trabalhoRecente = $this->trabalhoRecenteRepository->create($input);
+        $foto = $this->fotosRepository->uploadAndCreate($request);
 
-        Flash::success('Trabalho Recente saved successfully.');
+        $trabalhoRecente->foto()->save($foto);
+
+        $publicId = "trabalhos_recentes_".$trabalhoRecente->id;
+        $retorno = $this->fotosRepository->sendToCloudinary($foto, $publicId);
+
+        $this->fotosRepository->deleteLocal($foto->id);
+
+        Flash::success('Trabalho Recente registrado com sucesso.');
 
         return redirect(route('trabalhoRecentes.index'));
     }
@@ -149,6 +155,10 @@ class TrabalhoRecenteController extends AppBaseController
             Flash::error('Trabalho Recente not found');
 
             return redirect(route('trabalhoRecentes.index'));
+        }
+
+        if ($trabalhoRecente->foto) {
+            $this->fotosRepository->delete($trabalhoRecente->foto->id);
         }
 
         $this->trabalhoRecenteRepository->delete($id);

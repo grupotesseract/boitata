@@ -81,7 +81,7 @@ class FotoRepository extends BaseRepository
             $retornoCloudinary = \Cloudder::upload($foto->fullPath, $publicId);
 
             return  $foto->update([
-                'cloudinary_id' => \Cloudder::getPublicId(),
+                'cloudinary_id' => $publicId,
             ]);
         } else {
             return false;
@@ -113,10 +113,20 @@ class FotoRepository extends BaseRepository
     public function delete($id)
     {
         $this->removeFromCloudinary($id);
+        $this->deleteLocal($id);
 
         return parent::delete($id);
     }
     
+
+    public function deleteLocal($id)
+    {
+        $Foto = $this->findWithoutFail($id);
+
+        if ($Foto && \File::exists($Foto->fullPath)) {
+            \File::delete($Foto->fullPath);
+        }
+    }
 
 
 

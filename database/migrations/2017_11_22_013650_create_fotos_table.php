@@ -15,11 +15,12 @@ class CreateFotosTable extends Migration
     {
         Schema::create('fotos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('image_name');
-            $table->string('image_path');
-            $table->string('image_extension');
-            $table->integer('owner_id');
-            $table->string('owner_type');
+            $table->string('cloudinary_id')->nullable();
+            $table->string('image_name')->nullable();
+            $table->string('image_path')->nullable();
+            $table->string('image_extension')->nullable();
+            $table->integer('owner_id')->nullable();
+            $table->string('owner_type')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

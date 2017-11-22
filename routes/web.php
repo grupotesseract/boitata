@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  return view('welcome')->with('trabalhosRecentes', \App\Models\TrabalhoRecente::orderBy('ordem')->get());
 });
 
 

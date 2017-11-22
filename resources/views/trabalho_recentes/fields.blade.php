@@ -18,8 +18,8 @@
 
 <!-- Url Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('imagem', 'Upload da imagem:') !!}
-    {!! Form::file('imagem', null, ['class' => 'form-control']) !!}
+    {!! Form::label('file', 'Upload da imagem:') !!}
+    {!! Form::file('file', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

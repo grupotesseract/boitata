@@ -21,6 +21,7 @@ class Foto extends Model
 
 
     public $fillable = [
+        'cloudinary_id',
         'image_name',
         'image_path',
         'image_extension',
@@ -52,12 +53,6 @@ class Foto extends Model
 
     /**
      * Binding Model Events.
-     *
-     * OBS: Os Model Events só são disparados quando o trigger parte de uma instancia
-     * do Model. Se partimos de outro model e modificarmos a relação o evento nao é disparado
-     * Ex: App\Models\Photo $photo - $photo->delete() - Dispara o evento ao deletar
-     * Ex: App\Models\Experiencia $user - $user->fotoListagem->delete() - Dispara o evento ao deletar
-     * Ex: App\Models\Experiencia $user - $user->fotoListagem()->delete() - Não dispara o evento pois estamos na camada do SQL (Query Buider)
      */
     public static function boot()
     {
@@ -65,7 +60,9 @@ class Foto extends Model
 
         /** Binding the delete model event to destroy the filesystem archive **/
         static::deleted(function ($photo) {
-            \File::delete(public_path().'/uploads/'.$photo->image_name.'.'.$photo->image_extension);
+            if (\File::exists($photo->fullPath)) {
+                \File::delete($photo->fullPath);
+            }
         });
     }
 

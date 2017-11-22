@@ -46,5 +46,10 @@ class TrabalhoRecente extends Model
         
     ];
 
+
+    public function foto()
+    {
+        return $this->morphOne(\App\Models\Foto::class, 'owner');
+    }
     
 }
