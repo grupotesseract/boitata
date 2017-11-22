@@ -7,11 +7,24 @@ window.playAnimacaoMenu = function() {
     let borda = $('.borda-menu-principal');
     
     //Tirando clase escondida e adicionando classe da animacao
-    borda.toggleClass('escondida').addClass('play-animacao-borda');
+    borda.removeClass('escondida').addClass('play-animacao-borda');
 
     setTimeout(function() {
-        $('.logo-menu-principal').toggleClass('escondida').addClass('play-animacao-logo');
+        $('.logo-menu-principal').removeClass('escondida').addClass('play-animacao-logo');
     }, 600);
 
 };
+
+
+$(document).ready(function(){
+    $(window).scroll(function () {
+       var windowpos = $(window).scrollTop();
+       if(windowpos > 400) {
+           playAnimacaoMenu();
+       } else {
+       }
+       console.log(windowpos);
+    });
+});
+    
 
