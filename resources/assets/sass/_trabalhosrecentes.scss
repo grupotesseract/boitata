@@ -24,51 +24,42 @@
     }
 
     #tesseract-carousel {
-        max-width: 800px;
-        width: 800px;
-
-        //Imagem contendo a borda do slider
-        &::before {
-            width: 100px;
-            content: url('/teste-container-caroulsel.png');
-            position: absolute;
-            bottom: -80px;
-        }
 
         // as bolinhas indicando qual slide ativo
         ol.carousel-indicators {
-            left: 95%;
-            bottom: -45px;
+            max-width: 160px;
+            left: 100%;
+            bottom: 30px;
+
+            li {
+                width: 8px;
+                height: 8px;
+                background: #fff;
+                &.active {
+                    width: 11px;
+                    height: 11px;
+                }
+            }
         }
 
         //Os slides em sí
         div.item  {
-            border: 4px solid white;
+            h3 {
+                min-height:52px;
+                color: black;
+                text-align: left;
+                text-shadow: none;
+                margin: 14px 8px;
+                font-size: 16px;
+                font-weight: 400;
+            }
 
             > img {
+                border: 4px solid white;
                 width:100%;
                 max-width: 800px;
                 height:auto;
             }
-        }
-
-    /** Tentativa de por a borda nº 1
-        div.borda-caroulsel {
-            background-image: url('/teste-container-caroulsel.png');
-            width: 950px;
-            height: 535px;
-            position: absolute;
-            top: 20px;
-        } **/
-
-        .carousel-caption {
-            color: black;
-            text-align: left;
-            position: absolute;
-            bottom: -78px;
-            left: 25px;
-            text-shadow: none;
-            font-weight: 300;
         }
 
     }
