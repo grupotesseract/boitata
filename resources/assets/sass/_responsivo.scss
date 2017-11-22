@@ -67,46 +67,24 @@
             width: 290px;
             margin: auto;
 
-            //Escondendo imagem das bordas do caroulsel
-            &::before {
-                content: '';
-            }
-
-            // as bolinhas indicando qual slide ativo
             ol.carousel-indicators {
-                left: 10%;
+                bottom:10px;
+                max-width:90px;
             }
 
-            //Os slides em sí
             div.item  {
-                border: 4px solid white;
-
                 > img {
                     width:100%;
                     max-width: 300px;
                     height:auto;
                 }
+
+                h3 {
+                    color: white;
+                    max-width: 70%;
+                    font-size: 14px;
+                }
             }
-
-        /** Tentativa de por a borda nº 1
-            div.borda-caroulsel {
-                background-image: url('/teste-container-caroulsel.png');
-                width: 950px;
-                height: 535px;
-                position: absolute;
-                top: 20px;
-            } **/
-
-            .carousel-caption {
-                color: black;
-                text-align: left;
-                position: absolute;
-                bottom: -78px;
-                left: 25px;
-                text-shadow: none;
-                font-weight: 300;
-            }
-
         }
     }
 
@@ -191,20 +169,38 @@
     }
 
     #secao-trabalhos-recentes {
+
+        .texto-vertical {
+            margin-top: 4.5em;
+            font-size: 2.4em;
+            height: 20px;
+            width: 90px;
+            line-height: 25px;
+        }
+
+
         #tesseract-carousel {
             max-width: 630px;
             width: 630px;
 
-            /** Escondendo Imagem contendo a borda do slider **/
-            &::before {
-                content: '';
+            ol.carousel-indicators {
+                bottom:10px;
+                max-width:90px;
+                left: 115%;
             }
 
-            // as bolinhas indicando qual slide ativo
-            ol.carousel-indicators {
-                left: 5%;
+            div.item  {
+                > img {
+                    width:100%;
+                    height:auto;
+                }
+
+                h3 {
+                    color: white;
+                    max-width: 80%;
+                    font-size: 24px;
+                }
             }
-            
         }
     }
 
@@ -230,7 +226,7 @@
 }
 
 /* Desktop */
-@media only screen and (min-width: 1201px) and (max-width: 1399px) {
+@media only screen and (min-width: 1201px) {
 
     nav#menu-principal {
 
@@ -245,16 +241,17 @@
     }
 
     #tesseract-carousel {
-        max-width: 630px;
-        width: 630px;
+        max-width: 950px;
+        width: 950px;
+        height: 530px;
+        padding-right: 150px;
+        padding-bottom: 30px;
+        background: url('/teste-container-caroulsel.png');
 
-        /** Imagem contendo a borda do slider **/
-        &::before {
-            content: url('/teste-container-caroulsel-md.png');
-            position: absolute;
-            bottom: -68px;
+        a.right.carousel-control {
+            right: 150px;
         }
-
+        
     }
 
     #secao-editorial {
@@ -264,15 +261,13 @@
     
     footer {
         min-height: 320px;
-        background-position: 85% bottom;
-    }
-
-}
-
-/* Desktop HD */
-@media only screen and (min-width: 1400px) {
-    footer {
-        min-height: 320px;
         background-position: 100% bottom;
     }
 }
+
+
+@media only screen and (min-width: 1440px) {
+    .col-xlg-3 { width: 25%; }
+    .col-xlg-9 { width: 75%; }
+}
+

@@ -12,10 +12,16 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  return view('welcome')->with('trabalhosRecentes', \App\Models\TrabalhoRecente::orderBy('ordem')->get());
 });
-
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'HomeController@index');
+
+Route::resource('fotos', 'FotoController');
+
+Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
+
+Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
