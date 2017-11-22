@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::resource('fotos', 'FotoController');
+
+Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
+
+Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');

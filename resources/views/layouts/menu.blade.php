@@ -1,4 +1,4 @@
-<li class="{{ Request::is('fotos*') ? 'active' : '' }}">
-    <a href="{!! route('fotos.index') !!}"><i class="fa fa-edit"></i><span>Fotos</span></a>
+<li class="{{ Request::is('trabalhoRecentes*') ? 'active' : '' }}">
+    <a href="{!! route('trabalhoRecentes.index') !!}"><i class="fa fa-eye"></i><span>Trabalhos Recentes</span></a>
 </li>
 
