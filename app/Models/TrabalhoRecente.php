@@ -12,13 +12,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class TrabalhoRecente extends Model
 {
+    /**
+     * Incluindo traits de SoftDelete e HasTags
+     */
     use SoftDeletes;
 
     public $table = 'trabalho_recentes';
     
-
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'titulo',
@@ -43,13 +44,33 @@ class TrabalhoRecente extends Model
      * @var array
      */
     public static $rules = [
-        
+        'titulo' => 'required',
+        'url' => 'required',
+        'file' => 'required'
     ];
 
 
+    /**
+     * Dando override no metodo getTagClassName do HasTags Trait para retornar o nome do model que vamos usar
+     */
+    public static function getTagClassName(): string
+    {
+        return Categoria::class;
+    }
+
+    /**
+     * Todo TrabalhoRecente tem 1 foto associada.
+     */
     public function foto()
     {
         return $this->morphOne(\App\Models\Foto::class, 'owner');
     }
-    
+
+    /**
+     * TrabalhoRecente pode ter varias categorias associadas
+     */
+    public function categorias()
+    {
+        return $this->morphToMany(\App\Models\Categoria::class, 'categorizavel');
+    }
 }

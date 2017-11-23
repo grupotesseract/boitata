@@ -1,15 +1,9 @@
 @extends('layouts.app')
 
-@section('scripts')
-<script src='/js/app.js'></script>
-@endsection
-
-
-
 @section('content')
     <section class="content-header">
         <h1>
-            Trabalho Recente
+            Categoria
         </h1>
     </section>
     <div class="content">
@@ -18,9 +12,9 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'trabalhoRecentes.store', 'files' => true]) !!}
+                    {!! Form::open(['route' => 'categorias.store']) !!}
 
-                        @include('trabalho_recentes.fields')
+                        @include('categorias.fields')
 
                     {!! Form::close() !!}
                 </div>

@@ -5,7 +5,18 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
 
+require('select2');
+
 require('./tesseract');
+
+
+$(document).ready(function(){
+    $('.select2').select2();
+});
+
+
+
 

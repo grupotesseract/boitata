@@ -23,5 +23,10 @@ Route::get('/admin', 'HomeController@index');
 Route::resource('fotos', 'FotoController');
 
 Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
+Route::resource('categorias', 'CategoriaController');
 
-Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
+
+
+Route::resource('categorias', 'CategoriaController');
+
+Route::resource('categorias', 'CategoriaController');

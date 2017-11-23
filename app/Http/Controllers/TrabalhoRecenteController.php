@@ -59,16 +59,18 @@ class TrabalhoRecenteController extends AppBaseController
     public function store(CreateTrabalhoRecenteRequest $request)
     {
         $input = $request->all();
-
         $trabalhoRecente = $this->trabalhoRecenteRepository->create($input);
-        $foto = $this->fotosRepository->uploadAndCreate($request);
 
+        //Criando foto e associando ao TrabalhoRecente
+        $foto = $this->fotosRepository->uploadAndCreate($request);
         $trabalhoRecente->foto()->save($foto);
 
+        //Upload p/ Cloudinary e delete local 
         $publicId = "trabalhos_recentes_".$trabalhoRecente->id;
         $retorno = $this->fotosRepository->sendToCloudinary($foto, $publicId);
-
         $this->fotosRepository->deleteLocal($foto->id);
+
+        $trabalhoRecente->categorias()->sync($request->categorias);
 
         Flash::success('Trabalho Recente registrado com sucesso.');
 
