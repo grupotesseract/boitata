@@ -94,5 +94,13 @@ class Foto extends Model
     {
         return $this->image_path.$this->image_name.'.'.$this->image_extension;
     }
-    
+
+    /**
+     * Definindo um acessor para a URL da foto no cloudinary no tamanho maximo que irão aparecer 800 x 450
+     */
+    public function getURLCloudinaryAttribute()
+    {
+        return "//res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/c_scale,g_center,h_450,w_800/$this->cloudinary_id.jpg";
+    }
+
 }

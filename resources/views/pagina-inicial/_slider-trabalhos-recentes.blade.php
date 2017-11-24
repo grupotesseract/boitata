@@ -12,8 +12,8 @@
 
     @foreach ($trabalhosRecentes as $key => $TrabalhoRecente)
 
-      <div class="item @if ($TrabalhoRecente->ordem == 1) active @endif">
-        <img src="http://res.cloudinary.com/tesseract/image/upload/c_scale,g_center,h_450,w_800/v1508033622/{{ $TrabalhoRecente->foto->cloudinary_id }}.jpg" alt="{{ $TrabalhoRecente->titulo }}">
+      <div class="item @if ($key == 0) active @endif">
+        <img src="{{ $TrabalhoRecente->foto->URLCloudinary }}" alt="{{ $TrabalhoRecente->titulo }}">
           <h3>{{ $TrabalhoRecente->titulo }}</h3>
       </div>
 
