@@ -23,7 +23,6 @@ $(document).ready(function(){
            playAnimacaoMenu();
        } else {
        }
-       console.log(windowpos);
     });
 });
     
