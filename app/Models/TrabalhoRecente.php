@@ -46,7 +46,6 @@ class TrabalhoRecente extends Model
     public static $rules = [
         'titulo' => 'required',
         'url' => 'required',
-        'file' => 'required'
     ];
 
 

@@ -23,9 +23,7 @@ class Categoria extends Model
     protected $dates = ['deleted_at'];
 
     public $fillable = [
-        'nome',
-        'owner_id',
-        'owner_type'
+        'nome'
     ];
 
     /**
@@ -34,9 +32,7 @@ class Categoria extends Model
      * @var array
      */
     protected $casts = [
-        'nome' => 'string',
-        'owner_id' => 'integer',
-        'owner_type' => 'string'
+        'nome' => 'string'
     ];
 
     /**
@@ -49,6 +45,9 @@ class Categoria extends Model
     ];
 
 
+    /**
+     * Relacao many x many polimorfica com trabalhosRecentes
+     */
     public function trabalhosRecentes()
     {
         return $this->morphedByMany('App\Models\TrabalhoRecente', 'categorizavel');

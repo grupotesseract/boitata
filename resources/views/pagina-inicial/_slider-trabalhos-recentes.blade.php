@@ -13,7 +13,9 @@
     @foreach ($trabalhosRecentes as $key => $TrabalhoRecente)
 
       <div class="item @if ($key == 0) active @endif">
-        <img src="{{ $TrabalhoRecente->foto->URLCloudinary }}" alt="{{ $TrabalhoRecente->titulo }}">
+           <a href="{{ $TrabalhoRecente->url }}" target="_blank">
+               <img src="{{ $TrabalhoRecente->foto->URLCloudinary }}" alt="{{ $TrabalhoRecente->titulo }}">
+           </a>
           <h3>{{ $TrabalhoRecente->titulo }}</h3>
       </div>
 
