@@ -18,6 +18,7 @@
 </head>
 
 <body class="skin-blue sidebar-mini">
+@include('googletagmanager::script')
 <div class="wrapper">
     <!-- Main Header -->
     <header class="main-header">

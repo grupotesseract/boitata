@@ -185,6 +185,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
 
+        Spatie\GoogleTagManager\GoogleTagManagerServiceProvider::class,
+
     ],
 
     /*
@@ -240,6 +242,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+
+        'GoogleTagManager' => Spatie\GoogleTagManager\GoogleTagManagerFacade::class,
 
     ],
 
