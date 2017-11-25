@@ -8,13 +8,23 @@
     background-position: 35%;
 
 
+    //Texto 'motion'
     > h3 {
         text-align: right;
+        margin-right:0px;
         width: 30%;
         margin: auto;
         font-weight: 800;
         font-size: 3.2em;
+        margin-bottom:10px;
     }
+
+    //texto de descriao do motion
+    h4 {
+        max-width:50%;
+        line-height: 1.35em;
+    }
+    
 
     div.borda-top {
         background-image: url('/borda-motion-top.png');
@@ -29,8 +39,8 @@
     
         iframe {
             border: 5px white solid;
-            width: 550px;
-            max-width: 550px;
+            width: 620px;
+            max-width: 620px;
         }
     }
 

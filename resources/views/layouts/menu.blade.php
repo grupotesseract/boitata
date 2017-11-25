@@ -6,3 +6,6 @@
     <a href="{!! route('categorias.index') !!}"><i class="fa fa-asterisk"></i><span>Categorias</span></a>
 </li>
 
+<li class="{{ Request::is('motions*') ? 'active' : '' }}">
+    <a href="{!! route('motions.index') !!}"><i class="fa fa-play"></i><span>Motions</span></a>
+</li>
