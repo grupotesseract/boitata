@@ -12,6 +12,8 @@
     </head>
     <body>
 
+@include('googletagmanager::script')
+
         @include ('menu-principal')
 
         @include ('pagina-inicial.video')

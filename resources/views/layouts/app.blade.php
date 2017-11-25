@@ -17,7 +17,7 @@
     @yield('css')
 </head>
 
-<body class="skin-blue sidebar-mini">
+<body class="skin-black sidebar-mini">
 @include('googletagmanager::script')
 <div class="wrapper">
     <!-- Main Header -->
