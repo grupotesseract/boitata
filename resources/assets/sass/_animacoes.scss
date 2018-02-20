@@ -1,9 +1,9 @@
 
 .play-animacao-borda {
     -webkit-animation-name: desce_borda; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.8s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
     animation-name: desce_borda;
-    animation-duration: 0.8s;
+    animation-duration: 1.5s;
 }
 
 .play-animacao-logo {
@@ -28,7 +28,7 @@
     }
     to {
         display:block;
-        margin-top: -14px;
+        margin-top: 9px;
     }
 }
 
