@@ -12,10 +12,10 @@
         <meta property="og:title" content="Boitatá - Design & Projetos - Ideias que tomam forma"/>
         <meta property="og:image" content="https://dev.coletivoboitata.com.br/og_image_boitata.jpeg"/>
         <meta property="og:image:type" content="image/jpeg">
-        <meta property="og:image:width" content="800"> /** PIXELS **/
-        <meta property="og:image:height" content="325"> /** PIXELS **/
+        <meta property="og:image:width" content="800">
+        <meta property="og:image:height" content="325">
 
-        <meta property="og:url" content="https://coletivoboitata.com.br"/>
+        <meta property="og:url" content="https://dev.coletivoboitata.com.br"/>
         <meta property="og:description" content="Você tem uma ideia e não sabe por onde começar? Vem falar com a gente.  Consultoria - Criação de marca - Cartão de visitas e papelaria em geral - Ilustração - Motion - Site - Aplicativos - Instalações."/> 
 
         <link rel="shortcut icon" href="/favicon.ico">
