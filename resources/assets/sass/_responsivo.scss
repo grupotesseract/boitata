@@ -9,10 +9,35 @@
 /* Até antes de tablet */ 
 @media only screen and (max-width: 767px) {
 
-    
     footer {
+        background-image:url('/rodape_mobile_2.png');
         background-position: 80% bottom;
         min-height: 240px;
+        
+        img.logo-rodape {
+            max-height: 65px;
+            position: inherit;
+            margin-bottom:-100px;
+        }
+
+        div.container-texto-rodape {
+            display: -webkit-inline-box;
+            font-size: 13px;
+            margin-top: 32px;
+            margin-left: 45%;
+            margin-bottom:15px;
+
+            &.desktop {
+                display:none;
+            }
+
+            &.mobile {
+                display:block;
+                footer div.wrapper-social-links {
+                    margin-bottom: 5px;
+                }
+            }
+        }
 
         #infos-rodape {
             font-size:1em;
@@ -47,10 +72,22 @@
             display: flex;
             margin: 0;
         }
+
+        div.navbar-header {
+            img.logo-menu-principal {
+                height: 75px;
+                left: -8px;
+            }
+        }
+   
     }
 
     #secao-trabalhos-recentes {
-        padding: 0em 0em 6em 0em;
+        padding: 0em 0em 3em 0em;
+        
+        .borda-top img {
+            height:40px;
+        }
 
         .texto-vertical {
             transform: none;
@@ -93,8 +130,8 @@
         background-position: 35%;
 
         > h3 {
-            text-align: left;
-            margin: 15px;
+            text-align: center;
+            margin: auto;
             font-size: 2.5em;
         }
 
@@ -104,16 +141,23 @@
         }
 
         div#container-youtube-motion {
+            margin-top:1em;
             margin-bottom:1em;
             iframe {
-                width: 290px;
-                max-width: 290px;
+                width: 100%;
+                max-width: 100%;
             }
         }
 
         div#container-texto-motion {
             margin-left: 0;
             padding-left: 15px;
+            margin-bottom:1em;
+
+            h4 {
+                max-width:100%;
+                text-align:center;
+            }
         }
 
     }
@@ -123,6 +167,7 @@
 
         div.borda-top {
             height: 65px;
+            margin-top:-1px;
         }
 
         div.container-editorial {
@@ -150,7 +195,22 @@
 
 /* Tablets e alguns Celulares */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-    
+    footer {
+        div.container-texto-rodape {
+            display: -webkit-inline-box;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            margin-left: 11%;
+        }
+        img.logo-rodape {
+            max-height: 75px;
+            position: absolute;
+            right: 39%;
+            bottom: 145%;
+        }
+    }
+
     nav#menu-principal {
         /** Escondendo a animacao do menu no mobile **/
         div.esconde-borda {
@@ -204,6 +264,43 @@
         }
     }
 
+    #secao-motion {
+        background-position: 35%;
+
+        > h3 {
+            text-align: center;
+            margin: auto;
+            font-size: 2.5em;
+        }
+
+        div.borda-top {
+            height: 100px;
+            margin-top: -20px;
+        }
+
+        div#container-youtube-motion {
+            margin-top:1em;
+            margin-bottom:1em;
+            iframe {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        div#container-texto-motion {
+            margin-left: 0;
+            padding-left: 15px;
+            margin-bottom:1em;
+
+            h4 {
+                max-width:100%;
+                text-align:center;
+            }
+        }
+
+    }
+    
+
     #secao-editorial {
         min-height: 780px;
 
@@ -218,7 +315,7 @@
         }
 
         div#fix-altura-mobile {
-            min-height:200px;
+            min-height:100px;
         }
         
     }
@@ -260,7 +357,6 @@
     
     
     footer {
-        min-height: 320px;
         background-position: 100% bottom;
     }
 }
@@ -269,12 +365,27 @@
 @media only screen and (min-width: 1440px) {
     .col-xlg-3 { width: 25%; }
     .col-xlg-9 { width: 75%; }
+
+    footer {
+        img.logo-rodape {
+            max-height: 80px;
+            position: absolute;
+            right: 28%;
+            bottom: 100%;
+        }
+        div.container-texto-rodape {
+            font-size: 18px;
+            margin-left: 55%;
+        }    
+    }
+    
 }
 
 
 @media only screen and (min-width: 1200px) and (max-width:1800px)  {
     footer {
         background-size:contain;
+
     }
 }
 

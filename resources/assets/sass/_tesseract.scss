@@ -23,12 +23,35 @@ body > section {
 footer {
     background-size:cover;
     background-repeat:no-repeat;
+    background-image:url('/rodape_desk_2.png');
     width: 100%;
     float:left;
     position:relative;
     background-position: 80% bottom;
     min-height: 240px;
     margin-top:-240px;
+}
+
+footer div.container-footer {
+    margin-bottom: -10px;
+}
+
+footer img.logo-rodape {
+    max-height: 65px;
+    position: absolute;
+    right: 26.5%;
+    bottom: 65%;
+}
+
+footer div.container-texto-rodape {
+    display: -webkit-inline-box;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 45%;
+
+    &.mobile {
+        display:none;
+    }
 }
 
 footer #infos-rodape {
