@@ -187,6 +187,8 @@ return [
 
         Spatie\GoogleTagManager\GoogleTagManagerServiceProvider::class,
 
+        Jenssegers\Agent\AgentServiceProvider::class,
+
     ],
 
     /*
@@ -244,6 +246,8 @@ return [
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
 
         'GoogleTagManager' => Spatie\GoogleTagManager\GoogleTagManagerFacade::class,
+
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
     ],
 

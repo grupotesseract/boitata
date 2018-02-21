@@ -14,10 +14,12 @@
 Route::get('/', function () {
     $trabalhosRecentes =  \App\Models\TrabalhoRecente::orderBy('ordem')->get();
     $motion =  \App\Models\Motion::ativo();
+    $isMobile = \Agent::isMobile() || \Agent::isTablet();
 
     return view('welcome')->with([
         'trabalhosRecentes' => $trabalhosRecentes,
         'motion' => $motion,
+        'isMobile' => $isMobile
     ]);
 
 });

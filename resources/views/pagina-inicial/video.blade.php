@@ -8,7 +8,7 @@
 </video>
 --}}
 
-<video autoplay="autoplay" muted poster="html5video/home_video.jpg" style="width:100%" title="home_video">
+<video autoplay="autoplay" @if( isset($isMobile) && $isMobile ) controls @endif muted poster="html5video/home_video.jpg" style="width:100%" title="home_video">
     <source src="html5video/home_video.m4v" type="video/mp4" />
     <source src="html5video/home_video.webm" type="video/webm" />
     <object type="application/x-shockwave-flash" data="html5video/flashfox.swf" width="1920" height="850" style="position:relative;">
