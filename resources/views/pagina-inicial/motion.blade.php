@@ -1,4 +1,4 @@
-
+@if ( isset($motion) && $motion )
 <section id="secao-motion">
     
     <div class="borda-top"></div>
@@ -18,3 +18,4 @@
     </div>
 
 </section>
+@endif

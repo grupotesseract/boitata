@@ -55,8 +55,10 @@ class Motion extends Model
      */
     public function scopeAtivo($query)
     {
-        return $query->where('ativo', true)->first();
+        return $query->where('ativo', true);
     } 
+
+
 
     
 }

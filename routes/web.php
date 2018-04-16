@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $trabalhosRecentes =  \App\Models\TrabalhoRecente::orderBy('ordem')->get();
-    $motion =  \App\Models\Motion::ativo();
+    $motion =  \App\Models\Motion::ativo()->get()->first();
     $isMobile = \Agent::isMobile() || \Agent::isTablet();
 
     return view('welcome')->with([
