@@ -103,4 +103,5 @@ class Foto extends Model
         return "//res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/c_scale,g_center,h_450,w_800/$this->cloudinary_id.jpg";
     }
 
+
 }

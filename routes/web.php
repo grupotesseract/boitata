@@ -33,3 +33,5 @@ Route::resource('fotos', 'FotoController');
 Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
 Route::resource('categorias', 'CategoriaController');
 Route::resource('motions', 'MotionController');
+Route::resource('editorials', 'EditorialController');
+
