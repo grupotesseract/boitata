@@ -1,0 +1,94 @@
+/*npm install
+npm run dev 
+nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
+
+#contato {
+
+    background-color: #040506;
+    color: #FFFFFF;
+    background-image: url('/gotas_contato.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 45vw auto;
+    font-family: inherit;
+    min-height: 100vh;
+    font-size: 18px;
+
+    div.container{
+   	 	margin-top: 6em;
+    	margin-bottom: 3em;
+    		
+		div.inicioc{
+
+			h2{
+				text-align: center;	
+				font-weight: bold;
+				border-bottom: 1px solid currentColor;
+				max-width: 180px
+			}
+
+			p{
+				margin-left: -50px;
+			}
+			
+		}
+
+		div.pessoas{
+			
+			padding: 15em 0em;	
+ 			
+ 			a {
+ 				color: White;
+ 			}
+ 			
+			p{
+				font-weight: bold;
+				color: Yellow;
+				line-height: 5px;
+				margin:0 0 5px;
+			}
+
+ 		}
+		
+		div.formemail{
+			
+			margin-left: -50px;
+			margin-top: -50px;
+			padding: 7em;
+		}
+
+		div.premail{
+			
+			p{
+				font-weight: bold;
+			}
+
+		}
+		   
+		div.caixa-email{
+			background-color: #FFFFFF;
+			color: #040506;
+			padding: 16px;
+			border-radius: 4px;
+		}
+	}
+}
+
+
+.infcontatos{
+	max-width: 300px;
+    float: right;
+}
+
+
+.texto-inline{
+	    display: inline-block;
+}
+
+#borda-bot{
+	background-image: url('/Forma-do-contato-15.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+    margin-top: -2px;
+    height: 50px;
+}
