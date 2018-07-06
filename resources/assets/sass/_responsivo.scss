@@ -104,6 +104,10 @@
             width: 290px;
             margin: auto;
 
+            .carousel-inner {
+                height:285px;
+            }
+            
             ol.carousel-indicators {
                 bottom:10px;
                 max-width:90px;
@@ -242,6 +246,10 @@
         #tesseract-carousel {
             max-width: 630px;
             width: 630px;
+
+            .carousel-inner {
+                height:460px;
+            }
 
             ol.carousel-indicators {
                 bottom:10px;
