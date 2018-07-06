@@ -11,9 +11,11 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($trabalhoRecente, ['route' => ['trabalhoRecentes.update', $trabalhoRecente->id], 'method' => 'patch']) !!}
+                   {!! Form::model($trabalhoRecente, ['route' => ['trabalhoRecentes.update', $trabalhoRecente->id], 'method' => 'patch', 'files' => true]) !!}
 
-                        @include('trabalho_recentes.fields')
+                        @include('trabalho_recentes.fields',[
+                            'editing' => true
+                        ])
 
                    {!! Form::close() !!}
                </div>
