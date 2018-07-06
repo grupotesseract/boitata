@@ -2,22 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateEditorialRequest;
-use App\Http\Requests\UpdateEditorialRequest;
+use Flash;
+use Response;
+use Illuminate\Http\Request;
+use App\Repositories\FotoRepository;
 use App\Repositories\EditorialRepository;
 use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
-use Flash;
+use App\Http\Requests\CreateEditorialRequest;
+use App\Http\Requests\UpdateEditorialRequest;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Response;
 
 class EditorialController extends AppBaseController
 {
     /** @var  EditorialRepository */
     private $editorialRepository;
+    private $fotosRepository;
 
-    public function __construct(EditorialRepository $editorialRepo)
+    public function __construct(EditorialRepository $editorialRepo, FotoRepository $fotoRepo)
     {
+        $this->fotosRepository = $fotoRepo;
         $this->editorialRepository = $editorialRepo;
     }
 
@@ -30,10 +33,13 @@ class EditorialController extends AppBaseController
     public function index(Request $request)
     {
         $this->editorialRepository->pushCriteria(new RequestCriteria($request));
-        $editorials = $this->editorialRepository->all();
+        $primeiroEditorial = \App\Models\Editorial::primeiro()->first();
+        $segundoEditorial = \App\Models\Editorial::segundo()->first();
 
         return view('editorials.index')
-            ->with('editorials', $editorials);
+            ->with('primeiroEditorial', $primeiroEditorial)
+            ->with('segundoEditorial', $segundoEditorial);
+
     }
 
     /**
@@ -59,7 +65,18 @@ class EditorialController extends AppBaseController
 
         $editorial = $this->editorialRepository->create($input);
 
-        Flash::success('Editorial saved successfully.');
+        //Criando foto e associando ao TrabalhoRecente
+        $foto = $this->fotosRepository->uploadAndCreate($request);
+        $editorial->foto()->save($foto);
+
+        //Upload p/ Cloudinary e delete local 
+        $publicId = "editorial_".time();
+        $retorno = $this->fotosRepository->sendToCloudinary($foto, $publicId);
+        $this->fotosRepository->deleteLocal($foto->id);
+
+        $editorial->categorias()->sync($request->categorias);
+
+        Flash::success('Editorial criado com sucesso.');
 
         return redirect(route('editorials.index'));
     }
@@ -118,11 +135,30 @@ class EditorialController extends AppBaseController
 
         if (empty($editorial)) {
             Flash::error('Editorial not found');
-
             return redirect(route('editorials.index'));
         }
 
         $editorial = $this->editorialRepository->update($request->all(), $id);
+
+        //se existir um file 
+        if ($request->file) {
+
+            //se ja tiver uma foto delete
+            if ($editorial->foto) {
+                $editorial->foto->delete();
+            }
+
+            //Criando foto e associando ao Editorial
+            $foto = $this->fotosRepository->uploadAndCreate($request);
+            $editorial->foto()->save($foto);
+
+            //Upload p/ Cloudinary e delete local 
+            $publicId = "editorial_".time();
+            $retorno = $this->fotosRepository->sendToCloudinary($foto, $publicId);
+            $this->fotosRepository->deleteLocal($foto->id);
+        }
+
+        $editorial->categorias()->sync($request->categorias);
 
         Flash::success('Editorial updated successfully.');
 

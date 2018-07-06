@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('css')
+    <link rel="stylesheet" href="/css/dropzone.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/admin.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+@endsection
+
 @section('content')
     <section class="content-header">
         <h1>
@@ -12,9 +18,11 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'editorials.store']) !!}
+                    {!! Form::open(['route' => 'editorials.store', 'files'=>true]) !!}
 
-                        @include('editorials.fields')
+                        @include('editorials.fields', [
+                            'ordem' => 1
+                        ])
 
                     {!! Form::close() !!}
                 </div>

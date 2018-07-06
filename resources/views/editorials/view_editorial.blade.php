@@ -7,34 +7,30 @@
         <div class="col-xs-12 col-md-2"></div>
         <div class="col-xs-12 col-md-2 container-texto">
             <h3>editorial</h3>
-            <a class="btn btn-default" href="/editorials/1/edit">
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="container-item-editorial text-center">
+                <a href="{{ $primeiroEditorial->url }}" target="_blank">
+                    <img src="{{ $primeiroEditorial->linkFoto }}" alt="{{ $primeiroEditorial->titulo }}" >
+                    <h4>{{ $primeiroEditorial->titulo }}</h4>
+                </a>
+            </div>
+            <a class="btn btn-default" href="/editorials/{{$primeiroEditorial->id}}/edit">
                 <i class="fa fa-pencil"></i> Trocar
             </a>
         </div>
         <div class="col-xs-12 col-md-3">
             <div class="container-item-editorial text-center">
-                <a href="https://www.behance.net/gallery/49903177/Bicho-Transparente" target="_blank">
-                    <img src="/foto_editorial_01.png" alt="Folder impresso para espetáculo de teatro" >
-                    <h4>Folder impresso para espetáculo de teatro</h4>
-                </a>
-                <br>
-                <a class="btn btn-default" href="/editorials/1/edit">
-                    <i class="fa fa-pencil"></i> Trocar
+                <a href="{{ $segundoEditorial->url }}" target="_blank">
+                    <img src="{{ $segundoEditorial->linkFoto }}" alt="{{ $segundoEditorial->titulo }}" >
+                    <h4>{{ $segundoEditorial->titulo }}</h4>
                 </a>
             </div>
+            <a class="btn btn-default" href="/editorials/{{$segundoEditorial->id}}/edit">
+                <i class="fa fa-pencil"></i> Trocar
+            </a>
         </div>
-        <div class="col-xs-12 col-md-3">
-            <div class="container-item-editorial text-center">
-                <a href="https://www.behance.net/gallery/59283893/Livro-impresso-para-dissertacao-em-Design" target="_blank">
-                    <img src="/foto_editorial_02.png" alt="Livro impresso para dissertação">
-                    <h4>Livro impresso para dissertação</h4>
-                </a>
-                <br>
-                <a class="btn btn-default" href="/editorials/2/edit">
-                    <i class="fa fa-pencil"></i> Trocar
-                </a>
-            </div>
-        </div>
+        <div id="fix-altura-mobile" class="col-xs-12 col-md-2"></div>
 </div>
 
 </section>

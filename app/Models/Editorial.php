@@ -47,8 +47,57 @@ class Editorial extends Model
      * @var array
      */
     public static $rules = [
-        
+        'titulo' => 'required',
+        'url' => 'required',
     ];
 
+
+    /**
+     * Dando override no metodo getTagClassName do HasTags Trait para retornar o nome do model que vamos usar
+     */
+    public static function getTagClassName(): string
+    {
+        return \App\Models\Categoria::class;
+    }
+
+    /**
+     * Todo item de Editorial tem 1 foto associada.
+     */
+    public function foto()
+    {
+        return $this->morphOne(\App\Models\Foto::class, 'owner');
+    }
+
+    /**
+     * Editorial pode ter varias categorias associadas
+     */
+    public function categorias()
+    {
+        return $this->morphToMany(\App\Models\Categoria::class, 'categorizavel');
+    }
+
+
+    /**
+     * Scope para aplicar na query filtrando por ordem = 1
+     */
+    public function scopePrimeiro($query)
+    {
+        return $query->where('ordem', 1);
+    }
+
+    /**
+     * Scope para aplicar na query filtrando por ordem = 2
+     */
+    public function scopeSegundo($query)
+    {
+        return $query->where('ordem', 2);
+    }
     
+    /**
+     * Definindo um acessor para a URL da foto no cloudinary no tamanho maximo que irão aparecer 800 x 450
+     */
+    public function getlinkFotoAttribute()
+    {
+        return "//res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/q_auto/".$this->foto->cloudinary_id.".jpeg";
+    }
 }

@@ -11,9 +11,12 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($editorial, ['route' => ['editorials.update', $editorial->id], 'method' => 'patch']) !!}
+                   {!! Form::model($editorial, ['route' => ['editorials.update', $editorial->id], 'method' => 'patch', 'files'=>true]) !!}
 
-                        @include('editorials.fields')
+                        @include('editorials.fields', [
+                            'editing' => true
+                        ])
+
 
                    {!! Form::close() !!}
                </div>
