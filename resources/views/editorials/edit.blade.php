@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Motion
+            Editorial
         </h1>
    </section>
    <div class="content">
@@ -11,11 +11,12 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($motion, ['route' => ['motions.update', $motion->id], 'method' => 'patch']) !!}
+                   {!! Form::model($editorial, ['route' => ['editorials.update', $editorial->id], 'method' => 'patch', 'files'=>true]) !!}
 
-                        @include('motions.fields',[
+                        @include('editorials.fields', [
                             'editing' => true
                         ])
+
 
                    {!! Form::close() !!}
                </div>

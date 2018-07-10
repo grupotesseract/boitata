@@ -31,9 +31,11 @@ class MotionController extends AppBaseController
     {
         $this->motionRepository->pushCriteria(new RequestCriteria($request));
         $motions = $this->motionRepository->all();
+        $motion =  \App\Models\Motion::ativo()->get()->first();
 
         return view('motions.index')
-            ->with('motions', $motions);
+            ->with('motions', $motions)
+            ->with('motion', $motion);
     }
 
     /**
@@ -76,7 +78,7 @@ class MotionController extends AppBaseController
         $motion = $this->motionRepository->findWithoutFail($id);
 
         if (empty($motion)) {
-            Flash::error('Motion not found');
+            Flash::error('Motion não encontrado');
 
             return redirect(route('motions.index'));
         }
@@ -96,7 +98,7 @@ class MotionController extends AppBaseController
         $motion = $this->motionRepository->findWithoutFail($id);
 
         if (empty($motion)) {
-            Flash::error('Motion not found');
+            Flash::error('Motion não encontrado');
 
             return redirect(route('motions.index'));
         }
@@ -117,15 +119,14 @@ class MotionController extends AppBaseController
         $motion = $this->motionRepository->findWithoutFail($id);
 
         if (empty($motion)) {
-            Flash::error('Motion not found');
-
+            Flash::error('Motion não encontrado');
             return redirect(route('motions.index'));
         }
 
         $motion = $this->motionRepository->update($request->all(), $id);
+        $motion->categorias()->sync($request->categorias);
 
-        Flash::success('Motion updated successfully.');
-
+        Flash::success('Motion atualizado com sucesso.');
         return redirect(route('motions.index'));
     }
 
@@ -141,7 +142,7 @@ class MotionController extends AppBaseController
         $motion = $this->motionRepository->findWithoutFail($id);
 
         if (empty($motion)) {
-            Flash::error('Motion not found');
+            Flash::error('Motion não encontrado');
 
             return redirect(route('motions.index'));
         }

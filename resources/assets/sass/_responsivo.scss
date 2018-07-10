@@ -104,6 +104,10 @@
             width: 290px;
             margin: auto;
 
+            .carousel-inner {
+                height:285px;
+            }
+            
             ol.carousel-indicators {
                 bottom:10px;
                 max-width:90px;
@@ -128,6 +132,11 @@
 
     #secao-motion {
         background-position: 35%;
+
+        .tags {
+            display: inline;
+            margin-left: 10px;
+        }
 
         > h3 {
             text-align: center;
@@ -243,6 +252,10 @@
             max-width: 630px;
             width: 630px;
 
+            .carousel-inner {
+                height:460px;
+            }
+
             ol.carousel-indicators {
                 bottom:10px;
                 max-width:90px;
@@ -265,6 +278,13 @@
     }
 
     #secao-motion {
+
+        .tags {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        
         background-position: 35%;
 
         > h3 {

@@ -137,6 +137,27 @@ class TrabalhoRecenteController extends AppBaseController
 
         $trabalhoRecente = $this->trabalhoRecenteRepository->update($request->all(), $id);
 
+        //se existir um file 
+        if ($request->file) {
+
+            //se ja tiver uma foto delete
+            if ($trabalhoRecente->foto) {
+                $trabalhoRecente->foto->delete();
+            }
+
+            //Criando foto e associando ao trabalhoRecente
+            $foto = $this->fotosRepository->uploadAndCreate($request);
+            $trabalhoRecente->foto()->save($foto);
+
+            //Upload p/ Cloudinary e delete local 
+            $publicId = "trabalhoRecente_".time();
+            $retorno = $this->fotosRepository->sendToCloudinary($foto, $publicId);
+            $this->fotosRepository->deleteLocal($foto->id);
+        }
+
+        $trabalhoRecente->categorias()->sync($request->categorias);
+        
+
         Flash::success('Trabalho Recente updated successfully.');
 
         return redirect(route('trabalhoRecentes.index'));
