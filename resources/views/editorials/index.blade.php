@@ -9,7 +9,6 @@
 }
 #secao-editorial {
     min-height: 770px;
-    min-height: 770px;
 }
 #secao-editorial div.container-editorial {
     margin: 2em 0;

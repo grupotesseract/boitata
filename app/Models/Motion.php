@@ -58,7 +58,13 @@ class Motion extends Model
         return $query->where('ativo', true);
     } 
 
-
+    /**
+     * Motion pode ter varias categorias associadas
+     */
+    public function categorias()
+    {
+        return $this->morphToMany(\App\Models\Categoria::class, 'categorizavel');
+    }
 
     
 }

@@ -7,7 +7,7 @@
 </li>
 
 <li class="{{ Request::is('motions*') ? 'active' : '' }}">
-    <a href="{!! route('motions.index') !!}"><i class="fa fa-play"></i><span>Motions</span></a>
+    <a href="{!! route('motions.index') !!}"><i class="fa fa-play"></i><span>Motion</span></a>
 </li>
 
 <li class="{{ Request::is('editorials*') ? 'active' : '' }}">
