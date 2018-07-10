@@ -37,5 +37,11 @@ Route::resource('fotos', 'FotoController');
 Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
 Route::resource('categorias', 'CategoriaController');
 Route::resource('motions', 'MotionController');
+
+
+Route::get('/contato', function () {
+	return view('contato.show');
+});
+
 Route::resource('editorials', 'EditorialController');
 
