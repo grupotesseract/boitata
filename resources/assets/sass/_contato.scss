@@ -98,24 +98,66 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
     height: 50px;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 767px){
+	#contato{
+		background-size: 45vw auto;
+	}
+
 	.containerCont{
 		margin-bottom: 13em;
-	}
-	.pessoas{
-		padding: 1em;
+		
+		.inicioc{
+			p{
+				text-align: center;
+			}
+		}
 
-		p{
-			line-height: 5px;
-			margin:0 0 5px;
+		.pessoas{
+			padding: 1em;
+
+			p{
+				line-height: 5px;
+				margin:0 0 5px;
+			}
+		}
+		.formemail{
+			padding: 0em;
 		}
 	}
 
 }
 
+@media (min-width: 768px) and (max-width: 1023px){
+	#contato{
+		background-size: 45vw auto;
+	}
 
 
-@media (min-width: 1201px){
+	.containerCont{
+		margin-bottom: 13em;
+		
+		.inicioc{
+			p{
+				text-align: center;
+			}
+		}
+		.pessoas{
+			padding: 1em;
+
+			p{
+				line-height: 5px;
+				margin:0 0 5px;
+			}
+		}
+		.formemail{
+			padding: 4em;
+		}
+	}
+}
+
+
+
+@media (min-width: 1024px){
 	#contato{
 		background-size: 45vw auto;
 	}
@@ -144,7 +186,7 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 		}
 
 		.formemail{
-			padding: 7em;
+			padding: 5em;
 			margin-left: -50px;
 			margin-top: -50px;
 		}
