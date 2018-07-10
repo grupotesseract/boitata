@@ -93,7 +93,7 @@ class EditorialController extends AppBaseController
         $editorial = $this->editorialRepository->findWithoutFail($id);
 
         if (empty($editorial)) {
-            Flash::error('Editorial not found');
+            Flash::error('Editorial não encontrado');
 
             return redirect(route('editorials.index'));
         }
@@ -113,7 +113,7 @@ class EditorialController extends AppBaseController
         $editorial = $this->editorialRepository->findWithoutFail($id);
 
         if (empty($editorial)) {
-            Flash::error('Editorial not found');
+            Flash::error('Editorial não encontrado');
 
             return redirect(route('editorials.index'));
         }
@@ -134,7 +134,7 @@ class EditorialController extends AppBaseController
         $editorial = $this->editorialRepository->findWithoutFail($id);
 
         if (empty($editorial)) {
-            Flash::error('Editorial not found');
+            Flash::error('Editorial não encontrado');
             return redirect(route('editorials.index'));
         }
 
@@ -160,7 +160,7 @@ class EditorialController extends AppBaseController
 
         $editorial->categorias()->sync($request->categorias);
 
-        Flash::success('Editorial updated successfully.');
+        Flash::success('Editorial atualizado com sucesso.');
 
         return redirect(route('editorials.index'));
     }
@@ -177,7 +177,7 @@ class EditorialController extends AppBaseController
         $editorial = $this->editorialRepository->findWithoutFail($id);
 
         if (empty($editorial)) {
-            Flash::error('Editorial not found');
+            Flash::error('Editorial não encontrado');
 
             return redirect(route('editorials.index'));
         }
