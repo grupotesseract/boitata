@@ -8,22 +8,22 @@
 	<div class="caixa-email">
 		<div>
 			<div class="form-group">
-				<label for='name'>Nome</label>
+				<label for='name'>NOME</label>
 				<input type="text" class="form-control" id="name" name="name">
 			</div>
 
 			<div class="form-group">
-				<label for='email'>Email</label>
+				<label for='email'>EMAIL</label>
 				<input type="email" class="form-control" id="email" name="email">
 			</div>
 
 			<div class="form-group">
-				<label for="title">Assunto</label>
+				<label for="title">ASSUNTO</label>
 				<input type="text" class="form-control" id="Assunto" name="title">
 			</div>
 		  	
 			<div class="form-group input-lg-60">
-				<label for="Mensagem">Mensagem</label>
+				<label for="Mensagem">MENSAGEM</label>
 				<textarea class="form-control" id="Mensagem" name="body"></textarea>
 			</div>
 

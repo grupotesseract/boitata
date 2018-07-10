@@ -5,7 +5,7 @@
 		
 	<section id="contato">
 
-		<div class="container">
+		<div class="container containerCont">
 		
 			<div class="col-md-6 col-xs-12">
 			</div>
@@ -16,8 +16,8 @@
 				</div>
 				
 				<div class="col-md-12 col-xs-12">
-					<p>Ainda não sabe bem do que você ou sua empresa precisam?<br>
-					Vamos conversar e ver qual a melhor maneira de atendê-los</p>		
+					<p>Ainda não sabe bem do que você ou sua empresa precisam?<br></p>
+					<p>Vamos conversar e ver qual a melhor maneira de atendê-los</p>		
 				</div>
 			</div>
 
@@ -26,11 +26,8 @@
 				@include ('contato.people')				
 			</div>
 
-			<!--ajuste de quebra-->
-			<div class="clearfix visible-xs-block"></div>
-
 			<!--descrição e caixa de email-->
-			<div class="col-xs-12 col-sm-6 formemail">
+			<div class="col-md-6 col-xs-12 formemail">
 				@include ('contato.emailcontato')
 			</div>
 
