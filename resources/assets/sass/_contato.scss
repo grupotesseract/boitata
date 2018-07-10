@@ -1,15 +1,17 @@
-/*npm install
-npm run dev 
-nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
+
+/* Media queries divididas em:
+ * menor que 767px
+ * entre 768px e 1023px
+ * maior que 1024px
+ */
 
 #contato {
 
     background-color: #040506;
     color: #FFFFFF;
     background-image: url('/gotas_contato.png');
-	background-position: center top;
+	background-position: 10% 5%;
 	background-repeat: no-repeat;
-	/*background-size: 45vw auto;*/
     font-family: inherit;
     min-height: 100vh;
     font-size: 18px;
@@ -22,8 +24,6 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 			h2{
 				text-align: center;	
 				font-weight: bold;
-				/*border-bottom: 1px solid currentColor;
-				max-width: 180px;*/
 				margin: center;
 			}		
 		}
@@ -60,11 +60,7 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 
  		}
 		
-		.formemail{
-				
-			/*margin-left: -50px;*/
-			/*margin-top: 50px;
-			/*padding: 7em;*/
+		.formemail{	
 		}
 
 		.premail{
@@ -100,7 +96,7 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 
 @media (max-width: 767px){
 	#contato{
-		background-size: 45vw auto;
+		background-size: 100%;
 	}
 
 	.containerCont{
@@ -129,7 +125,7 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 
 @media (min-width: 768px) and (max-width: 1023px){
 	#contato{
-		background-size: 45vw auto;
+		background-size: 80%;
 	}
 
 
@@ -159,7 +155,7 @@ nom run watch    (nao precisa ficar dando comando de run dev toda hora)*/
 
 @media (min-width: 1024px){
 	#contato{
-		background-size: 45vw auto;
+		background-size: 67%;
 	}
 
 	div.containerCont{
