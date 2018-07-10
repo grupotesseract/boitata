@@ -14,6 +14,11 @@
                     <img src="{{ $primeiroEditorial->linkFoto }}" alt="{{ $primeiroEditorial->titulo }}" >
                     <h4>{{ $primeiroEditorial->titulo }}</h4>
                 </a>
+                <div class="text-left">
+                    @foreach ($primeiroEditorial->categorias as $Categoria)
+                        <span class="tags">{{$Categoria->nome}}</span>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div class="col-xs-12 col-md-3">
@@ -22,6 +27,11 @@
                     <img src="{{ $segundoEditorial->linkFoto }}" alt="{{ $segundoEditorial->titulo }}" >
                     <h4>{{ $segundoEditorial->titulo }}</h4>
                 </a>
+                <div class="text-left">
+                    @foreach ($segundoEditorial->categorias as $Categoria)
+                        <span class="tags">{{$Categoria->nome}}</span>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div id="fix-altura-mobile" class="col-xs-12 col-md-2"></div>

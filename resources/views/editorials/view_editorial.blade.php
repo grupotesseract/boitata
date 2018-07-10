@@ -14,6 +14,11 @@
                     <img src="{{ $primeiroEditorial->linkFoto }}" alt="{{ $primeiroEditorial->titulo }}" >
                     <h4>{{ $primeiroEditorial->titulo }}</h4>
                 </a>
+                <div class="text-left">
+                    @foreach ($primeiroEditorial->categorias as $Categoria)
+                        <span class="tags">{{$Categoria->nome}}</span>
+                    @endforeach
+                </div>
             </div>
             <a class="btn btn-default" href="/editorials/{{$primeiroEditorial->id}}/edit">
                 <i class="fa fa-pencil"></i> Trocar
@@ -25,6 +30,11 @@
                     <img src="{{ $segundoEditorial->linkFoto }}" alt="{{ $segundoEditorial->titulo }}" >
                     <h4>{{ $segundoEditorial->titulo }}</h4>
                 </a>
+                <div class="text-left">
+                    @foreach ($segundoEditorial->categorias as $Categoria)
+                        <span class="tags">{{$Categoria->nome}}</span>
+                    @endforeach
+                </div>
             </div>
             <a class="btn btn-default" href="/editorials/{{$segundoEditorial->id}}/edit">
                 <i class="fa fa-pencil"></i> Trocar

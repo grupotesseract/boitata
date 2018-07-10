@@ -1,17 +1,25 @@
 <!-- Titulo Field -->
-<div class="form-group col-sm-4">
+<div class="form-group col-sm-6">
     {!! Form::label('titulo', 'Titulo:') !!}
     {!! Form::text('titulo', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Url Field -->
-<div class="form-group col-sm-4">
+<div class="form-group col-sm-6">
     {!! Form::label('url', 'Link do behance:') !!}
     {!! Form::text('url', null, ['class' => 'form-control']) !!}
 </div>
 
+@if (!isset($editing))
+<div class="form-group col-sm-3">
+    {!! Form::label('ordem', 'Ordem de aparicao:') !!}
+    {!! Form::select('ordem', [1 => 'primeiro', 2 => 'segundo'], null, ['class' => 'form-control']) !!}
+</div>
+@endif
+
+
 <!-- Categorias Field -->
-<div class="form-group col-sm-4">
+<div class="form-group {{ isset($editing) ? "col-sm-9" : "col-sm-6"}}">
 @if (isset($editing))
     @include('categorias.select', [
         'selecionadas' => $editorial->categorias->pluck('id')
@@ -21,21 +29,8 @@
 @endif
 </div>
 
-<div class="form-group col-sm-12 col-lg-12">
-    @if ( isset($owner_id) )
-        {!! Form::hidden('owner_id', $owner_id) !!}
-    @endif
-    @if ( isset($owner_type) )
-        {!! Form::hidden('owner_type', $owner_type) !!}
-    @endif
-</div>
 
-<div class="form-group col-sm-6">
-    {!! Form::label('ordem', 'Ordem de aparicao:') !!}
-    {!! Form::select('ordem', [1 => 'primeiro', 2 => 'segundo'], null, ['class' => 'form-control']) !!}
-</div>
-
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('file', 'Imagem:') !!}
     {!! Form::file('file') !!}
 </div>

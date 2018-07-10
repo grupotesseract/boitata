@@ -7,6 +7,12 @@
     min-height: 950px;
     padding-bottom: 21vw;
 
+    .tags {
+        font-weight:bold;
+        margin: 0;
+        margin-left: 10px;
+    }
+
     div.borda-top {
         background-image: url('/borda-editorial-top.png');
         background-size: contain;
@@ -44,6 +50,7 @@
                 margin-top: -30px;
                 margin-left: 15px;
                 max-width: 90%;
+                min-height: 30px;
                 text-align:left;
             }
         }

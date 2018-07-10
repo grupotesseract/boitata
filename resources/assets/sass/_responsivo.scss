@@ -133,6 +133,11 @@
     #secao-motion {
         background-position: 35%;
 
+        .tags {
+            display: inline;
+            margin-left: 10px;
+        }
+
         > h3 {
             text-align: center;
             margin: auto;
@@ -273,6 +278,13 @@
     }
 
     #secao-motion {
+
+        .tags {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        
         background-position: 35%;
 
         > h3 {
