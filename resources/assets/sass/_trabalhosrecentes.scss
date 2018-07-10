@@ -25,6 +25,15 @@
 
     #tesseract-carousel {
 
+        .tags {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .carousel-inner {
+            height:600px;
+        }
+
         // as bolinhas indicando qual slide ativo
         ol.carousel-indicators {
             max-width: 160px;
@@ -45,13 +54,14 @@
         //Os slides em sí
         div.item  {
             h3 {
-                min-height:52px;
+                min-height: 40px;
                 color: black;
                 text-align: left;
                 text-shadow: none;
                 margin: 14px 8px;
                 font-size: 16px;
                 font-weight: 400;
+                margin-bottom:0px;
             }
 
             > img {

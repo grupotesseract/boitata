@@ -12,6 +12,13 @@ require('select2');
 
 require('./tesseract');
 
+const Swal = require('sweetalert2');
+const swal = Swal;
+require('./dropzone_bindings')
+
+window.Dropzone = require('./dropzone_src');
+Dropzone.autoDiscover = false;
+
 
 $(document).ready(function(){
     $('.select2').select2();

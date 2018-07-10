@@ -18,7 +18,13 @@
 
 <!-- Categorias Field -->
 <div class="form-group col-sm-6">
+@if (isset($editing))
+    @include('categorias.select', [
+        'selecionadas' => $trabalhoRecente->categorias->pluck('id')
+    ])
+@else
     @include('categorias.select')
+@endif
 </div>
 
 <!-- Imagem Field -->

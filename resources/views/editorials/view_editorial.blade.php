@@ -20,6 +20,9 @@
                     @endforeach
                 </div>
             </div>
+            <a class="btn btn-default" href="/editorials/{{$primeiroEditorial->id}}/edit">
+                <i class="fa fa-pencil"></i> Trocar
+            </a>
         </div>
         <div class="col-xs-12 col-md-3">
             <div class="container-item-editorial text-center">
@@ -33,9 +36,11 @@
                     @endforeach
                 </div>
             </div>
+            <a class="btn btn-default" href="/editorials/{{$segundoEditorial->id}}/edit">
+                <i class="fa fa-pencil"></i> Trocar
+            </a>
         </div>
         <div id="fix-altura-mobile" class="col-xs-12 col-md-2"></div>
-        
 </div>
 
 </section>
