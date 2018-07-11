@@ -148,7 +148,7 @@ class CategoriaController extends AppBaseController
 
         $this->categoriaRepository->delete($id);
 
-        Flash::success('Categoria removida com sucesso.');
+        \Flash::success('Categoria removida com sucesso.');
 
         return redirect(route('categorias.index'));
     }
