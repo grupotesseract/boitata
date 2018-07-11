@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EnviaEmailContatoRequest;
+use App\Mail\EmailContato;
 use Flash;
+use Mail;
 
 class ContatoController extends Controller
 {
@@ -23,7 +25,7 @@ class ContatoController extends Controller
      */
     public function postContato(EnviaEmailContatoRequest $request)
     {
-        \Mail::send(new \App\Mail\EmailContato($request->all()));
+        Mail::send(new EmailContato($request->all()));
         Flash::success('Seu contato foi enviado com sucesso!');
         return redirect()->back();
     }
