@@ -6,6 +6,7 @@
 
 <div class="caixa-email">
     @include('adminlte-templates::common.errors')
+    @include('flash::message')
     
     <div>
         {!! Form::open(['route' => 'contato']) !!}
