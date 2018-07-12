@@ -14,3 +14,8 @@
     <a href="{!! route('editorials.index') !!}"><i class="fa fa-book"></i><span>Editorial</span></a>
 </li>
 
+
+<li class="{{ Request::is('trabalhoPortfolios*') ? 'active' : '' }}">
+    <a href="{!! route('trabalhoPortfolios.index') !!}"><i class="fa fa-edit"></i><span>Trabalho Portfolios</span></a>
+</li>
+
