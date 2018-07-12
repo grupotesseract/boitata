@@ -1,4 +1,4 @@
-
+@if ( isset($motion) && $motion )
 <section id="secao-motion">
     
     <div class="borda-top"></div>
@@ -10,11 +10,11 @@
     </div>
     <div id="container-texto-motion" class="col-xs-12 col-md-4 text-left">
         <h4>{{ $motion->descricao }}</h4>
-
-     {{-- IGNORANDO ESSA TAG
-       <p class="tag-motion">#tag</p>
-      --}}
+        @foreach ($motion->categorias as $Categoria)
+            <p class="tags">{{$Categoria->nome}}</p>
+        @endforeach
 
     </div>
 
 </section>
+@endif

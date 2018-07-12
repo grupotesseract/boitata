@@ -13,7 +13,9 @@
                <div class="row">
                    {!! Form::model($motion, ['route' => ['motions.update', $motion->id], 'method' => 'patch']) !!}
 
-                        @include('motions.fields')
+                        @include('motions.fields',[
+                            'editing' => true
+                        ])
 
                    {!! Form::close() !!}
                </div>
