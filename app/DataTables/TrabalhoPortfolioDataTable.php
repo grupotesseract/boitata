@@ -72,13 +72,10 @@ class TrabalhoPortfolioDataTable extends DataTable
     private function getColumns()
     {
         return [
-            'id_behance' => ['name' => 'id_behance', 'data' => 'id_behance'],
+            'ordem' => ['name' => 'ordem', 'data' => 'ordem'],
             'titulo' => ['name' => 'titulo', 'data' => 'titulo'],
             'descricao' => ['name' => 'descricao', 'data' => 'descricao'],
-            'ordem' => ['name' => 'ordem', 'data' => 'ordem'],
             'url_behance' => ['name' => 'url_behance', 'data' => 'url_behance'],
-            'json_behance' => ['name' => 'json_behance', 'data' => 'json_behance'],
-            'covers' => ['name' => 'covers', 'data' => 'covers']
         ];
     }
 

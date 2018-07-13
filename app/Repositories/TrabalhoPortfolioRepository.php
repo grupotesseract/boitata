@@ -37,22 +37,26 @@ class TrabalhoPortfolioRepository extends BaseRepository
      *
      * @return void
      */
-    public function createComBehance()
+    public function createFromBehance()
     {
         $Behance = new \App\Helpers\Behance();
         $obj = $Behance->getProjetos();
         $novosTrabalhos = [];
+        $ordem = 1;
 
         foreach ($obj->projects as $Proj) {
-           $novosTrabalhos[] =  $this->create([
+            $novosTrabalhos[] =  [
                 'titulo' => $Proj->name,
                 'id_behance' => $Proj->id,
                 'json_behance' => $Proj,
+                'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
+                'ordem' => $ordem++,
                 'data_sync' => time()
-            ]);
-        } 
+            ];
+        }
 
+        $this->createMany($novosTrabalhos);
         return $novosTrabalhos;
     }
     

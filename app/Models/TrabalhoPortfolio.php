@@ -71,6 +71,35 @@ class TrabalhoPortfolio extends Model
     {
         return $this->attributes['covers'] = json_encode($value);
     }
+
+
+    /**
+     * getCoversAttribute 
+     *
+     * @param mixed $value
+     */
+    public function getCoversAttribute($value)
+    {
+        return json_decode($value);
+    }
+
+    /**
+     * getJsonBehanceAttribute 
+     *
+     * @param mixed $value
+     */
+    public function getJsonBehanceAttribute($value)
+    {
+        return json_decode($value);
+    }
+
+    /**
+     * Acessor para a url da cover original
+     */
+    public function getURLCapaAttribute()
+    {
+        return $this->covers->{"original"};
+    }
     
     
 }
