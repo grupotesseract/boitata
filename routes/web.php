@@ -49,3 +49,5 @@ Route::post('/contato', 'ContatoController@postContato')->name('contato');
 
 
 Route::resource('trabalhoPortfolios', 'TrabalhoPortfolioController');
+
+Route::resource('blocoBehances', 'BlocoBehanceController');

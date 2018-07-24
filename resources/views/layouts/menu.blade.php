@@ -19,3 +19,7 @@
     <a href="{!! route('trabalhoPortfolios.index') !!}"><i class="fa fa-edit"></i><span>Trabalho Portfolios</span></a>
 </li>
 
+<li class="{{ Request::is('blocoBehances*') ? 'active' : '' }}">
+    <a href="{!! route('blocoBehances.index') !!}"><i class="fa fa-edit"></i><span>Bloco Behances</span></a>
+</li>
+

@@ -45,21 +45,35 @@ class TrabalhoPortfolioRepository extends BaseRepository
         $ordem = 1;
 
         foreach ($obj->projects as $Proj) {
-            $novosTrabalhos[] =  [
+            $novosTrabalhos[] =  TrabalhoPortfolio::create([
                 'titulo' => $Proj->name,
                 'id_behance' => $Proj->id,
                 'json_behance' => $Proj,
                 'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
                 'ordem' => $ordem++,
-                'data_sync' => time()
-            ];
+                'data_sync' => \Carbon\Carbon::now()
+            ]);
         }
 
-        $this->createMany($novosTrabalhos);
+        foreach ($novosTrabalhos as $Trabalho) {
+            $detalhes = $Behance->getProjeto($Trabalho->id_behance);
+            $ordem=1;
+
+            foreach ($detalhes->project->modules as $moduloBehance) {
+                $Trabalho->blocosConteudo()->create([
+                    'tipo' => $moduloBehance->type,
+                    'ordem' => $ordem++,
+                    'json_behance' => $moduloBehance
+                ]);
+            }
+
+            sleep(1);
+        }
+        
+
         return $novosTrabalhos;
     }
-    
 
 
 }

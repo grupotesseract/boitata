@@ -21,6 +21,8 @@ class TrabalhoPortfolio extends Model
 {
     public $table = 'trabalho_portfolios';
 
+    public $dates = [ 'created_at', 'updated_at', 'data_sync' ];
+
     public $fillable = [
         'id_behance',
         'titulo',
@@ -100,6 +102,17 @@ class TrabalhoPortfolio extends Model
     {
         return $this->covers->{"original"};
     }
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     */
+    public function blocosConteudo()
+    {
+        return $this->hasMany(\App\Models\BlocoBehance::class);
+    }
+    
     
     
 }

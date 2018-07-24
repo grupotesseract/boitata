@@ -37,14 +37,14 @@
 <!-- Json Behance Field -->
 <div class="form-group">
     {!! Form::label('json_behance', 'Json Behance:') !!}
-    <p>{!! $trabalhoPortfolio->json_behance !!}</p>
+    <p>{!! json_encode($trabalhoPortfolio->json_behance) !!}</p>
 </div>
 
 <!-- Covers Field -->
 <div class="form-group">
     {!! Form::label('covers', 'Covers:') !!}
-    <p>{!! $trabalhoPortfolio->covers !!}</p>
-</div>
+    <p>{!! json_encode($trabalhoPortfolio->covers)  !!}</p>
+</divon
 
 <!-- Data Sync Field -->
 <div class="form-group">
