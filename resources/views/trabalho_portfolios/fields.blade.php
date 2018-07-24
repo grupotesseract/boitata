@@ -4,20 +4,32 @@
     {!! Form::text('titulo', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Descricao Field -->
+<!-- Categorias Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('descricao', 'Descricao:') !!}
-    {!! Form::text('descricao', null, ['class' => 'form-control']) !!}
+@if (isset($editing))
+    @include('categorias.select', [
+        'selecionadas' => $trabalhoPortfolio->categorias->pluck('id')
+    ])
+@else
+    @include('categorias.select')
+@endif
 </div>
 
 <!-- Url Behance Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('url_behance', 'Url Behance:') !!}
     {!! Form::text('url_behance', null, ['class' => 'form-control']) !!}
 </div>
 
+
+<!-- Descricao Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('descricao', 'Descricao:') !!}
+    {!! Form::textarea('descricao', null, ['class' => 'form-control summernote' ]) !!}
+</div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('trabalhoPortfolios.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('trabalhoPortfolios.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

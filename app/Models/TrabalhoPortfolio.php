@@ -112,6 +112,14 @@ class TrabalhoPortfolio extends Model
         return $this->hasMany(\App\Models\BlocoBehance::class);
     }
     
+    /**
+     * TrabalhoPortfolio pode ter varias categorias associadas
+     */
+    public function categorias()
+    {
+        return $this->morphToMany(\App\Models\Categoria::class, 'categorizavel');
+    }
+    
     
     /**
      * Acessor para retornar o HTML do Trabalho já parseado.

@@ -54,7 +54,6 @@ class TrabalhoPortfolioController extends AppBaseController
         $input = $request->all();
 
         $trabalhoPortfolio = $this->trabalhoPortfolioRepository->create($input);
-
         Flash::success('Trabalho Portfolio saved successfully.');
 
         return redirect(route('trabalhoPortfolios.index'));
@@ -119,6 +118,7 @@ class TrabalhoPortfolioController extends AppBaseController
         }
 
         $trabalhoPortfolio = $this->trabalhoPortfolioRepository->update($request->all(), $id);
+        $trabalhoPortfolio->categorias()->sync($request->categorias);
 
         Flash::success('Trabalho Portfolio updated successfully.');
 

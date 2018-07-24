@@ -92,6 +92,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
 
 @yield('scripts')
+@yield('js')
 
 </body>
 </html>

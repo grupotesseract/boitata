@@ -38,16 +38,11 @@ Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');
 Route::resource('categorias', 'CategoriaController');
 Route::resource('motions', 'MotionController');
 Route::resource('editorials', 'EditorialController');
+Route::resource('trabalhoPortfolios', 'TrabalhoPortfolioController');
+Route::resource('blocoBehances', 'BlocoBehanceController');
 
+Route::post('trabalhoPortfolios/resync', 'TrabalhoPortfolioController@postResyncTrabalhos')->name('trabalhoPortfolios.resync');
 
 Route::get('/contato', 'ContatoController@getContato');
 Route::post('/contato', 'ContatoController@postContato')->name('contato');
 
-
-
-
-
-
-Route::resource('trabalhoPortfolios', 'TrabalhoPortfolioController');
-
-Route::resource('blocoBehances', 'BlocoBehanceController');

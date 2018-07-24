@@ -146,6 +146,6 @@ class BlocoBehanceController extends AppBaseController
 
         Flash::success('Bloco Behance deleted successfully.');
 
-        return redirect(route('blocoBehances.index'));
+        return redirect()->back();
     }
 }

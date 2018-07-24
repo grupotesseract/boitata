@@ -74,7 +74,7 @@ class TrabalhoPortfolioDataTable extends DataTable
         return [
             'ordem' => ['name' => 'ordem', 'data' => 'ordem'],
             'titulo' => ['name' => 'titulo', 'data' => 'titulo'],
-            'descricao' => ['name' => 'descricao', 'data' => 'descricao'],
+            'descricao' => ['name' => 'descricao', 'data' => 'descricao', "visible"=>false],
             'url_behance' => ['name' => 'url_behance', 'data' => 'url_behance'],
         ];
     }
