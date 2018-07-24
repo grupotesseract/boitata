@@ -52,7 +52,6 @@ class TrabalhoPortfolio extends Model
      * @var array
      */
     public static $rules = [
-        'id_behance' => 'required',
         'titulo' => 'required',
         'descricao' => 'required'
     ];
@@ -104,7 +103,7 @@ class TrabalhoPortfolio extends Model
     }
 
     /**
-     * undocumented function
+     * Um Trabalho do Portfolio tem varios blocosConteudo
      *
      * @return void
      */
@@ -114,5 +113,22 @@ class TrabalhoPortfolio extends Model
     }
     
     
+    /**
+     * Acessor para retornar o HTML do Trabalho já parseado.
+     *
+     * @return string - HTML já parseado do conteudo do trabalho
+     */
+    public function getHtmlCompletoAttribute()
+    {
+        $htmlFinal='';
+
+        foreach ($this->blocosConteudo as $Bloco) {
+            $htmlFinal .= $Bloco->html;
+        }
+
+        return $htmlFinal;
+    }
+    
+
     
 }

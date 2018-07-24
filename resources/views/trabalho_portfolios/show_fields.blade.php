@@ -44,7 +44,7 @@
 <div class="form-group">
     {!! Form::label('covers', 'Covers:') !!}
     <p>{!! json_encode($trabalhoPortfolio->covers)  !!}</p>
-</divon
+</div>
 
 <!-- Data Sync Field -->
 <div class="form-group">

@@ -16,7 +16,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class BlocoBehance extends Model
 {
-    use SoftDeletes;
+    const TIPO_IMAGE='image';
+    const TIPO_TEXT='text';
+    const TIPO_VIDEO='video';
+    const TIPO_EMBED='embed';
+    const TIPO_AUDIO='audio';
 
     public $table = 'bloco_behances';
     
@@ -53,9 +57,6 @@ class BlocoBehance extends Model
         'nomeProjeto'
     ];
 
-
-
-
     /**
      * getJsonBehanceAttribute 
      *
@@ -77,7 +78,7 @@ class BlocoBehance extends Model
     }
 
     /**
-     * undocumented function
+     * Todo Bloco do Behance pertence a 1 TrabalhoPortfolio
      *
      * @return void
      */
@@ -87,11 +88,47 @@ class BlocoBehance extends Model
     }
 
     /**
-     * Acessor para 
+     * Acessor para o Nome do Projeto a qual esse bloco pertence
      */
     public function getNomeProjetoAttribute()
     {
         return $this->trabalhoPortfolio->titulo;
     }
     
+
+    /**
+     * Acessor para o Html formatado do bloco
+     *
+     * @return string
+     */
+    public function getHtmlAttribute()
+    {
+        switch ($this->tipo) {
+        case self::TIPO_IMAGE:
+            return "<img src='".$this->json_behance->src."' alt='".$this->nomeProjeto."'>";
+            break;
+
+        case self::TIPO_TEXT:
+            return $this->json_behance->text; 
+            break;
+
+        case self::TIPO_VIDEO:
+            return "<video src='".$this->json_behance->src."'>"; 
+            break;
+
+        case self:TIPO_EMBED:
+            return $this->json_behance->embed; 
+            break;
+
+        case self::TIPO_AUDIO:
+            return $this->json_behance->embed; 
+            break;
+        }
+
+
+        return null;
+    }
+
+
+
 }

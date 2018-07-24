@@ -16,18 +16,6 @@
     {!! Form::text('url_behance', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Json Behance Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('json_behance', 'Json Behance:') !!}
-    {!! Form::text('json_behance', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Covers Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('covers', 'Covers:') !!}
-    {!! Form::text('covers', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
