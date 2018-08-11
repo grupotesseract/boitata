@@ -27,7 +27,6 @@
             font-weight:bold;
             margin-right:10px;
         }
-        
     </style>
 @endsection
 
@@ -59,22 +58,22 @@
                 <div class="tab-pane" id="tab_2">
                     <div class="container-portfolio">
                         <ul class="list-group">
-                        @foreach ($trabalhoPortfolio->blocosConteudo as $bloco)
-                            <li class="list-group-item">
-                        <div class="col-xs-9 text-center behances-container">
-                            {!! $bloco->html !!}            
-                        </div>
-                        <div class="col-xs-3">
-                            {!! Form::open(['route' => ['blocoBehances.destroy', $bloco->id], 'method' => 'delete']) !!}
-                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
-                                'type' => 'submit',
-                                'class' => 'btn btn-danger btn-xs',
-                                'onclick' => "return confirm('Tem certeza?')"
-                            ]) !!}
-                            {!! Form::close() !!}
-                        </div>
-                            </li>
-                        @endforeach
+                            @foreach ($trabalhoPortfolio->blocosConteudo as $bloco)
+                                <li class="list-group-item">
+                                    <div class="col-xs-9 text-center behances-container">
+                                        {!! $bloco->html !!}            
+                                    </div>
+                                    <div class="col-xs-3">
+                                        {!! Form::open(['route' => ['blocoBehances.destroy', $bloco->id], 'method' => 'delete']) !!}
+                                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
+                                            'type' => 'submit',
+                                            'class' => 'btn btn-danger btn-xs',
+                                            'onclick' => "return confirm('Tem certeza?')"
+                                        ]) !!}
+                                        {!! Form::close() !!}
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -88,6 +87,6 @@
 @section('js')
     <script src="/js/summernote.js"></script>
     <script charset="utf-8">
-        $('.summernote').summernote({ height: 300});
+$('.summernote').summernote({ height: 300});
     </script>
 @endsection

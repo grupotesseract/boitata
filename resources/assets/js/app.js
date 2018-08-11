@@ -19,6 +19,7 @@ require('./dropzone_bindings')
 window.Dropzone = require('./dropzone_src');
 Dropzone.autoDiscover = false;
 
+require('./portfolio')
 
 $(document).ready(function(){
     $('.select2').select2();
