@@ -99,7 +99,7 @@ class TrabalhoPortfolio extends Model
      */
     public function getURLCapaAttribute()
     {
-        return $this->covers->{"original"};
+        return $this->covers->{"404"};
     }
 
     /**

@@ -22,6 +22,20 @@ class TrabalhoPortfolioController extends AppBaseController
     }
 
     /**
+     * Display a listing of TrabalhoPortfolio to site visitor.
+     *
+     * @param TrabalhoPortfolioDataTable $trabalhoPortfolioDataTable
+     * @return Response
+     */
+    public function listToVisitor()
+    {
+        $trabalhos = $this->trabalhoPortfolioRepository->all();
+        return view('portfolio')->with([
+            'trabalhos' => $trabalhos
+        ]);
+    }
+
+    /**
      * Display a listing of the TrabalhoPortfolio.
      *
      * @param TrabalhoPortfolioDataTable $trabalhoPortfolioDataTable
