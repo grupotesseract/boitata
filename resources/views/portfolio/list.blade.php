@@ -33,17 +33,51 @@ div.container-portfolio .container-texto h3 {
     font-size: 3em;
     font-weight: 800;
 }
+.container-portfolio a {
+    text-decoration: none;
+            border: 4px solid white;
+}
         .img-portfolio {
-            border: 3px solid white;
             height: 20vw;
             max-height: 200px;
             background-position: 50% 50%;
             background-size:100%;
             transition-property:background;
             transition-duration: 0.5s;
+            overflow:hidden;
+            position: relative;
         }
         .img-portfolio:hover {
             background-size:120%;
+        }
+        .img-portfolio .titulo {
+            background-color: rgba(0,0,0,0);
+            transition: all 1s;
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+        }
+        .img-portfolio:hover .titulo {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .img-portfolio h4 {
+            text-align: center;
+            color: white;
+            opacity: 0;
+            font-size: 1.5em;
+            padding:0 15px;
+            transition-property: opacity;
+            transition-duration: 0.5s;
+            text-decoration: none;
+            text-shadow: black 0px 0 5px; 
+        }
+        .img-portfolio:hover h4 {
+            opacity: 1;
         }
         .grid {
             max-width: 69em;
@@ -69,7 +103,6 @@ div.container-portfolio .container-texto h3 {
         .grid li a,
         .grid li img {
             outline: none;
-            border: none;
             display: block;
             max-width: 100%;
         }
@@ -93,8 +126,11 @@ div.container-portfolio .container-texto h3 {
         <ul class="grid effect-3" id="grid">
             @foreach($trabalhos as $trabalho)
             <li>
-                <a href="http://drbl.in/fWMM">
+                <a href="/portfolio/{{ $trabalho->id }}">
                         <div class="img-portfolio" style="background-image: url('{{ $trabalho->URLCapa }}')">
+                            <div class="titulo">
+                                <h4>{{ $trabalho->titulo }}</h4>
+                            </div>
                         </div>
                 </a>
             </li>
