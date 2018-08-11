@@ -29,7 +29,7 @@ class TrabalhoPortfolioSeeder extends Seeder
     public function run()
     {
         $this->command->info("## Pegando projetos do Behance... ");
-        $projetos = $this->repositorioTrabalhos->createFromBehance();
+        $projetos = $this->repositorioTrabalhos->createAllFromBehance();
         $this->command->info("## GGWP... ". count($projetos). " projetos adicionados :+1:");
 
     }
