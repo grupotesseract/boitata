@@ -23,7 +23,6 @@ class CreateBlocoBehancesTable extends Migration
             $table->foreign('trabalho_portfolio_id')->references('id')->on('trabalho_portfolios');
 
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

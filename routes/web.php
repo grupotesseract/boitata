@@ -42,6 +42,7 @@ Route::resource('trabalhoPortfolios', 'TrabalhoPortfolioController');
 Route::resource('blocoBehances', 'BlocoBehanceController');
 
 Route::post('trabalhoPortfolios/resync', 'TrabalhoPortfolioController@postResyncTrabalhos')->name('trabalhoPortfolios.resync');
+Route::post('trabalhoPortfolios/getnovos', 'TrabalhoPortfolioController@postGetNovosTrabalhos')->name('trabalhoPortfolios.getNovos');
 
 Route::get('/contato', 'ContatoController@getContato');
 Route::post('/contato', 'ContatoController@postContato')->name('contato');

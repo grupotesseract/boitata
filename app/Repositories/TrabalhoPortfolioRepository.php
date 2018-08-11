@@ -33,11 +33,11 @@ class TrabalhoPortfolioRepository extends BaseRepository
 
 
     /**
-     * undocumented function
+     * Metodo para criar todos os projetos a partir do Behance
      *
-     * @return void
+     * @return array novos TrabalhosPortfolio
      */
-    public function createFromBehance()
+    public function createAllFromBehance()
     {
         $Behance = new \App\Helpers\Behance();
         $obj = $Behance->getProjetos();
@@ -57,6 +57,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
         }
 
         foreach ($novosTrabalhos as $Trabalho) {
+            \Log::info("\n## Obtendo detalhes do projeto ".$Trabalho->titulo);
             $detalhes = $Behance->getProjeto($Trabalho->id_behance);
             $ordem=1;
 
@@ -67,14 +68,64 @@ class TrabalhoPortfolioRepository extends BaseRepository
                     'json_behance' => $moduloBehance
                 ]);
             }
-
-            sleep(1);
         }
-        
-
         return $novosTrabalhos;
     }
 
+    /**
+     * Metodo para criar os projetos que ja nao existirem no BD a partir do Behance
+     *
+     * @return array novos TrabalhosPortfolio
+     */
+    public function createNovosFromBehance()
+    {
+        $Behance = new \App\Helpers\Behance();
+        $obj = $Behance->getProjetos();
 
+
+        $idsBehance = collect($obj->projects)->pluck('id')->all();
+        $idsTrabsAtuais = $this->all()->pluck('id_behance')->all();
+        $idsNovos = array_diff($idsBehance, $idsTrabsAtuais);
+
+        if (empty($idsNovos)) {
+            return [];
+        }
+
+        $novosTrabalhos = [];
+        $ordem = TrabalhoPortfolio::max('ordem')+1;
+        foreach ($obj->projects as $Proj) {
+            
+            //Se nao for um projeto com id Novo, só pular
+            if ( ! array_search($Proj->id, $idsNovos) ) {
+                continue;
+            }
+
+            $novosTrabalhos[] =  TrabalhoPortfolio::create([
+                'titulo' => $Proj->name,
+                'id_behance' => $Proj->id,
+                'json_behance' => $Proj,
+                'url_behance' => $Proj->url,
+                'covers' => $Proj->covers,
+                'ordem' => $ordem++,
+                'data_sync' => \Carbon\Carbon::now()
+            ]);
+        }
+
+        //Obtem os modulos que compoem o projeto no behance
+        foreach ($novosTrabalhos as $Trabalho) {
+            \Log::info("\n## Obtendo detalhes do projeto ".$Trabalho->titulo);
+            $detalhes = $Behance->getProjeto($Trabalho->id_behance);
+            $ordem=1;
+
+            foreach ($detalhes->project->modules as $moduloBehance) {
+                $Trabalho->blocosConteudo()->create([
+                    'tipo' => $moduloBehance->type,
+                    'ordem' => $ordem++,
+                    'json_behance' => $moduloBehance
+                ]);
+            }
+        }
+        return $novosTrabalhos;
+    }
 }
 

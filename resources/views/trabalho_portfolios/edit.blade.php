@@ -13,6 +13,10 @@
             overflow:auto;
         }
 
+        li.list-group-item {
+            display: -webkit-box;
+        }
+
         .descricao-container {
             background-color:#424242;
             display:block;
@@ -54,7 +58,9 @@
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="tab_2">
                     <div class="container-portfolio">
+                        <ul class="list-group">
                         @foreach ($trabalhoPortfolio->blocosConteudo as $bloco)
+                            <li class="list-group-item">
                         <div class="col-xs-9 text-center behances-container">
                             {!! $bloco->html !!}            
                         </div>
@@ -67,8 +73,9 @@
                             ]) !!}
                             {!! Form::close() !!}
                         </div>
+                            </li>
                         @endforeach
-
+                        </ul>
                     </div>
                 </div>
                 <!-- /.tab-pane -->
@@ -76,11 +83,6 @@
             <!-- /.tab-content -->
         </div>
     </div>
-
-
-
-
-
 @endsection
 
 @section('js')

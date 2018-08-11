@@ -148,4 +148,33 @@ class TrabalhoPortfolioController extends AppBaseController
 
         return redirect(route('trabalhoPortfolios.index'));
     }
+
+
+    /**
+     * postResyncTrabalhos - Limpa os TrabalhosPortfolio e Resynca com o Behance
+     */
+    public function postResyncTrabalhos()
+    {
+        $this->trabalhoPortfolioRepository->all()->each(function($Trab) {
+            $Trab->delete();
+        });
+
+        $this->trabalhoPortfolioRepository->createAllFromBehance();
+
+        Flash::success('Trabalhos atualizados com sucesso!.');
+        return redirect(route('trabalhoPortfolios.index'));
+    }
+
+    /**
+     * postGetNovosTrabalhos - Busca por novos TrabalhosPortfolio no Behance
+     */
+    public function postGetNovosTrabalhos()
+    {
+        $qnt = $this->trabalhoPortfolioRepository->createNovosFromBehance();
+
+        Flash::success('Trabalhos atualizados com sucesso!.');
+        return redirect(route('trabalhoPortfolios.index'));
+    }
+    
+    
 }
