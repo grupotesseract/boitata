@@ -22,6 +22,40 @@ class TrabalhoPortfolioController extends AppBaseController
     }
 
     /**
+     * Display a listing of TrabalhoPortfolio to site visitor.
+     *
+     * @param TrabalhoPortfolioDataTable $trabalhoPortfolioDataTable
+     * @return Response
+     */
+    public function listToVisitor()
+    {
+        $trabalhos = $this->trabalhoPortfolioRepository->all();
+        return view('portfolio')->with([
+            'trabalhos' => $trabalhos
+        ]);
+    }
+
+    /**
+     * Display a TrabalhoPortfolio to site visitor.
+     *
+     * @param TrabalhoPortfolioDataTable $trabalhoPortfolioDataTable
+     * @return Response
+     */
+    public function showToVisitor($id)
+    {
+        $trabalhoPortfolio = $this->trabalhoPortfolioRepository->findWithoutFail($id);
+        if (empty($trabalhoPortfolio)) {
+            Flash::error('Trabalho Portfolio not found');
+
+            return redirect(route('portfolio.list'));
+        }
+
+        return view('portfolio.view')->with([
+            'trabalho' => $trabalhoPortfolio
+        ]);
+    }
+
+    /**
      * Display a listing of the TrabalhoPortfolio.
      *
      * @param TrabalhoPortfolioDataTable $trabalhoPortfolioDataTable

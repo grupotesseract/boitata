@@ -18,7 +18,7 @@
               {{-- Removido até dev dessa feature
             <li><a href="/quem-somos">QUEM SOMOS</a></li>
               --}}
-            <li><a href="https://www.behance.net/coletivoboitata">PORTFOLIO</a></li>    
+            <li><a href="/portfolio">PORTFOLIO</a></li>    
             <li><a href="/contato">CONTATO</a></li>
             <li class="wrapper-social-media-menu">
                 @include ('partials.social-media-links')
