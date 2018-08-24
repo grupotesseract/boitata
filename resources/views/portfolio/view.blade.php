@@ -5,6 +5,14 @@
     <div class="borda-top"></div>
 
     <div class="container-portfolio container">
+        <div class="row text-right">
+            <div class="col-xs-3">&nbsp;</div>
+            <div class="col-xs-9 text-center">
+                <div class="container-btn-voltar">
+                    <a href="/portfolio" class="voltar">Voltar <i class="fa fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
         <div class="col-xs-3 descricao-container">
             <h1>{{ $trabalho->titulo }}</h1>
 
@@ -19,8 +27,6 @@
             {!! $trabalho->htmlCompleto !!}            
         </div>
 
-        <a href="/portfolio">Voltar</a>
-        {!! $trabalho->html_completo !!}
     </div>
 </section>
 @endsection
