@@ -15,28 +15,50 @@ a.voltar {
     text-transform: uppercase;
     color: white;
 }
+.voltar-cc {
+    text-align:center;
+    @media screen and (max-width: 990px) {
+        text-align:right;
+    }
+}
 .container-btn-voltar {
     width: 600px;
+    @media screen and (max-width: 990px) {
+        width:10em;
+    }
     display: inline-block;
     text-align: right;
     padding-bottom: 2rem;
 }
 div.descricao-container {
     background-color: #424242;
+    min-height: 500px;
+    @media screen and (max-width: 990px) {
+        background-color:rgba(0,0,0,0);
+        min-height: 200px;
+    }
     h1 {
+        font-size: 2em;
+        font-weight: bold;
         text-transform: uppercase;
     }
 }
 div.behances-container {
     text-align: center;
 
-    img + div.caption {
+    img + div.caption,
+    img + div.main-text {
         padding-top:2rem;
     }
-    div.caption {
+    img {
+        max-width: 100%;
+    }
+    div.caption,
+    div.main-text {
         padding-bottom:2rem;
     }
-    .caption {
+    .caption,
+    .main-text {
         padding-right: 2rem;
         padding-left: 2rem;
         display: inline-block;
@@ -108,14 +130,22 @@ div.container-portfolio .container-texto h3 {
     list-style: none;
     margin: 30px auto;
     padding: 0;
-}
-
-.grid li {
-    display: block;
-    float: left;
-    padding: 7px;
-    width: 33%;
-    opacity: 0;
+    li {
+        display: block;
+        float: left;
+        padding: 7px;
+        width: 33%;
+        opacity: 0;
+        @media screen and (max-width: 640px) {
+            width: 50%;
+            .img-portfolio {
+                height: 35vw;
+                h4 {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
 }
 
 .grid li.shown,
