@@ -115,7 +115,7 @@ class BlocoBehance extends Model
             return "<video src='".$this->json_behance->src."'>"; 
             break;
 
-        case self:TIPO_EMBED:
+        case self::TIPO_EMBED:
             return $this->json_behance->embed; 
             break;
 
