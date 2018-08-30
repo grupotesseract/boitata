@@ -5,9 +5,11 @@
 
 #secao-portfolio {
     color: white;
-    background: url(/formas_fundo_portfolio.png) black;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: url(/formas_fundo_portfolio.png);
+    background-repeat: repeat-y;
+    background-size: 105% 30%;
+    background-position-y: 40%;
+    background-color: black;
     min-height: 950px;
     padding-bottom: 21vw;
 }
@@ -85,7 +87,7 @@ div.container-portfolio .container-texto h3 {
 }
 .img-portfolio {
     height: 20vw;
-    max-height: 200px;
+    max-height: 404px;
     background-position: 50% 50%;
     background-size:100%;
     transition-property:background;
@@ -126,7 +128,6 @@ div.container-portfolio .container-texto h3 {
     opacity: 1;
 }
 .grid {
-    max-width: 69em;
     list-style: none;
     margin: 30px auto;
     padding: 0;
