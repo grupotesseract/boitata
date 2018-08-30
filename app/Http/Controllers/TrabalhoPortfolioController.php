@@ -26,6 +26,15 @@ class TrabalhoPortfolioController extends AppBaseController
      */
     public function listToVisitor()
     {
+        if (\Request::get('categoria')) {
+            $trabalhos = $this->trabalhoPortfolioRepository
+                ->getPorCategoria(\Request::get('categoria'))->get();
+
+            return view('portfolio')->with([
+                'trabalhos' => $trabalhos
+            ]);
+        }
+
         $trabalhos = $this->trabalhoPortfolioRepository->all();
         return view('portfolio')->with([
             'trabalhos' => $trabalhos

@@ -44,7 +44,6 @@ class TrabalhoPortfolioRepository extends BaseRepository
         $novosTrabalhos = [];
         $ordem = 1;
 
-        //para cada um dos projetos, criar no BD
         foreach ($obj->projects as $Proj) {
             $novosTrabalhos[] =  TrabalhoPortfolio::create([
                 'titulo' => $Proj->name,
@@ -53,18 +52,15 @@ class TrabalhoPortfolioRepository extends BaseRepository
                 'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
                 'ordem' => $ordem++,
-                'data_sync' => time()
+                'data_sync' => \Carbon\Carbon::now()
             ]);
         }
 
-        //Iterando novamente para pegar os detalhes de cada projeto, 
-        //@TODO refatorar para 1 unico foreach? - fazer essa segunda etapa assync? executar 1 unica query para crar em lote?
         foreach ($novosTrabalhos as $Trabalho) {
             \Log::info("\n## Obtendo detalhes do projeto ".$Trabalho->titulo);
             $detalhes = $Behance->getProjeto($Trabalho->id_behance);
             $ordem=1;
 
-            //Para cada um dos modulos que compoem um projeto do behance, criar no BD
             foreach ($detalhes->project->modules as $moduloBehance) {
                 $Trabalho->blocosConteudo()->create([
                     'tipo' => $moduloBehance->type,
@@ -111,7 +107,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
                 'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
                 'ordem' => $ordem++,
-                'data_sync' => time()
+                'data_sync' => \Carbon\Carbon::now()
             ]);
         }
 
@@ -134,34 +130,15 @@ class TrabalhoPortfolioRepository extends BaseRepository
 
 
     /**
-     * AtualizarTrabalhoBehance - Metodo para sycronizar 1 unico TrabalhoPortfolio com o Behance
-     * @param TrabalhoPortfolio $Trabalho
-     * @return TrabalhoPortfolio - instancia do Trabalho após re-syncronizar
+     * undocumented function
+     *
+     * @return void
      */
-    public function atualizarTrabalhoBehance(TrabalhoPortfolio $Trabalho)
+    public function getPorCategoria($categoriaID)
     {
-        \Log::info("\n## Atualizando o projeto ".$Trabalho->titulo);
-
-        $Behance = new \App\Helpers\Behance();
-        $Trabalho->blocosConteudo()->delete();
-        $detalhes = $Behance->getProjeto($Trabalho->id_behance);
-        $ordem=1;
-
-        //Inserindo cada um os modulos.
-        foreach ($detalhes->project->modules as $moduloBehance) {
-            $Trabalho->blocosConteudo()->create([
-                'tipo' => $moduloBehance->type,
-                'ordem' => $ordem++,
-                'json_behance' => $moduloBehance
-            ]);
-        }
-
-        //Atualizado as capas e a data de syncronizacao
-        $Trabalho->covers = $detalhes->project->covers;
-        $Trabalho->data_sync = time();
-        $Trabalho->save();
-
-        return $Trabalho;
+        return $this->model->whereHas('categorias', function($qCat) use ($categoriaID){
+            $qCat->where('categorias.id', $categoriaID);        
+        });
     }
     
 }

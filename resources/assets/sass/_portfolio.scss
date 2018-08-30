@@ -147,19 +147,34 @@ div.container-portfolio .container-texto h3 {
         padding: 7px;
         width: 33%;
         opacity: 0;
-        min-height: 220px;
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 360px) {
             width: 50%;
             .img-portfolio {
-                height: 19vh;
+                height: 18vh;
                 h4 {
                     font-size: 1.1em;
                 }
             }
         }
-        @media screen and (min-width:641px) and (max-width: 1440px) {
+        @media screen and (min-width: 361px) and (max-width: 640px) {
+            width: 50%;
             .img-portfolio {
-                height: 35vh;
+                height: 20vh;
+                min-height:200px;
+                h4 {
+                    font-size: 1.1em;
+                }
+            }
+        }
+        @media screen and (min-width:641px) and (max-width: 960px) {
+            width: 50%;
+            .img-portfolio {
+                height: 25vh;
+            }
+        }
+        @media screen and (min-width:1025px) and (max-width: 1440px) {
+            .img-portfolio {
+                height: 40vh;
             }
         }
     }
