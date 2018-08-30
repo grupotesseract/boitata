@@ -5,9 +5,14 @@
 
     <div class="container-portfolio container">
         <div class="row">
-            <div class="col-xs-12 col-md-4"></div>
-            <div class="col-xs-12 col-md-4 container-texto text-center">
+            <div class="col-xs-12 container-texto text-center">
                 <h3>portfolio</h3>
+            </div>
+            <div id="filtro-tags" class="col-xs-12">
+                @foreach(\App\Models\Categoria::all() as $categoria)
+                    <a href="portfolio?cateogria={{$categoria->id}}" target="_blank"> {{$categoria->nome}}</a>
+                @endforeach
+
             </div>
             <div class="col-xs-12 col-md-4">&nbsp;</div>
         </div>

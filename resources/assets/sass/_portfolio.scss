@@ -13,6 +13,17 @@
     min-height: 950px;
     padding-bottom: 21vw;
 }
+
+#filtro-tags {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+
+    a {
+        color: white;
+    }
+}
+
 a.voltar {
     text-transform: uppercase;
     color: white;
@@ -86,8 +97,7 @@ div.container-portfolio .container-texto h3 {
     border: 4px solid white;
 }
 .img-portfolio {
-    height: 20vw;
-    max-height: 404px;
+    height: 26vh;
     background-position: 50% 50%;
     background-size:100%;
     transition-property:background;
@@ -137,13 +147,19 @@ div.container-portfolio .container-texto h3 {
         padding: 7px;
         width: 33%;
         opacity: 0;
+        min-height: 220px;
         @media screen and (max-width: 640px) {
             width: 50%;
             .img-portfolio {
-                height: 35vw;
+                height: 19vh;
                 h4 {
                     font-size: 1.1em;
                 }
+            }
+        }
+        @media screen and (min-width:641px) and (max-width: 1440px) {
+            .img-portfolio {
+                height: 35vh;
             }
         }
     }
