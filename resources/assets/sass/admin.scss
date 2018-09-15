@@ -1,0 +1,51 @@
+
+
+
+.container-area-upload {
+    margin: auto;
+    width: 80%;
+
+    .dropzone {
+        cursor: pointer;
+        background: #cdcdcd;
+        min-height: 150px;
+        border: 5px dashed rgba(255, 129, 0, 0.69);
+        text-align: center;
+        
+        .dz-image {
+            margin: auto;
+        }
+
+        .dz-preview.dz-image-preview {
+            background: none;
+        }
+
+        .dz-error {
+            .dz-progress,.dz-size,.dz-details,.dz-filename {
+                display:none;
+            }
+        }
+
+        &.dz-started {
+            h2, i {
+                display: none;
+            }
+        }
+
+        &.dz-drag-hover {
+            background: rgba(205,205,205,0.6);
+        }
+
+        &:hover {
+            background: rgba(205,205,205,0.6);
+        }
+        
+    }
+    .dz-error-mark {
+        display: none;
+    }
+    .dz-success-mark {
+        display: none;
+    }
+}
+

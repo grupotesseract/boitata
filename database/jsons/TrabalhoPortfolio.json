@@ -1,0 +1,91 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "id_behance",
+        "fillable": true,
+        "dbType": "integer",
+        "htmlType": "numeric",
+        "validations": "required"
+    },
+    {
+        "name": "titulo",
+        "fillable": true,
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required"
+    },
+    {
+        "name": "descricao",
+        "fillable": true,
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required"
+    },
+    {
+        "name": "ordem",
+        "fillable": true,
+        "dbType": "integer",
+        "htmlType": "numeric"
+    },
+    {
+        "name": "url_behance",
+        "dbType": "string",
+        "fillable": true,
+        "htmlType": "text"
+    },
+    {
+        "name": "json_behance",
+        "dbType": "json",
+        "fillable": true,
+        "htmlType": "text"
+    },
+    {
+        "name": "covers",
+        "dbType": "json",
+        "fillable": true,
+        "htmlType": "text"
+    },
+    {
+        "name": "data_sync",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]

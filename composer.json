@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-ide-helper": "^2.3",
         "doctrine/dbal": "~2.3",
+        "guzzlehttp/guzzle": "^6.3",
         "infyomlabs/adminlte-templates": "5.4.x-dev",
         "infyomlabs/laravel-generator": "5.4.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
@@ -18,7 +19,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
-        "spatie/laravel-googletagmanager": "^2.4"
+        "spatie/laravel-googletagmanager": "^2.4",
+        "yajra/laravel-datatables-oracle": "6.20"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

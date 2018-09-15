@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\TrabalhoPortfolio;
+use App\Observers\TrabalhoPortfolioObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        TrabalhoPortfolio::observe(TrabalhoPortfolioObserver::class);
     }
 
     /**

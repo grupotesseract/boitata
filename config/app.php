@@ -189,6 +189,8 @@ return [
 
         Jenssegers\Agent\AgentServiceProvider::class,
 
+        Yajra\Datatables\DatatablesServiceProvider::class,
+
     ],
 
     /*

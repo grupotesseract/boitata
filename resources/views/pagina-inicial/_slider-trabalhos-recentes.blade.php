@@ -8,7 +8,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" style="">
 
     @foreach ($trabalhosRecentes as $key => $TrabalhoRecente)
 
@@ -17,6 +17,9 @@
                <img src="{{ $TrabalhoRecente->foto->URLCloudinary }}" alt="{{ $TrabalhoRecente->titulo }}">
            </a>
           <h3>{{ $TrabalhoRecente->titulo }}</h3>
+          @foreach ($TrabalhoRecente->categorias as $Categoria)
+            <span class="tags">{{$Categoria->nome}}</span>
+          @endforeach
       </div>
 
     @endforeach
