@@ -87,6 +87,19 @@
 @section('js')
     <script src="/js/summernote.js"></script>
     <script charset="utf-8">
-$('.summernote').summernote({ height: 300});
+    $('.summernote').summernote({ 
+         minHeight: 200,
+         fontSizes: ['12', '14', '18', '19', '20', '21','22','23','24','25', '28', '36', '48'],
+         toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['format', ['style']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'paragraph']],
+            ['height', ['height']],
+            ['misc', ['fullscreen', 'undo', 'redo']]
+          ]
+         
+    });
     </script>
 @endsection
