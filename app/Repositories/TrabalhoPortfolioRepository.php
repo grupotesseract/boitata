@@ -141,5 +141,32 @@ class TrabalhoPortfolioRepository extends BaseRepository
         });
     }
     
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     */
+    public function atualizarTrabalhoBehance($Trabalho)
+    {
+        $Trabalho->blocosConteudo()->delete();
+        \Log::info("\n## Obtendo detalhes do projeto ".$Trabalho->titulo);
+        $Behance = new \App\Helpers\Behance();
+        $detalhes = $Behance->getProjeto($Trabalho->id_behance);
+        $ordem=1;
+
+        foreach ($detalhes->project->modules as $moduloBehance) {
+            $Trabalho->blocosConteudo()->create([
+                'tipo' => $moduloBehance->type,
+                'ordem' => $ordem++,
+                'json_behance' => $moduloBehance
+            ]);
+        }
+        return null;
+    }
+    
+
+
+
 }
 
