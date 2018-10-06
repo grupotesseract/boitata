@@ -1,51 +1,57 @@
-
 nav#menu-principal {
-    div.esconde-borda {
-        position:fixed;
-        top: 0px;
-        height:68px;
-        background: white;
-        width:260px;
-    }
+  div.esconde-borda {
+    position: fixed;
+    top: 0px;
+    height: 68px;
+    background: white;
+    width: 260px;
+  }
 
-    // escondendo logo inicialmente
+  // escondendo logo inicialmente
+  img.logo-menu-principal {
     img.logo-menu-principal { 
-        &.escondida {
-            opacity:0;
-            display:none;
-        }
-        display:block;
-        position:fixed;
-        top: 0px;
+  img.logo-menu-principal {
+    &.escondida {
+      opacity: 0;
+      display: none;
     }
 
+    display: block;
+    position: fixed;
+    top: 0;
+  }
+
+  img.borda-menu-principal {
     img.borda-menu-principal { 
-        &.escondida {
-            margin-top:-100px;
-        }
-        margin-top:9px;
-        display:block;
-        position:fixed;
-        top: 0px;
+  img.borda-menu-principal {
+    &.escondida {
+      margin-top:-100px;
     }
 
-    div.navbar-collapse {
-        border-color: transparent;
-    }
+    margin-top: 9px;
+    display: block;
+    position: fixed;
+    top: 0;
+  }
 
+  div.navbar-collapse {
+    border-color: transparent;
+  }
 
-    font-family: 'Nunito', sans-serif;
-    border-color: #939598;
-    box-shadow: #939598 0px 0px 0px 1px;
-    padding: 9px 0px;
+  border-color: #939598;
+  box-shadow: #939598 0 0 0 1px;
+  padding: 9px 0px;
 
-    li~li {
-        margin-left: 3rem;
-    }
+  li ~ li {
+    margin-left: 3rem;
+  }
 
-    a {
-        color: #222;
-    }
+  .wrapper-social-media-menu {
+    display: flex;
+    margin-left: 5rem;
+  }
+}
+
 
     li.wrapper-social-media-menu {
         display: flex;
