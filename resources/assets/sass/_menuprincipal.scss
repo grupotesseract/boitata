@@ -9,8 +9,6 @@ nav#menu-principal {
 
   // escondendo logo inicialmente
   img.logo-menu-principal {
-    img.logo-menu-principal { 
-  img.logo-menu-principal {
     &.escondida {
       opacity: 0;
       display: none;
@@ -21,8 +19,6 @@ nav#menu-principal {
     top: 0;
   }
 
-  img.borda-menu-principal {
-    img.borda-menu-principal { 
   img.borda-menu-principal {
     &.escondida {
       margin-top:-100px;
@@ -52,9 +48,30 @@ nav#menu-principal {
   }
 }
 
+// Cores de destaque diferentes para cada página
+.navbar-default .navbar-nav > li {
+  > a {
+    color: #030305;
+  }
 
-    li.wrapper-social-media-menu {
-        display: flex;
-        margin-left: 5rem;
+  > a[href="/contato"] {
+    &:hover,
+    &.active {
+      color: #e7b401;
     }
+  }
+
+  > a[href="/quem-somos"] {
+    &:hover,
+    &.active {
+      color: #a7231e;
+    }
+  }
+
+  > a[href="/portfolio"] {
+    &:hover,
+    &.active {
+      color: #52bad7;
+    }
+  }
 }
