@@ -1,10 +1,10 @@
 /*********
- * Aqui ficam os estilos gerais
- */
+* Aqui ficam os estilos gerais
+*/
 
 body {
-    font-family: 'Nunito', sans-serif;
-    background: #cdcdcd;
+  font-family: 'Nunito', sans-serif;
+  background: #cdcdcd;
 }
 
 video {
@@ -15,57 +15,55 @@ video {
 }
 
 body > section {
-    width: 100%;
-    min-height:20vh;
-    float:left;
+  width: 100%;
+  min-height:20vh;
+  float:left;
 }
 
 footer {
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-image:url('/rodape_desk_2.png');
-    width: 100%;
-    float:left;
-    position:relative;
-    background-position: 80% bottom;
-    min-height: 240px;
-    margin-top:-240px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url('/rodape_desk_2.png');
+  width: 100%;
+  float:left;
+  position:relative;
+  background-position: 80% bottom;
+  min-height: 240px;
+  margin-top:-240px;
 }
 
 footer div.container-footer {
-    margin-bottom: -10px;
+  margin-bottom: -10px;
 }
 
 footer img.logo-rodape {
-    max-height: 65px;
-    position: absolute;
-    right: 26.5%;
-    bottom: 65%;
+  max-height: 65px;
+  position: absolute;
+  right: 26.5%;
+  bottom: 65%;
 }
 
 footer div.container-texto-rodape {
-    display: -webkit-inline-box;
-    font-size: 16px;
-    margin-top: 40px;
-    margin-left: 45%;
+  display: -webkit-inline-box;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-left: 45%;
 
-    &.mobile {
-        display:none;
-    }
+  &.mobile {
+    display:none;
+  }
 }
 
 footer #infos-rodape {
-    bottom: 1em;
-    font-size:1.6em;
-    position:absolute;
-    a {
-        color: black;
-        text-decoration: none;
-        padding: 0 0.3em 0 0.3em;
-        i.fa {
-            font-size: 1.2em;
-        }
+  bottom: 1em;
+  font-size:1.6em;
+  position:absolute;
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 0 0.3em 0 0.3em;
+    i.fa {
+      font-size: 1.2em;
     }
+  }
 }
-
-
