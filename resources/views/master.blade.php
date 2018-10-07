@@ -56,6 +56,10 @@
 
         @include('footer')
 
+        @if (env('APP_ENV') === 'local')
+            <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.24.7"></script>
+        @endif
+
         @yield('js')
     </body>
 </html>
