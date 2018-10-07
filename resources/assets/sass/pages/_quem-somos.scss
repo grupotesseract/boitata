@@ -1,0 +1,95 @@
+.quem-somos {
+  background-color: #fff;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  h3 {
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 700px;
+  }
+
+  > div {
+    margin: 0;
+    padding: 100px 0;
+  }
+}
+
+.quem-somos-header {
+  background: transparent url(/img/quem-somos/img-equipe.jpg) no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.quem-somos-info {
+  background: #a5dbf5;
+  background: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
+  color: #030000;
+  padding: 100px 0;
+
+  p {
+    text-align: justify;
+  }
+
+  p:first-of-type {
+    font-weight: 500;
+  }
+
+  strong {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.quem-somos-fotos {
+  margin-top: 100px;
+  text-align: center;
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.quem-somos-tarefas {
+  background: #c9d3d9;
+  background: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
+  height: 600px;
+}
+
+.quem-somos-parcerias {
+  background: #000;
+  height: 600px;
+
+  h2 {
+    color: #72c5e1;
+    text-align: right;
+  }
+}
