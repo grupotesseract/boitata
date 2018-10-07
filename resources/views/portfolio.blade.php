@@ -1,7 +1,5 @@
-@extends ('master')
+@extends('master')
 
-@section ('content')
-        @include ('portfolio.list')
+@section('content')
+    @include('portfolio.list')
 @endsection
-
-
