@@ -52,6 +52,7 @@
 .navbar-default .navbar-nav > li {
   > a {
     color: #030305;
+    transition: color ease .25s;
   }
 
   > a[href="/contato"] {
