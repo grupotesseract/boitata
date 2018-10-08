@@ -50,9 +50,11 @@ class TrabalhoPortfolioController extends AppBaseController
     public function showToVisitor($id)
     {
         $trabalhoPortfolio = $this->trabalhoPortfolioRepository->findWithoutFail($id);
+        $trabalhoPortfolio = $trabalhoPortfolio ? $trabalhoPortfolio : 
+            $this->trabalhoPortfolioRepository->findBySlugWithoutFail($id);        
+            
         if (empty($trabalhoPortfolio)) {
             Flash::error('Trabalho do portfólio não encontrado');
-
             return redirect(route('portfolio.list'));
         }
 

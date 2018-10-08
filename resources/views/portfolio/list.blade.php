@@ -8,19 +8,13 @@
             <div class="col-xs-12 container-texto text-center">
                 <h3>portfolio</h3>
             </div>
-            <div id="filtro-tags" class="col-xs-12">
-                <a href="portfolio"> TODOS </a>
-                @foreach(\App\Models\Categoria::all() as $categoria)
-                    <a href="portfolio?categoria={{$categoria->id}}"> {{$categoria->nome}}</a>
-                @endforeach
-
-            </div>
+            @include('partials.lista-tags', ['mostrarTodos'=>true])
             <div class="col-xs-12 col-md-4">&nbsp;</div>
         </div>
         <ul class="grid effect-3" id="grid">
             @foreach($trabalhos as $trabalho)
             <li>
-                <a href="/portfolio/{{ $trabalho->id }}">
+                <a href="/portfolio/{{ $trabalho->slug }}">
                         <div class="img-portfolio" style="background-image: url('{{ $trabalho->URLCapa }}')">
                             <div class="titulo">
                                 <h4>{{ $trabalho->titulo }}</h4>

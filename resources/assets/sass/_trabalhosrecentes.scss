@@ -6,6 +6,15 @@
     background-image: url('/bg_trabalhos_recentes.png');
     background-repeat: no-repeat;
     background-size:contain;
+
+    div#filtro-tags {
+        padding: 0px 20% 0 10%;
+        margin: -6rem 0 5rem;
+        a {
+            font-size: 1.35rem;
+        }
+    }
+
     
     .texto-vertical {
         transform: rotate(270deg);
