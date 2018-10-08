@@ -79,12 +79,12 @@ class TrabalhoPortfolioRepository extends BaseRepository
      */
     public function createNovosFromBehance()
     {
+        \Log::info("\n## Checando por novos projetos no Behance!.. ");
         $Behance = new \App\Helpers\Behance();
         $obj = $Behance->getProjetos();
 
-
         $idsBehance = collect($obj->projects)->pluck('id')->all();
-        $idsTrabsAtuais = $this->all()->pluck('id_behance')->all();
+        $idsTrabsAtuais = TrabalhoPortfolio::all()->pluck('id_behance')->all();
         $idsNovos = array_diff($idsBehance, $idsTrabsAtuais);
 
         if (empty($idsNovos)) {
@@ -93,10 +93,12 @@ class TrabalhoPortfolioRepository extends BaseRepository
 
         $novosTrabalhos = [];
         $ordem = TrabalhoPortfolio::max('ordem')+1;
-        foreach ($obj->projects as $Proj) {
+
+        foreach ($idsNovos as $idProjBehance) {
             
-            //Se nao for um projeto com id Novo, só pular
-            if ( ! array_search($Proj->id, $idsNovos) ) {
+            $Proj = collect($obj->projects)->where('id', $idProjBehance)->first();
+            if ( !$Proj ) {
+                \Log::info("\n## Erro Nao encontrou projeto $idProjBehance");
                 continue;
             }
 
