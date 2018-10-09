@@ -67,3 +67,35 @@ footer #infos-rodape {
     }
   }
 }
+
+
+/** Estilos da lista de tags **/
+#lista-tags {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+
+    .tag {
+        padding: 0 1rem;
+    }
+
+    button.slick-arrow {
+        background: transparent;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    a {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        outline: none;
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+

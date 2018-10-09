@@ -1,8 +1,12 @@
-<div id="filtro-tags" class="col-xs-12">
+<div id="lista-tags" class="col-xs-12">
     @isset($mostrarTodos)
-        <a href="portfolio"> TODOS </a>
+    <div class="tag">
+        <a class="{{\Request::get('categoria') != null ? '' : 'active'}}" href="portfolio"> TODOS </a>
+    </div>
     @endisset
     @foreach(\App\Models\Categoria::all() as $categoria)
-        <a href="portfolio?categoria={{$categoria->id}}"> {{$categoria->nome}}</a>
+        <div class="tag">
+            <a class="{{\Request::get('categoria') == $categoria->id ? 'active' : '' }}" href="portfolio?categoria={{$categoria->id}}"> {{$categoria->nome}}</a>
+        </div>
     @endforeach
 </div>
