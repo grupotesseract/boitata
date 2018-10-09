@@ -81,33 +81,59 @@
         </div>
 
         <div class="quem-somos-tarefas">
-            <h2>O que fazemos</h2>
+            <div class="container">
+                <h1>O que fazemos</h1>
 
-            <div class="col-xs-2">
-                Identidade Visual<br>
+                <div class="tarefas">
+                    <div class="item">
+                        <div class="title">Identidade Visual</div>
 
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Rem sint, impedit numquam, earum nam necessitatibus incidunt
-                quasi repellat itaque sed quos, modi beatae doloribus
-                aliquam architecto quaerat porro debitis ex?
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Rem sint, impedit numquam, earum nam necessitatibus incidunt
+                            quasi repellat itaque sed quos, modi beatae doloribus
+                            aliquam architecto quaerat porro debitis ex?
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Editorial</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Ilustração</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Posters</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Motion</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Webdesign</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle">Instalações</div>
+                    </div>
+
+                </div>
             </div>
-
-            <div class="col-xs-2">Editorial</div>
-            <div class="col-xs-2">Ilustração</div>
-            <div class="col-xs-2">Posters</div>
-            <div class="col-xs-2">Motion</div>
-            <div class="col-xs-2">Webdesign</div>
-            <div class="col-xs-2">Instalações</div>
         </div>
 
         <div class="quem-somos-parcerias">
             <h2>Parcerias</h2>
 
-            <img src="" alt="Grupo Tesseract" />
-            <img src="" alt="Oficina Desmanche" />
-            <img src="" alt="Protótipo Tópico" />
-            <img src="" alt="Zame" />
-            <img src="" alt="Eduardo Kenji Fotógrafo" />
+            <div class="logo-container">
+                <img src="" alt="Grupo Tesseract" />
+                <img src="" alt="Oficina Desmanche" />
+                <img src="" alt="Protótipo Tópico" />
+                <img src="" alt="Zame" />
+                <img src="" alt="Eduardo Kenji Fotógrafo" />
+            </div>
         </div>
     </section>
 
