@@ -16,10 +16,10 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="{{ Request::is('quem-somos') ? 'active' : '' }}" href="/quem-somos">QUEM SOMOS</a></li>
-                <li><a class="{{ Request::is('portfolio') ? 'active' : '' }}" href="/portfolio">PORTFOLIO</a></li>
+                <li><a class="{{ Request::is('portfolio') ? 'active' : '' }}" href="/portfolio">PORTFÓLIO</a></li>
                 <li><a class="{{ Request::is('contato') ? 'active' : '' }}" href="/contato">CONTATO</a></li>
                 <li class="wrapper-social-media-menu">
-                    @include ('partials.social-media-links')
+                    @include('partials.social-media-links')
                 </li>
             </ul>
         </div>

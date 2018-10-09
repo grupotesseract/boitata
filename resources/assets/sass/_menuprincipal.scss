@@ -40,7 +40,21 @@
 
   .wrapper-social-media-menu {
     display: flex;
-    margin-left: 5rem;
+    margin-left: 2rem;
+
+    a {
+      padding: 14px 8px;
+    }
+
+    i {
+      font-size: 1.45em;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .ionicons {
+      font-size: 1.7em;
+    }
   }
 
   li ~ li {
@@ -48,13 +62,13 @@
   }
 }
 
-// Cores de destaque diferentes para cada página
 .navbar-default .navbar-nav > li {
   > a {
-    color: #030305;
+    color: #121212;
     transition: color ease .25s;
   }
 
+  // Cores de destaque diferentes para cada página
   > a[href="/contato"] {
     &:hover,
     &.active {
@@ -65,7 +79,7 @@
   > a[href="/quem-somos"] {
     &:hover,
     &.active {
-      color: #a7231e;
+      color: #c51a1b;
     }
   }
 

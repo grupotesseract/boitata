@@ -6,35 +6,38 @@
   h3,
   h4 {
     text-align: center;
-    margin-bottom: 50px;
     text-transform: uppercase;
     line-height: 1.3;
   }
 
   h1 {
-    font-weight: 600;
+    margin-bottom: 40px;
   }
 
   h2 {
-    font-weight: 300;
-    line-height: 1.2;
+    margin-bottom: 50px;
+    line-height: 1.3;
   }
 
   h3 {
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   p {
-    font-size: 16px;
-    font-weight: 300;
+    color: #121212;
+    font-size: 18px;
+    line-height: 1.3;
     margin-bottom: 20px;
   }
 
-  .container {
-    width: 700px;
+  hr {
+    border-top: 1px solid rgba(0,0,0,.25);
+    box-shadow: 1px 1px 0 rgba(0,0,0,.05);
+    margin: 40px auto;
+    width: 75%;
   }
 
-  > div {
+  > div:not(.quem-somos-header) {
     margin: 0;
     padding: 100px 0;
   }
@@ -51,26 +54,24 @@
 .quem-somos-info {
   background: #a5dbf5;
   background: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
-  color: #030000;
   padding: 100px 0;
 
-  p {
-    text-align: justify;
+  .container {
+    width: 700px;
   }
 
   p:first-of-type {
-    font-weight: 500;
-  }
-
-  strong {
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 400;
   }
 }
 
 .quem-somos-fotos {
   margin-top: 100px;
   text-align: center;
+
+  .container {
+    width: 700px;
+  }
 
   img {
     width: 140px;
@@ -82,11 +83,44 @@
   background: #c9d3d9;
   background: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
   height: 600px;
+
+  .container {
+    width: 800px;
+  }
+
+  .tarefas {
+    display: flex;
+
+    .item {
+      flex: 1 0 0;
+      text-align: center;
+    }
+
+    .circle {
+      border: 2px solid #93d2ed;
+      border-radius: 50%;
+      text-transform: uppercase;
+      width: 80px;
+      height: 80px;
+    }
+
+    .title {
+      text-transform: uppercase;
+    }
+  }
 }
 
 .quem-somos-parcerias {
   background: #000;
   height: 600px;
+
+  .logo-container {
+    display: flex;
+
+    .item {
+      flex: 1 0 0;
+    }
+  }
 
   h2 {
     color: #72c5e1;
