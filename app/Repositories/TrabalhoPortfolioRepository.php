@@ -109,6 +109,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
                 'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
                 'ordem' => $ordem++,
+                'slug' => $this->trataTituloParaSlug($Proj->name),
                 'data_sync' => \Carbon\Carbon::now()
             ]);
         }
@@ -168,23 +169,15 @@ class TrabalhoPortfolioRepository extends BaseRepository
     }
     
 
-    public function updateSlugs()
+
+    /**
+     * Metodo para fazer update da slugs de acordo com o titulo do Trabalho
+     */
+    public function updateSlug($Trabalho)
     {
-        $trabalhos = $this->all();
-        
-        $trabalhos->each(function($Trabalho) {
-            $titulo = strtolower($Trabalho->titulo);
-
-            $slug = str_replace(' ', '-', $titulo);
-            $slug = str_replace([',', '.', 'º', 'ª', '---', '-|-', '∆'], ['', '', '', '', '-', '-', 'a'], $slug);
-            $slug = str_replace(['á', 'é', 'í', 'ó', 'ú'],['a','e','i','o','u'],$slug);
-            $slug = str_replace(['â', 'ê', 'î', 'ô', 'û'],['a','e','i','o','u'],$slug);
-            $slug = str_replace(['ã', 'ẽ', 'ĩ', 'õ', 'ũ'],['a','e','i','o','u'],$slug);
-
-            $Trabalho->slug=$slug;
-            $Trabalho->save();
-        });
-
+        $slug = $this->trataTituloParaSlug($Trabalho->titulo);
+        $Trabalho->slug = $slug;
+        $Trabalho->save();
     }
     
     /**
@@ -198,6 +191,21 @@ class TrabalhoPortfolioRepository extends BaseRepository
     }
     
 
+    /**
+     * undocumented function
+     *
+     * @return void
+     */
+    public function trataTituloParaSlug($titulo)
+    {
+        $slug = strtolower($titulo);
+        $slug = str_replace(' ', '-', $titulo);
+        $slug = str_replace([',', '.', 'º', 'ª', '---', '-|-', '∆'], ['', '', '', '', '-', '-', 'a'], $slug);
+        $slug = str_replace(['á', 'é', 'í', 'ó', 'ú'],['a','e','i','o','u'],$slug);
+        $slug = str_replace(['â', 'ê', 'î', 'ô', 'û'],['a','e','i','o','u'],$slug);
+        $slug = str_replace(['ã', 'ẽ', 'ĩ', 'õ', 'ũ'],['a','e','i','o','u'],$slug);
+        return $slug;
+    }
 
 }
 

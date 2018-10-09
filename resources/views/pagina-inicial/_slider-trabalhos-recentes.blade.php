@@ -18,7 +18,7 @@
            </a>
           <h3>{{ $TrabalhoRecente->titulo }}</h3>
           @foreach ($TrabalhoRecente->categorias as $Categoria)
-            <span class="tags">{{$Categoria->nome}}</span>
+              <a href="/portfolio?categoria={{$Categoria->id}}"> <span class="tags">{{$Categoria->nome}}</span> </a>
           @endforeach
       </div>
 

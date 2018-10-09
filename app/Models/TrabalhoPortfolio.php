@@ -28,6 +28,7 @@ class TrabalhoPortfolio extends Model
         'titulo',
         'descricao',
         'ordem',
+        'slug',
         'url_behance',
         'json_behance',
         'covers'
