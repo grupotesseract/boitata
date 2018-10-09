@@ -16,7 +16,7 @@
         <div class="col-xs-12 col-md-3 descricao-container">
             <h1>{{ $trabalho->titulo }}</h1>
 
-            @foreach($trabalho->categorias as $categoria) 
+            @foreach($trabalho->categorias as $categoria)
                 <span class="tag">{{$categoria->nome}}</span>
             @endforeach
 
@@ -24,7 +24,7 @@
 
         </div>
         <div class="col-xs-12 col-md-9 text-center behances-container">
-            {!! $trabalho->htmlCompleto !!}            
+            {!! $trabalho->htmlCompleto !!}
         </div>
 
     </div>

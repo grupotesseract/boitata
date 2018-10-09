@@ -32,8 +32,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'HomeController@index');
+Route::get('/quem-somos', 'QuemSomosController@index');
 Route::get('/portfolio', 'TrabalhoPortfolioController@listToVisitor');
 Route::get('/portfolio/{id}', 'TrabalhoPortfolioController@showToVisitor');
+
 
 Route::resource('fotos', 'FotoController');
 Route::resource('trabalhoRecentes', 'TrabalhoRecenteController');

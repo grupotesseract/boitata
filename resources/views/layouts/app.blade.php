@@ -91,6 +91,10 @@
 <!-- AdminLTE App -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
 
+@if (env('APP_ENV') === 'local')
+    <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.24.7"></script>
+@endif
+
 @yield('scripts')
 @yield('js')
 

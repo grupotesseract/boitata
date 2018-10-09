@@ -3,29 +3,23 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 // FontAwesome
-@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
 
 //=== CUSTOM STYLES
-@import "tesseract";
+@import 'tesseract';
+@import 'menuprincipal';
+@import 'trabalhosrecentes';
+@import 'motion';
+@import 'editorial';
+@import 'responsivo';
+@import 'animacoes';
+@import 'contato';
+@import 'portfolio';
 
-@import "menuprincipal";
-
-@import "trabalhosrecentes";
-
-@import "motion";
-
-@import "editorial";
-
-@import "responsivo";
-
-@import "animacoes";
-
-@import "contato";
-
-@import "portfolio"
+@import 'pages/quem-somos';

@@ -7,9 +7,9 @@ class TrabalhoPortfolioSeeder extends Seeder
 {
 
     /**
-     * repositorioTrabalhos 
+     * repositorioTrabalhos
      *
-     * @var mixed 
+     * @var mixed
      */
     private $repositorioTrabalhos;
 
@@ -17,7 +17,7 @@ class TrabalhoPortfolioSeeder extends Seeder
      * @param mixed TrabalhoPortfolioRepository $repositorioTrabalhos
      */
     public function __construct(TrabalhoPortfolioRepository $repositorioTrabalhos)
-    { 
+    {
         $this->repositorioTrabalhos = $repositorioTrabalhos;
     }
 
@@ -31,6 +31,5 @@ class TrabalhoPortfolioSeeder extends Seeder
         $this->command->info("## Pegando projetos do Behance... ");
         $projetos = $this->repositorioTrabalhos->createAllFromBehance();
         $this->command->info("## GGWP... ". count($projetos). " projetos adicionados :+1:");
-
     }
 }
