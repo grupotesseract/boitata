@@ -20,8 +20,8 @@
           slidesToShow: 4,
           centerMode: false,
           variableWidth: true,
-          prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-2x fa-caret-left"></i></button>',
-          nextArrow: '<button type="button" class="slick-next"><i class="fa fa-2x fa-caret-right"></i></button>',
+          prevArrow: '<button type="button" class="slick-prev"><img src="/fonts/caret-left-solid.svg"/></button>',
+          nextArrow: '<button type="button" class="slick-next"><img src="/fonts/caret-right-solid.svg"/></button>',
         });
     </script>
     @endif

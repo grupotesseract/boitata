@@ -54,7 +54,7 @@ class TrabalhoPortfolio extends Model
      */
     public static $rules = [
         'titulo' => 'required',
-        'descricao' => 'required'
+        'slug' => 'required',
     ];
 
 

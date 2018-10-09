@@ -14,7 +14,7 @@
 @section('js')
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    @if (\Agent::isMobile())
+    @if (\Agent::isMobile() && !\Agent::isTablet())
         <script charset="utf-8">
         $('#lista-tags').slick({
           dots: false,

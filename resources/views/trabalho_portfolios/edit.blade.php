@@ -45,6 +45,9 @@
                         <i class="fa fa-angle-left"></i> Voltar</a> </li>
             </ul>
             <div class="tab-content">
+                @include('adminlte-templates::common.errors')
+                @include('flash::message')
+                
                 <div class="tab-pane active" id="tab_1">
                     {!! Form::model($trabalhoPortfolio, ['route' => ['trabalhoPortfolios.update', $trabalhoPortfolio->id], 'method' => 'patch']) !!}
 
