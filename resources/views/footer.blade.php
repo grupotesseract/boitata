@@ -14,7 +14,6 @@
             <div class="wrapper-social-links">
                 @include( 'partials.social-media-links' )
             </div>
-            <a href="mailto:contato@coletivoboitata.com.br"><b>contato@coletivoboitata.com.br</b></a>    
         </div>
     </div>
 </div>

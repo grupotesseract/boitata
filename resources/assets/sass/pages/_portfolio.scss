@@ -12,6 +12,9 @@
   background-color: black;
   min-height: 950px;
   padding-bottom: 21vw;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 41vw;
+  }
 }
 
 a.voltar {
@@ -79,6 +82,10 @@ div.behances-container {
 
 div.container-portfolio {
   margin-top: 12em;
+
+  iframe {
+      max-width: 100%;
+  }
 }
 
 div.container-portfolio .container-texto h3 {

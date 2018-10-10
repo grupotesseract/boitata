@@ -5,6 +5,12 @@
   .wrapper-social-media-menu {
       display:flex;
       margin-right:8rem;
+        
+      @media screen and (width:768px) {
+          display: none;
+      }
+
+          
       .social-icon-container {
           height: 20px;
           width: 20px;
@@ -56,6 +62,13 @@
   li ~ li {
     margin-left: 3rem;
   }
+
+  .navbar-right {
+      @media screen and (width:768px){
+          margin-right: 75px;
+      }
+  }
+
 }
 
 .navbar-default .navbar-nav > li {
@@ -85,4 +98,5 @@
       color: #52bad7;
     }
   }
+
 }

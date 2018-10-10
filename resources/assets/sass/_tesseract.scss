@@ -31,8 +31,27 @@ footer {
     min-height: 240px;
     margin-top:-240px;
 
+    @media screen and (max-width:767px) {
+        background-image:url('/rodape_mobile_2.png');
+        background-position: 80% bottom;
+        min-height: 240px;
+    }
+    @media screen and (max-width:767px) {
+        margin-top:-200px;
+    }
+
+
     div.wrapper-social-links {
         width: 300px;
+
+        @media screen and (max-width:767px) {
+            margin-top: -40px!important;
+            display: flex;
+            width: auto;
+            .social-icon-container {
+                margin: 15px;
+            }
+        }
     }
 
     div.container-footer {
@@ -44,6 +63,21 @@ footer {
         position: absolute;
         right: 26.5%;
         bottom: 65%;
+
+        @media screen and (max-width:767px) {
+            max-height: 65px;
+            position: inherit;
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            max-height: 80px;
+            position: absolute;
+            right: 40%;
+            bottom: 100%;
+        }
+        @media screen and (width:1024px) {
+            right: 34%
+        }
+        
     }
 
     div.container-texto-rodape {
@@ -52,10 +86,20 @@ footer {
         left: 45%;
         position: absolute;
         bottom: 0px;
-        height: 20px;
+        height: 30px;
+
+        @media screen and (max-width:767px) {
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            left: 25%;
+        }
+
 
         &.mobile {
             display:none;
+            
         }
     }
 

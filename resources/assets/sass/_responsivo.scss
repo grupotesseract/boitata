@@ -10,22 +10,11 @@
 @media only screen and (max-width: 767px) {
 
     footer {
-        background-image:url('/rodape_mobile_2.png');
-        background-position: 80% bottom;
-        min-height: 240px;
         
-        img.logo-rodape {
-            max-height: 65px;
-            position: inherit;
-            margin-bottom:-100px;
-        }
-
         div.container-texto-rodape {
             display: -webkit-inline-box;
             font-size: 13px;
-            margin-top: 32px;
-            margin-left: 45%;
-            margin-bottom:15px;
+            height:30px;
 
             &.desktop {
                 display:none;
@@ -215,22 +204,6 @@
 
 /* Tablets e alguns Celulares */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-    footer {
-        div.container-texto-rodape {
-            display: -webkit-inline-box;
-            font-size: 16px;
-            margin-top: 15px;
-            margin-bottom: 20px;
-            margin-left: 11%;
-        }
-        img.logo-rodape {
-            max-height: 75px;
-            position: absolute;
-            right: 39%;
-            bottom: 145%;
-        }
-    }
-
     nav#menu-principal {
         /** Escondendo a animacao do menu no mobile **/
         div.esconde-borda {
@@ -412,7 +385,6 @@
         }
         div.container-texto-rodape {
             font-size: 18px;
-            margin-left: 55%;
         }    
     }
     

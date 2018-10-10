@@ -1,6 +1,6 @@
 
 /* Media queries divididas em:
- * menor que 767px
+ * menor que 768px
  * entre 768px e 1023px
  * maior que 1024px
  */
@@ -12,7 +12,7 @@
     background-position: 10% 5%;
     background-repeat: no-repeat;
     font-family: inherit;
-    min-height: 1000px;
+    min-height: 1065px;
 
     a {
         color: white; 
@@ -20,6 +20,11 @@
 
     div.containerCont{
         margin-top: 6em;
+
+            @media screen and (min-width:768px) and (max-witdh:1024px){
+                max-width: 72%;
+            }
+
 
         .inicioc{
             h2{
@@ -29,12 +34,20 @@
                 width: fit-content;
                 margin-bottom: 2rem;
                 margin-top: 4rem;
+                @media screen and (max-width:768px){
+                    margin-left:0;
+                    line-height:inherit;
+                }
             }		
             p{
                 font-weight:500;
                 margin-left: -12rem;
                 line-height: 15px;
                 font-size: 1.6rem;
+                @media screen and (max-width:768px){
+                    margin-left:0;
+                    line-height:inherit;
+                }
             }
         }
 
@@ -86,6 +99,11 @@
                 margin-right: 5rem;
                 margin-top: 13rem;
 
+                @media screen and (max-width:768px){
+                    margin-right: inherit;
+                    margin-top: 2rem;
+                }
+
                 .bloco-contato {
                     width: 100%;
                     a, p {
@@ -95,6 +113,9 @@
                             font-size:2.3rem;
                             margin: 0px;
                             color: #f4ed2f;
+                            @media screen and (max-width:768px){
+                                line-height: 30px;
+                            }
                         }
                     }
 
@@ -112,6 +133,10 @@
         }
 
         .premail{
+            @media screen and (max-width:768px){
+                margin-top:5rem;
+            }
+
             p{
                 font-weight: bold;
                 text-align: right;
@@ -153,7 +178,7 @@
     height: 50px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px){
     #contato{
         background-size: 100%;
     }
@@ -190,6 +215,7 @@
 
     .containerCont{
         margin-bottom: 13em;
+        max-width:72%;
 
         .inicioc{
             p{
