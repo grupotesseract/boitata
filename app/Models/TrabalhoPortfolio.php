@@ -28,6 +28,7 @@ class TrabalhoPortfolio extends Model
         'titulo',
         'descricao',
         'ordem',
+        'slug',
         'url_behance',
         'json_behance',
         'covers'
@@ -53,7 +54,7 @@ class TrabalhoPortfolio extends Model
      */
     public static $rules = [
         'titulo' => 'required',
-        'descricao' => 'required'
+        'slug' => 'required',
     ];
 
 

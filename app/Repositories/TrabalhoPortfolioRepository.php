@@ -109,6 +109,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
                 'url_behance' => $Proj->url,
                 'covers' => $Proj->covers,
                 'ordem' => $ordem++,
+                'slug' => $this->trataTituloParaSlug($Proj->name),
                 'data_sync' => \Carbon\Carbon::now()
             ]);
         }
@@ -169,6 +170,42 @@ class TrabalhoPortfolioRepository extends BaseRepository
     
 
 
+    /**
+     * Metodo para fazer update da slugs de acordo com o titulo do Trabalho
+     */
+    public function updateSlug($Trabalho)
+    {
+        $slug = $this->trataTituloParaSlug($Trabalho->titulo);
+        $Trabalho->slug = $slug;
+        $Trabalho->save();
+    }
+    
+    /**
+     * Metodo para buscar pela Slug sem quebrar
+     *
+     * @return void
+     */
+    public function findBySlugWithoutFail($slug)
+    {
+        return $this->model->where('slug', $slug)->first(); 
+    }
+    
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     */
+    public function trataTituloParaSlug($titulo)
+    {
+        $slug = strtolower($titulo);
+        $slug = str_replace(' ', '-', $titulo);
+        $slug = str_replace([',', '.', 'º', 'ª', '---', '-|-', '∆'], ['', '', '', '', '-', '-', 'a'], $slug);
+        $slug = str_replace(['á', 'é', 'í', 'ó', 'ú'],['a','e','i','o','u'],$slug);
+        $slug = str_replace(['â', 'ê', 'î', 'ô', 'û'],['a','e','i','o','u'],$slug);
+        $slug = str_replace(['ã', 'ẽ', 'ĩ', 'õ', 'ũ'],['a','e','i','o','u'],$slug);
+        return $slug;
+    }
 
 }
 

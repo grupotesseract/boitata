@@ -10,7 +10,6 @@
 @import 'tesseract';
 @import 'menuprincipal';
 @import 'motion';
-@import 'responsivo';
 @import 'animacoes';
 
 // Pages
@@ -19,3 +18,7 @@
 @import 'pages/portfolio';
 @import 'pages/quem-somos';
 @import 'pages/trabalhos-recentes';
+
+//O responsivo precisa vir por ultimo pra que as regras sobrscrevam
+@import 'responsivo';
+
