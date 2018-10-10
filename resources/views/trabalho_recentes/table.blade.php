@@ -9,7 +9,11 @@
     @foreach($trabalhoRecentes as $trabalhoRecente)
         <tr>
             <td>{!! $trabalhoRecente->ordem !!}</td>
-            <td>{!! $trabalhoRecente->titulo !!}</td>
+            <td>
+                <a href="/trabalhoRecentes/{{$trabalhoRecente->id}}/edit">
+                    {!! $trabalhoRecente->titulo !!}
+                </a>
+            </td>
             <td> <a href="{!! $trabalhoRecente->url !!}">{!! $trabalhoRecente->url !!}</a></td>
             <td>
                 {!! Form::open(['route' => ['trabalhoRecentes.destroy', $trabalhoRecente->id], 'method' => 'delete']) !!}

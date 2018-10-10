@@ -58,6 +58,12 @@ class TrabalhoPortfolio extends Model
     ];
 
 
+    public $appends = [
+        'listaCategorias',
+        'lastSync',
+    ];
+
+
     /**
      * Mutator para o campo json_behance
      */
@@ -138,6 +144,28 @@ class TrabalhoPortfolio extends Model
         return $htmlFinal;
     }
     
+    /**
+     * Acessor para Lista de categorias separadas por virgula
+     */
+    public function getListaCategoriasAttribute()
+    {
+        return implode($this->categorias->pluck('nome')->all(), ', ');
+    }
 
+    /**
+     * Acessor para a data de ultima atualizacao
+     */
+    public function getUpdatedAtAttribute()
+    {
+        return (new \Carbon\Carbon($this->attributes['updated_at']))->format('d/m/Y h:i:s');
+    }
+
+    /**
+     * Acessor para a data de ultima syncronização com behance
+     */
+    public function getLastSyncAttribute()
+    {
+        return (new \Carbon\Carbon($this->attributes['data_sync']))->format('d/m/Y h:i:s');
+    }
     
 }

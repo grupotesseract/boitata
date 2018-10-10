@@ -16,6 +16,9 @@ class TrabalhoPortfolioDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
+            ->addColumn('titulo', function ($model) {
+                return '<a href="/trabalhoPortfolios/'.$model->id.'/edit">'.$model->titulo.'</a>';
+            })
             ->addColumn('action', 'trabalho_portfolios.datatables_actions')
             ->make(true);
     }
@@ -28,7 +31,6 @@ class TrabalhoPortfolioDataTable extends DataTable
     public function query()
     {
         $trabalhoPortfolios = TrabalhoPortfolio::query();
-
         return $this->applyScopes($trabalhoPortfolios);
     }
 
@@ -47,20 +49,10 @@ class TrabalhoPortfolioDataTable extends DataTable
                 'dom' => 'Bfrtip',
                 'scrollX' => false,
                 'buttons' => [
-                    'print',
-                    'reset',
                     'reload',
-                    [
-                         'extend'  => 'collection',
-                         'text'    => '<i class="fa fa-download"></i> Export',
-                         'buttons' => [
-                             'csv',
-                             'excel',
-                             'pdf',
-                         ],
-                    ],
-                    'colvis'
-                ]
+                ],
+                'language' => ['url' => '//cdn.datatables.net/plug-ins/1.10.15/i18n/Portuguese-Brasil.json'],
+                
             ]);
     }
 
@@ -72,10 +64,11 @@ class TrabalhoPortfolioDataTable extends DataTable
     private function getColumns()
     {
         return [
-            'ordem' => ['name' => 'ordem', 'data' => 'ordem'],
             'titulo' => ['name' => 'titulo', 'data' => 'titulo'],
             'descricao' => ['name' => 'descricao', 'data' => 'descricao', "visible"=>false],
-            'url_behance' => ['name' => 'url_behance', 'data' => 'url_behance'],
+            'tags' => ['name' => 'categorias', 'data' => 'listaCategorias', 'searchable' => false, 'filterable'=>false, 'orderable' => false],
+            'updated_at' => ['name' => 'updated_at', 'data' => 'updated_at', 'title' => 'Atualizado em'],
+            'lastSync' => ['name' => 'lastSync', 'data' => 'lastSync', 'title' => 'Sincronizado com Behance em', 'searchable' => false, 'filterable'=>false, 'orderable' => false],
         ];
     }
 

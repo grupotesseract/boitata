@@ -28,14 +28,17 @@ class TrabalhoPortfolioController extends AppBaseController
     {
         if (\Request::get('categoria')) {
             $trabalhos = $this->trabalhoPortfolioRepository
-                ->getPorCategoria(\Request::get('categoria'))->get();
+                ->getPorCategoria(\Request::get('categoria'))
+                ->orderBy('updated_at', 'desc')->get();
 
             return view('portfolio')->with([
                 'trabalhos' => $trabalhos
             ]);
         }
 
-        $trabalhos = $this->trabalhoPortfolioRepository->all();
+        $trabalhos = $this->trabalhoPortfolioRepository
+                ->orderBy('updated_at', 'desc')->get();
+        
         return view('portfolio')->with([
             'trabalhos' => $trabalhos
         ]);

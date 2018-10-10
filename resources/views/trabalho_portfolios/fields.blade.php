@@ -23,7 +23,7 @@
 
 <!-- Url Amigavel Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('slug', 'Url Amigavel (a que vai aparecer na barra após /portfolio/):') !!}
+    {!! Form::label('slug', "Url Amigavel (como vai ficar na barra do browser:  coletivoboitata.com.br/portfolio/$trabalhoPortfolio->slug") !!}
     {!! Form::text('slug', null, ['class' => 'form-control']) !!}
 </div>
 
