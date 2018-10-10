@@ -19,7 +19,7 @@
                 <li><a class="{{ Request::is('portfolio') ? 'active' : '' }}" href="/portfolio">PORTFÓLIO</a></li>
                 <li><a class="{{ Request::is('contato') ? 'active' : '' }}" href="/contato">CONTATO</a></li>
                 <li class="wrapper-social-media-menu">
-                    @include('partials.social-media-links')
+                    @include('partials.social-media-links', ['links' => true])
                 </li>
             </ul>
         </div>

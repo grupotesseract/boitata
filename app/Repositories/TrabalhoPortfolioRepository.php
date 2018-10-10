@@ -169,6 +169,17 @@ class TrabalhoPortfolioRepository extends BaseRepository
     }
     
 
+    /**
+     * Metodo para fazer update de todas as Slugs de acordo com o titulo
+     */
+    public function updateAllSlugs()
+    {
+        foreach ($this->all() as $Trabalho) {
+            $slug = $this->trataTituloParaSlug($Trabalho->titulo);
+            $Trabalho->slug = $slug;
+            $Trabalho->save();
+        }
+    }
 
     /**
      * Metodo para fazer update da slugs de acordo com o titulo do Trabalho

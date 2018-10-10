@@ -6,185 +6,241 @@
  */
 
 #contato {
-
     background-color: #040506;
     color: #FFFFFF;
     background-image: url('/gotas_contato.png');
-	background-position: 10% 5%;
-	background-repeat: no-repeat;
+    background-position: 10% 5%;
+    background-repeat: no-repeat;
     font-family: inherit;
-    min-height: 100vh;
-    font-size: 18px;
+    min-height: 1000px;
+
+    a {
+        color: white; 
+    }
 
     div.containerCont{
-   	 	margin-top: 6em;
-    	
-    		
-		.inicioc{
-			h2{
-				text-align: center;	
-				font-weight: bold;
-				margin: center;
-			}		
-		}
+        margin-top: 6em;
+
+        .inicioc{
+            h2{
+                font-size: 4.2rem;
+                font-weight: 500;
+                margin-left: -5rem;
+                width: fit-content;
+                margin-bottom: 2rem;
+                margin-top: 4rem;
+            }		
+            p{
+                font-weight:500;
+                margin-left: -12rem;
+                line-height: 15px;
+                font-size: 1.6rem;
+            }
+        }
+
+        .pessoas{
+
+            .fa-icon-container {
+                min-width:35px;
+                min-height:20px;
+                padding: 0px;
+                display: flex;
+                align-items: center;
+                margin: 0px 2px;
+
+                img {
+                    filter: invert(100%);
+                    max-height:20px;
+                    max-width:20px;
+                    margin-right: 5px;
+                }
+            }
+
+            .wrapper-social-midias {
+                display:flex;
+                align-items:center;
+                text-align: right;
+                float: right;
+                span {
+                    font-weight:bold;
+                }
+                .social-icon-container, .fa-icon-container {
+                    height: 35px;
+                    width: 20px!important;
+                    padding: 0px;
+                    margin: 0px 2px;
+
+                    img {
+                        filter: invert(100%);
+                        max-height:20px;
+                        max-width:20px
+                    }
+                }
+            }
 
 
-		.pessoas{
-			
-			.infcontatos{
-				max-width: 300px;
-			    margin: auto;
+            .infcontatos{
+                font-size:2rem;
+                max-width: 500px;
+                margin: auto;
+                margin-right: 5rem;
+                margin-top: 13rem;
 
-	 			a{
-	 				color: White;
-	 			}
-	 			
-				p{
-					font-weight: bold;
-					color: Yellow;
-				}
+                .bloco-contato {
+                    width: 100%;
+                    a, p {
+                        width: 100%;
+                        &.nome {
+                            font-weight:600;
+                            font-size:2.3rem;
+                            margin: 0px;
+                            color: #f4ed2f;
+                        }
+                    }
 
-				.text-right{
-					p{ 
-						text-align: right;
-					}
-				}
-				
-				.text-left{
-					p{ 
-						text-align: left;
-					}
-				}
-			}
+                    &.text-right{
+                        a {
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
 
+        .formemail{	
+            max-width:500px;
+        }
 
- 		}
-		
-		.formemail{	
-		}
+        .premail{
+            p{
+                font-weight: bold;
+                text-align: right;
+                font-size: 1.8rem;
+                margin: 0 0 2rem;
+            }
 
-		.premail{
-			
-			p{
-				font-weight: bold;
-			}
+        }
 
-		}
-		   
-		.caixa-email{
-			background-color: #FFFFFF;
-			color: #040506;
-			padding: 16px;
-			border-radius: 4px;
-		}
-	}
+        .caixa-email{
+            background-color: #FFFFFF;
+            color: #040506;
+            padding: 16px;
+            border-radius: 4px;
+            input {
+                margin-top: -5px;
+                height: 28px;
+                border: 1px solid;
+            }
+            textarea{
+                margin-top: -5px;
+                border: 1px solid;
+            }
+        }
+    }
 }
 
 
 
 .texto-inline{
-	    display: inline-block;
+    display: inline-block;
 }
 
 #borda-bot{
-	background-image: url('/Forma-do-contato-15.png');
-	background-size: contain;
-	background-repeat: no-repeat;
+    background-image: url('/Forma-do-contato-15.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     margin-top: -2px;
     height: 50px;
 }
 
 @media (max-width: 767px){
-	#contato{
-		background-size: 100%;
-	}
+    #contato{
+        background-size: 100%;
+    }
 
-	.containerCont{
-		margin-bottom: 13em;
-		
-		.inicioc{
-			p{
-				text-align: center;
-			}
-		}
+    .containerCont{
+        margin-bottom: 13em;
 
-		.pessoas{
-			padding: 1em;
+        .inicioc{
+            p{
+                text-align: center;
+            }
+        }
 
-			p{
-				line-height: 5px;
-				margin:0 0 5px;
-			}
-		}
-		.formemail{
-			padding: 0em;
-		}
-	}
+        .pessoas{
+            padding: 1em;
+
+            p{
+                line-height: 5px;
+                margin:0 0 5px;
+            }
+        }
+        .formemail{
+            padding: 0em;
+        }
+    }
 
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
-	#contato{
-		background-size: 80%;
-	}
+    #contato{
+        background-size: 80%;
+    }
 
 
-	.containerCont{
-		margin-bottom: 13em;
-		
-		.inicioc{
-			p{
-				text-align: center;
-			}
-		}
-		.pessoas{
-			padding: 1em;
+    .containerCont{
+        margin-bottom: 13em;
 
-			p{
-				line-height: 5px;
-				margin:0 0 5px;
-			}
-		}
-		.formemail{
-			padding: 4em;
-		}
-	}
+        .inicioc{
+            p{
+                text-align: center;
+            }
+        }
+        .pessoas{
+            padding: 1em;
+
+            p{
+                line-height: 5px;
+                margin:0 0 5px;
+            }
+        }
+        .formemail{
+            padding: 4em;
+        }
+    }
 }
 
 
 
 @media (min-width: 1024px){
-	#contato{
-		background-size: 67%;
-	}
+    #contato{
+        background-size: 67%;
+    }
 
-	div.containerCont{
-		margin-bottom: 3em;
+    div.containerCont{
+        margin-bottom: 3em;
 
-		.inicioc{
-			h2{
-				border-bottom: 1px solid currentColor;
-				max-width: 180px;	
-			}
-
-			p{
-				margin-left: -50px;
-				text-align: left;
-			}
-		}
-		.pessoas{
+        .inicioc{
+            h2{
+                border-bottom: 1px solid currentColor;
+            }
+            p{
+                margin-left: -50px;
+                text-align: left;
+            }
+        }
+        .pessoas{
 
 
-			.infcontatos{
-				padding: 15em 0em;
-				float: right;
-			}
-		}
+            .infcontatos{
+                float: right;
+            }
+        }
 
-		.formemail{
-			padding: 5em;
-			margin-left: -50px;
-			margin-top: -50px;
-		}
-	}
+        .formemail{
+            padding: 5em;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+    }
 }

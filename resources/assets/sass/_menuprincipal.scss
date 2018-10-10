@@ -1,7 +1,22 @@
 #menu-principal {
-  border-color: #939598;
-  box-shadow: #939598 0 0 0 1px;
+  border-color: transparent;
   padding: 9px 0;
+
+  .wrapper-social-media-menu {
+      display:flex;
+      margin-right:8rem;
+      .social-icon-container {
+          height: 20px;
+          width: 20px;
+          padding: 0px;
+          margin: 11px 7px;
+
+          img {
+              max-height:20px;
+              max-width:20px
+          }
+      }
+  }
 
   .esconde-borda {
     position: fixed;
@@ -36,25 +51,6 @@
 
   .navbar-collapse {
     border-color: transparent;
-  }
-
-  .wrapper-social-media-menu {
-    display: flex;
-    margin-left: 2rem;
-
-    a {
-      padding: 14px 8px;
-    }
-
-    i {
-      font-size: 1.45em;
-      line-height: 1;
-      vertical-align: middle;
-    }
-
-    .ionicons {
-      font-size: 1.7em;
-    }
   }
 
   li ~ li {
