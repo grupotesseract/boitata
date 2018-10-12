@@ -36,8 +36,7 @@
     width: 75%;
   }
 
-  > div:not(.quem-somos-header) {
-    margin: 0;
+  > div {
     padding: 100px 0;
   }
 }
@@ -45,15 +44,18 @@
 .quem-somos-header {
   background: transparent url(/img/quem-somos/img-equipe.jpg) no-repeat top center;
   background-size: cover;
-  height: 100vh;
   width: 100%;
   margin-top: 70px;
+  height: 100vh;
+
+  @media (min-width: 1200px) {
+    height: 125vh;
+  }
 }
 
 .quem-somos-info {
   background: #a5dbf5;
   background: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
-  padding: 100px 0;
 
   .container {
     width: 700px;
@@ -65,7 +67,6 @@
 }
 
 .quem-somos-fotos {
-  margin-top: 100px;
   text-align: center;
 
   .container {
@@ -81,29 +82,40 @@
 .quem-somos-tarefas {
   background: #c9d3d9;
   background: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
-  height: 600px;
-
-  .container {
-    width: 800px;
-  }
 
   .tarefas {
     display: flex;
+    align-items: center;
+    justify-items: space-between;
 
     .item {
       flex: 1 0 0;
       text-align: center;
     }
 
+    p {
+      font-size: 10px;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
     .circle {
-      border: 2px solid #93d2ed;
+      $border: 3px;
+      $size: 106px;
+
+      border: $border solid #93d2ed;
       border-radius: 50%;
+      margin: 0 auto;
       text-transform: uppercase;
-      width: 80px;
-      height: 80px;
+      line-height: $size - 2 * $border;
+      width: $size;
+      height: $size;
     }
 
     .title {
+      font-size: 14px;
+      line-height: 1.4;
       text-transform: uppercase;
     }
   }
@@ -113,16 +125,15 @@
   background: #000;
   height: 600px;
 
-  .logo-container {
-    display: flex;
-
-    .item {
-      flex: 1 0 0;
-    }
+  img {
+    height: auto;
   }
 
   h2 {
     color: #72c5e1;
+    font-size: 36px;
+    font-weight: 600;
     text-align: right;
+    text-transform: initial;
   }
 }
