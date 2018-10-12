@@ -12,7 +12,7 @@
 @endsection
 
 @section('js')
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     @if (\Agent::isMobile() && !\Agent::isTablet())
         <script charset="utf-8">
