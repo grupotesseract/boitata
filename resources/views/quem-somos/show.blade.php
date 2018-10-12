@@ -41,7 +41,7 @@
                     mundo. Uma forma de tradução.
                 </p>
 
-                <hr>
+                <hr class="gota-hr">
 
                 <h3 class="quotes">
                     Esse é o Boitatá, uma mistura doida de<br>
