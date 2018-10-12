@@ -19,7 +19,7 @@ class Editorial extends Model
     use SoftDeletes;
 
     public $table = 'editorials';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -92,12 +92,12 @@ class Editorial extends Model
     {
         return $query->where('ordem', 2);
     }
-    
+
     /**
      * Definindo um acessor para a URL da foto no cloudinary no tamanho maximo que irão aparecer 800 x 450
      */
     public function getlinkFotoAttribute()
     {
-        return "//res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/q_auto/".$this->foto->cloudinary_id.".jpeg";
+        return 'https://res.cloudinary.com/'.env('CLOUDINARY_CLOUD_NAME').'/image/upload/q_auto/'.$this->foto->cloudinary_id.'.jpeg';
     }
 }
