@@ -65,6 +65,7 @@
                         tempora ducimus totam magni exercitationem.
                     </p>
                 </div>
+
                 <div class="col-xs-6">
                     <img src="https://via.placeholder.com/340x340" class="img-circle" />
 
@@ -81,7 +82,7 @@
         </div>
 
         <div class="quem-somos-tarefas">
-            <div class="container">
+            <div class="container-fluid">
                 <h1>O que fazemos</h1>
 
                 <div class="tarefas">
@@ -89,10 +90,10 @@
                         <div class="title">Identidade Visual</div>
 
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Rem sint, impedit numquam, earum nam necessitatibus incidunt
-                            quasi repellat itaque sed quos, modi beatae doloribus
-                            aliquam architecto quaerat porro debitis ex?
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
                         </p>
                     </div>
 
