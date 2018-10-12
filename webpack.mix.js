@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix');
+const mix = require('laravel-mix');
 
 mix.disableNotifications()
     .js('resources/assets/js/app.js', 'public/js')
