@@ -1,0 +1,45 @@
+.quote,
+.gota-hr,
+.icon-behance,
+.icon-facebook,
+.icon-instagram,
+.icon-youtube {
+  background: url(/img/sprites.png) no-repeat center center;
+  display: block;
+}
+
+.quote {
+  background-position: -144px 0;
+  width: 97px;
+  height: 79px;
+}
+
+.gota-hr {
+  background-position: -6px -80px;
+  width: 235px;
+  height: 21px;
+}
+
+.icon-behance {
+  background-position: -67px -48px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-facebook {
+  background-position: 0 -48px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-instagram {
+  background-position: -33px -48px;
+  width: 32px;
+  height: 31px;
+}
+
+.icon-youtube {
+  background-position: -101px -49px;
+  width: 41px;
+  height: 29px;
+}
