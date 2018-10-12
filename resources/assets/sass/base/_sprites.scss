@@ -1,4 +1,5 @@
-.quote,
+.quotes::after,
+.quotes::before,
 .gota-hr,
 .icon-behance,
 .icon-facebook,
@@ -8,16 +9,35 @@
   display: block;
 }
 
-.quote {
-  background-position: -144px 0;
-  width: 97px;
-  height: 79px;
+.quotes {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-position: -144px 0;
+    width: 97px;
+    height: 79px;
+    top: 30px;
+    zoom: 0.6;
+  }
+
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    right: 0;
+  }
 }
 
 .gota-hr {
-  background-position: -6px -80px;
+  background-position: right -55px;
+  background-origin: border-box;
+  background-size: 32%;
+  height: 12px;
   width: 235px;
-  height: 21px;
 }
 
 .icon-behance {
@@ -35,11 +55,11 @@
 .icon-instagram {
   background-position: -33px -48px;
   width: 32px;
-  height: 31px;
+  height: 32px;
 }
 
 .icon-youtube {
   background-position: -101px -49px;
   width: 41px;
-  height: 29px;
+  height: 30px;
 }
