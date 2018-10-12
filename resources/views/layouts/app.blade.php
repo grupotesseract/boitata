@@ -18,7 +18,9 @@
 </head>
 
 <body class="skin-blue sidebar-mini">
-@include('googletagmanager::script')
+    @if (env('APP_ENV') === 'production')
+        @include('googletagmanager::script')
+    @endif
 <div class="wrapper">
     <!-- Main Header -->
     <header class="main-header">
