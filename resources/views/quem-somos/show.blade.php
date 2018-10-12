@@ -125,14 +125,16 @@
         </div>
 
         <div class="quem-somos-parcerias">
-            <h2>Parcerias</h2>
+            <div class="container">
+                <h2>Parcerias</h2>
 
-            <div class="logo-container">
-                <img src="" alt="Grupo Tesseract" />
-                <img src="" alt="Oficina Desmanche" />
-                <img src="" alt="Protótipo Tópico" />
-                <img src="" alt="Zame" />
-                <img src="" alt="Eduardo Kenji Fotógrafo" />
+                <div class="logo-container">
+                    <img src="/img/parcerias/grupo-tesseract.png" alt="Grupo Tesseract" />
+                    <img src="/img/parcerias/oficina-desmanche.png" alt="Oficina Desmanche" />
+                    <img src="/img/parcerias/prototipo-topico.png" alt="Protótipo Tópico" />
+                    <img src="/img/parcerias/zame.png" alt="Zame" />
+                    <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Eduardo Kenji Fotógrafo" />
+                </div>
             </div>
         </div>
     </section>
