@@ -3,13 +3,13 @@
   padding: 10px 0;
 
   @media (max-width: 767px) {
-    /** Escondendo a animacao do menu no mobile **/
+    // Escondendo a animação do menu no mobile
     .esconde-borda,
     .borda-menu-principal {
       display: none;
     }
 
-    /** Escondendo a margem dos itens do menu no mobile **/
+    // Escondendo a margem dos itens do menu no mobile
     li ~ li {
       margin-left: 0;
     }
@@ -23,7 +23,6 @@
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
-    /** Escondendo a animacao do menu no mobile **/
     .esconde-borda {
       display: block;
       margin-top: 0;
@@ -49,19 +48,20 @@
       margin-right: 0;
     }
 
+    [class^='icon'] {
+      opacity: 1;
+      transition: opacity ease 0.25s;
+      zoom: 0.6;
+    }
+
     > a {
       padding: 14px 8px;
 
       &:hover [class^='icon'] {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
 
-    [class^='icon'] {
-      opacity: 1;
-      transition: opacity ease .25s;
-      zoom: .6;
-    }
   }
 
   .esconde-borda {
@@ -72,7 +72,7 @@
     width: 260px;
   }
 
-  // escondendo logo inicialmente
+  // Escondendo logo inicialmente
   .logo-menu-principal {
     display: block;
     position: fixed;
@@ -117,7 +117,7 @@
 .navbar-default .navbar-nav > li {
   > a {
     color: #121212;
-    transition: color ease .25s;
+    transition: color ease 0.25s;
   }
 
   // Cores de destaque diferentes para cada página
