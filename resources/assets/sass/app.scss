@@ -7,18 +7,23 @@
 @import 'base/typography';
 @import 'base/sprites';
 
+// Layout
+@import 'layout/menu-principal';
+@import 'layout/footer';
+
+// Components
+@import 'components/carousel';
+
 // Contents
 @import 'tesseract';
-@import 'menu-principal';
-@import 'motion';
 @import 'animacoes';
 
 // Pages
-@import 'pages/contato';
 @import 'pages/editorial';
-@import 'pages/portfolio';
-@import 'pages/quem-somos';
+@import 'pages/motion';
 @import 'pages/trabalhos-recentes';
+@import 'pages/quem-somos';
+@import 'pages/portfolio';
+@import 'pages/contato';
 
 @import 'responsivo';
-
