@@ -1,31 +1,72 @@
 #menu-principal {
-  border: 1px solid #aaa;
-  padding: 9px 0;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
 
-  .wrapper-social-media-menu {
-    display:flex;
-    margin-right:8rem;
-
-    @media screen and (width:768px) {
+  @media (max-width: 767px) {
+    /** Escondendo a animacao do menu no mobile **/
+    .esconde-borda,
+    .borda-menu-principal {
       display: none;
     }
 
-    .social-icon-container {
-      height: 20px;
-      width: 20px;
-      padding: 0px;
-      margin: 11px 7px;
+    /** Escondendo a margem dos itens do menu no mobile **/
+    li ~ li {
+      margin-left: 0;
+    }
 
-      img {
-        max-height:20px;
-        max-width:20px
+    .navbar-header {
+      .logo-menu-principal {
+        height: 75px;
+        left: -8px;
       }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    /** Escondendo a animacao do menu no mobile **/
+    .esconde-borda {
+      display: block;
+      margin-top: 0;
+    }
+
+    .borda-menu-principal {
+      display: block;
+      margin-top: 9px;
+    }
+  }
+
+  .wrapper-social-media-menu {
+    display: flex;
+    align-items: center;
+    margin-right: 8rem;
+    margin-left: 2rem;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+      margin-right: 0;
+    }
+
+    > a {
+      padding: 14px 8px;
+
+      &:hover [class^='icon'] {
+        opacity: .8;
+      }
+    }
+
+    [class^='icon'] {
+      opacity: 1;
+      transition: opacity ease .25s;
+      zoom: .6;
     }
   }
 
   .esconde-borda {
     position: fixed;
-    top: 0px;
+    top: 0;
     height: 68px;
     background: #fff;
     width: 260px;
@@ -45,7 +86,7 @@
 
   .borda-menu-principal {
     display: block;
-    margin-top: 9px;
+    margin-top: 10px;
     position: fixed;
     top: 0;
 
@@ -60,10 +101,13 @@
 
   li ~ li {
     margin-left: 3rem;
+    @media (min-width: 768px) and (max-width: 1200px) {
+      margin-left: 1.5rem;
+    }
   }
 
   .navbar-right {
-    @media screen and (width:768px){
+    @media (width: 768px) {
       margin-right: 75px;
     }
   }
