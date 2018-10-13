@@ -19,7 +19,7 @@ body > section {
 footer {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/img/footer/rodape_desk_2.png');
+  background-image: url('/img/footer/rodape-desk-2.png');
   width: 100%;
   float: left;
   position: relative;
@@ -28,7 +28,7 @@ footer {
   margin-top: -240px;
 
   @media (max-width: 767px) {
-    background-image: url('/img/footer/rodape_mobile_2.png');
+    background-image: url('/img/footer/rodape-mobile-2.png');
     background-position: 80% bottom;
     min-height: 240px;
   }
