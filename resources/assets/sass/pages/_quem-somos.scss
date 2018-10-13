@@ -39,7 +39,7 @@
 }
 
 .quem-somos-header {
-  background: transparent url(/img/quem-somos/img-equipe.jpg) no-repeat top center;
+  background: transparent url('/img/quem-somos/img-equipe.jpg') no-repeat top center;
   background-size: cover;
   width: 100%;
   margin-top: 70px;
@@ -51,9 +51,42 @@
 }
 
 .quem-somos-info {
-  background: #a5dbf5;
-  background: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
-  padding: 120px 0;
+  background-color: #a5dbf5;
+  background-image: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
+  border-top: 20px solid #fff;
+  padding: 100px 0;
+  position: relative;
+
+  &::before {
+    $image-width: 383px;
+
+    content: '';
+    background-color: transparent;
+    background-image: url('/img/quem-somos/curvas-secao-info.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% - #{$image-width} / 2) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    content: '';
+    background: transparent url('/img/quem-somos/gotas-secao-info.png') no-repeat top right;
+    // background-size: 50%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
 
   .container {
     width: 700px;
@@ -65,8 +98,20 @@
 }
 
 .quem-somos-membros {
-  padding: 120px 0 75px;
+  padding: 75px 0;
+  position: relative;
   text-align: center;
+
+  &::before {
+    content: '';
+    background: transparent url('/img/quem-somos/curvas-secao-membros.png') no-repeat top left;
+    background-size: 100%;
+    position: absolute;
+    top: -83px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   .container {
     width: 700px;
