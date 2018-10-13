@@ -113,8 +113,30 @@
 }
 
 .quem-somos-tarefas {
-  background: #c9d3d9;
-  background: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
+  background-color: #c9d3d9;
+  background-image: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
+  padding: 75px 0 100px;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: transparent url('/img/quem-somos/gotas-secao-tarefas.png') no-repeat top left;
+    background-size: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    margin-bottom: 75px;
+  }
 
   .tarefas {
     display: flex;
