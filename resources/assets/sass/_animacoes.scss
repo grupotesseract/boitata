@@ -1,76 +1,28 @@
-
 .play-animacao-borda {
-    -webkit-animation-name: desce_borda; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
-    animation-name: desce_borda;
-    animation-duration: 1.5s;
+  animation-name: desce_borda;
+  animation-duration: 1.5s;
 }
 
 .play-animacao-logo {
-    -webkit-animation-name: fade_in_logo; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
-    animation-name: fade_in_logo;
-    animation-duration: 1.5s;
+  animation-name: fade_in_logo;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade_in_logo {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes desce_borda {
-    from {
-        margin-top: -100px;
-    }
-    to {
-        display:block;
-        margin-top: 9px;
-    }
+  from {
+    margin-top: -100px;
+  }
+  to {
+    display: block;
+    margin-top: 9px;
+  }
 }
-
-.carousel-fade {
-    .carousel-inner {
-        .item {
-            transition-property: opacity;
-        }
-        
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-    .carousel-control {
-        z-index: 2;
-    }
-}
-
-
-
-html, 
-body, 
-.carousel, 
-.carousel-inner, 
-.carousel-inner .item {
-    height: 100%;
-}
-

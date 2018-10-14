@@ -12,6 +12,7 @@
 
   h1 {
     margin-bottom: 40px;
+    margin-top: 0;
   }
 
   h2 {
@@ -31,30 +32,60 @@
   }
 
   hr {
-    border-top: 1px solid rgba(0,0,0,.25);
-    box-shadow: 1px 1px 0 rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0,0,0,0.25);
     margin: 40px auto;
     width: 75%;
-  }
-
-  > div:not(.quem-somos-header) {
-    margin: 0;
-    padding: 100px 0;
   }
 }
 
 .quem-somos-header {
-  background: transparent url(/img/quem-somos/img-equipe.jpg) no-repeat top center;
+  background: transparent url('/img/quem-somos/img-equipe.jpg') no-repeat top center;
   background-size: cover;
-  height: 100vh;
   width: 100%;
   margin-top: 70px;
+  height: 100vh;
+
+  @media (min-width: 1200px) {
+    height: 125vh;
+  }
 }
 
 .quem-somos-info {
-  background: #a5dbf5;
-  background: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
-  padding: 100px 0;
+  background-color: #a5dbf5;
+  background-image: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
+  border-top: 20px solid #fff;
+  padding: 100px 0 150px;
+  position: relative;
+
+  &::before {
+    $image-width: 383px;
+
+    content: '';
+    background-color: transparent;
+    background-image: url('/img/quem-somos/curvas-secao-info.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% - #{$image-width} / 2) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    content: '';
+    background: transparent url('/img/quem-somos/gotas-secao-info.png') no-repeat top right;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
 
   .container {
     width: 700px;
@@ -65,65 +96,180 @@
   }
 }
 
-.quem-somos-fotos {
-  margin-top: 100px;
+.quem-somos-membros {
+  padding: 50px 0;
+  position: relative;
   text-align: center;
+
+  &::before {
+    content: '';
+    background-color: transparent;
+    background-image: url('/img/quem-somos/curvas-secao-membros.png');
+    background-repeat: no-repeat;
+    background-position: left 50% top 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   .container {
     width: 700px;
+    display: flex;
+  }
+
+  .column {
+    flex: 1 0 0;
+    margin: 0 50px;
+  }
+
+  .social-links {
+    text-align: center;
+
+    [class^='icon'] {
+      display: inline-block;
+      margin: 0 10px;
+      opacity: 1;
+      transition: opacity ease 0.25s;
+      zoom: 0.5;
+    }
+
+    > a {
+      &:hover [class^='icon'] {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  h3 {
+    font-weight: 400;
   }
 
   img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
+  }
+
+  p {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
   }
 }
 
 .quem-somos-tarefas {
-  background: #c9d3d9;
-  background: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
-  height: 600px;
+  background-color: #c9d3d9;
+  background-image: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
+  padding: 85px 0 150px;
+  position: relative;
 
-  .container {
-    width: 800px;
+  &::before {
+    content: '';
+    background: transparent url('/img/quem-somos/gotas-secao-tarefas.png') no-repeat top left;
+    background-size: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    content: '';
+    background: transparent url('/img/quem-somos/curvas-secao-tarefas.png') no-repeat left 55% top 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    margin-bottom: 75px;
   }
 
   .tarefas {
     display: flex;
+    align-items: center;
 
     .item {
       flex: 1 0 0;
       text-align: center;
     }
 
+    p {
+      font-size: 10px;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
     .circle {
-      border: 2px solid #93d2ed;
+      $border: 3px;
+      $size: 106px;
+
+      border: $border solid #93d2ed;
       border-radius: 50%;
+      margin: 0 auto;
       text-transform: uppercase;
-      width: 80px;
-      height: 80px;
+      line-height: $size - 2 * $border;
+      width: $size;
+      height: $size;
     }
 
     .title {
+      font-size: 14px;
+      line-height: 1.4;
       text-transform: uppercase;
     }
   }
 }
 
 .quem-somos-parcerias {
-  background: #000;
+  background-color: #000;
   height: 600px;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: transparent url('/img/quem-somos/curvas-secao-parcerias.png') no-repeat left 35% top 0;
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
 
   .logo-container {
     display: flex;
+    justify-content: space-between;
 
-    .item {
-      flex: 1 0 0;
+    img {
+      align-self: center;
     }
   }
 
   h2 {
     color: #72c5e1;
+    font-size: 36px;
+    font-weight: 600;
     text-align: right;
+    text-transform: initial;
   }
 }

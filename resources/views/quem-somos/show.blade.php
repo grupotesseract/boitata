@@ -41,7 +41,7 @@
                     mundo. Uma forma de tradução.
                 </p>
 
-                <hr>
+                <hr class="gota-hr">
 
                 <h3 class="quotes">
                     Esse é o Boitatá, uma mistura doida de<br>
@@ -51,31 +51,59 @@
             </div>
         </div>
 
-        <div class="quem-somos-fotos">
+        <div class="quem-somos-membros">
             <div class="container">
-                <div class="col-xs-6">
-                    <img src="https://via.placeholder.com/340x340" class="img-circle" />
+                <div class="column">
+                    <img src="/img/quem-somos/caroline-gomes.png" class="img-circle" />
 
-                    <h4>Caroline Gomes</h4>
+                    <h3>Caroline Gomes</h3>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolore hic enim commodi corrupti sint molestiae, quasi
-                        totam nisi? Cumque laborum fuga odit veniam quod corporis
-                        tempora ducimus totam magni exercitationem.
+                        Lorem ipsum dolor sit amet adipisicing
+                        elit. Dolore hic enim commodi corrupti sint molestiae,
+                        quasi totam nisi laborum fuga odit veniam quod
+                        corporis.
                     </p>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/coletivoboitata/" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-facebook"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-behance"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xs-6">
-                    <img src="https://via.placeholder.com/340x340" class="img-circle" />
 
-                    <h4>Thomas Musmann</h4>
+                <div class="column">
+                    <img src="/img/quem-somos/thomas-musmann.png" class="img-circle" />
+
+                    <h3>Thomas Musmann</h3>
 
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellendus illum suscipit nam aut consequuntur deleniti
-                        possimus corrupti minima pariatur obcaecati quisquam odio,
-                        rerum perferendis numquam. Excepturi incidunt ipsam blanditiis nihil.
+                        Repellendus illum suscipit nam aut consequuntur
+                        deleniti possimus corrupti minima pariatur obcaecati
+                        quisquam odio, rerum perferendis numquam excepturi.
                     </p>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/coletivoboitata/" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-facebook"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-behance"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,10 +117,10 @@
                         <div class="title">Identidade Visual</div>
 
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Rem sint, impedit numquam, earum nam necessitatibus incidunt
-                            quasi repellat itaque sed quos, modi beatae doloribus
-                            aliquam architecto quaerat porro debitis ex?
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
                         </p>
                     </div>
 
@@ -125,14 +153,16 @@
         </div>
 
         <div class="quem-somos-parcerias">
-            <h2>Parcerias</h2>
+            <div class="container">
+                <h2>Parcerias</h2>
 
-            <div class="logo-container">
-                <img src="" alt="Grupo Tesseract" />
-                <img src="" alt="Oficina Desmanche" />
-                <img src="" alt="Protótipo Tópico" />
-                <img src="" alt="Zame" />
-                <img src="" alt="Eduardo Kenji Fotógrafo" />
+                <div class="logo-container">
+                    <img src="/img/parcerias/grupo-tesseract.png" alt="Grupo Tesseract" />
+                    <img src="/img/parcerias/oficina-desmanche.png" alt="Oficina Desmanche" />
+                    <img src="/img/parcerias/prototipo-topico.png" alt="Protótipo Tópico" />
+                    <img src="/img/parcerias/zame.png" alt="Zame" />
+                    <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Eduardo Kenji Fotógrafo" />
+                </div>
             </div>
         </div>
     </section>

@@ -1,11 +1,10 @@
-
 /**
  * Função para dar trocar as classes de CSS que fazem a animação do menu principal
  */
 window.playAnimacaoMenu = function() {
-    
+
     let borda = $('.borda-menu-principal');
-    
+
     //Tirando clase escondida e adicionando classe da animacao
     borda.removeClass('escondida').addClass('play-animacao-borda');
 
@@ -16,14 +15,11 @@ window.playAnimacaoMenu = function() {
 };
 
 
-$(document).ready(function(){
+$(function () {
     $(window).scroll(function () {
-       var windowpos = $(window).scrollTop();
-       if(windowpos > 400) {
+       var scrollTop = $(window).scrollTop();
+       if (scrollTop > 400) {
            playAnimacaoMenu();
-       } else {
        }
     });
 });
-    
-

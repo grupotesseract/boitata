@@ -43,12 +43,14 @@
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}"></script>
-				
+
         @yield('css')
     </head>
 
     <body>
-        @include('googletagmanager::script')
+        @if (env('APP_ENV') === 'production')
+            @include('googletagmanager::script')
+        @endif
 
         @include('menu-principal')
 
@@ -57,7 +59,7 @@
         @include('footer')
 
         @if (env('APP_ENV') === 'local')
-            <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.24.7"></script>
+            <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.26.0"></script>
         @endif
 
         @yield('js')

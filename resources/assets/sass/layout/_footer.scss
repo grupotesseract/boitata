@@ -1,0 +1,28 @@
+footer .wrapper-social-links {
+  display: flex;
+  align-items: center;
+  margin-right: 8rem;
+  margin-left: 2rem;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    margin-right: 0;
+  }
+
+  [class^='icon'] {
+    opacity: 1;
+    transition: opacity ease 0.25s;
+    zoom: 0.6;
+  }
+
+  > a {
+    padding: 14px 8px;
+
+    &:hover [class^='icon'] {
+      opacity: 0.85;
+    }
+  }
+}

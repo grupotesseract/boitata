@@ -1,0 +1,136 @@
+#secao-motion {
+  background-color: #970f21;
+  color: white;
+  background-image: url('/img/home/bg-secao-motion.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 35%;
+
+  .tags {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  // Texto 'motion'
+  > h3 {
+    text-align: right;
+    margin-right: 0;
+    width: 30%;
+    margin: auto;
+    font-weight: 800;
+    font-size: 3.2em;
+    margin-bottom: 10px;
+  }
+
+  // Texto de descrição do motion
+  h4 {
+    max-width: 50%;
+    line-height: 1.35em;
+  }
+
+  .borda-top {
+    background-image: url('/img/home/borda-motion-top.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 160px;
+    margin-top: -20px;
+  }
+
+  #container-youtube-motion {
+    margin-bottom: 5em;
+
+    iframe {
+      border: 5px #fff solid;
+      width: 620px;
+      max-width: 620px;
+    }
+  }
+
+  #container-texto-motion {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  @media (max-width: 767px) {
+    background-position: 35%;
+
+    .tags {
+      display: inline;
+      margin-left: 10px;
+    }
+
+    > h3 {
+      text-align: center;
+      margin: auto;
+      font-size: 2.5em;
+    }
+
+    .borda-top {
+      height: 100px;
+      margin-top: -20px;
+    }
+
+    #container-youtube-motion {
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      iframe {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    #container-texto-motion {
+      margin-left: 0;
+      padding-left: 15px;
+      margin-bottom: 1em;
+
+      h4 {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    background-position: 35%;
+
+    .tags {
+      display: inline;
+      margin-left: 10px;
+    }
+
+    > h3 {
+      text-align: center;
+      margin: auto;
+      font-size: 2.5em;
+    }
+
+    .borda-top {
+      height: 100px;
+      margin-top: -20px;
+    }
+
+    #container-youtube-motion {
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      iframe {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    #container-texto-motion {
+      margin-left: 0;
+      padding-left: 15px;
+      margin-bottom: 1em;
+
+      h4 {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}
