@@ -54,7 +54,7 @@
   background-color: #a5dbf5;
   background-image: linear-gradient(to right, #a5dbf5 0%, #81cbe7 50%, #52bad7 100%);
   border-top: 20px solid #fff;
-  padding: 100px 0;
+  padding: 100px 0 150px;
   position: relative;
 
   &::before {
@@ -75,7 +75,6 @@
   &::after {
     content: '';
     background: transparent url('/img/quem-somos/gotas-secao-info.png') no-repeat top right;
-    // background-size: 50%;
     position: absolute;
     top: 20px;
     right: 0;
@@ -98,16 +97,18 @@
 }
 
 .quem-somos-membros {
-  padding: 75px 0;
+  padding: 50px 0 75px;
   position: relative;
   text-align: center;
 
   &::before {
     content: '';
-    background: transparent url('/img/quem-somos/curvas-secao-membros.png') no-repeat top left;
-    background-size: 100%;
+    background-color: transparent;
+    background-image: url('/img/quem-somos/curvas-secao-membros.png');
+    background-repeat: no-repeat;
+    background-position: left 50% top 0;
     position: absolute;
-    top: -83px;
+    top: -100px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -141,6 +142,11 @@
     }
   }
 
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
   h3 {
     font-weight: 400;
   }
@@ -160,7 +166,7 @@
 .quem-somos-tarefas {
   background-color: #c9d3d9;
   background-image: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
-  padding: 75px 0 100px;
+  padding: 75px 0 150px;
   position: relative;
 
   &::before {
@@ -186,7 +192,6 @@
   .tarefas {
     display: flex;
     align-items: center;
-    justify-items: space-between;
 
     .item {
       flex: 1 0 0;
@@ -222,11 +227,32 @@
 }
 
 .quem-somos-parcerias {
-  background: #000;
+  background-color: #000;
   height: 600px;
+  position: relative;
 
-  img {
-    height: auto;
+  &::before {
+    content: '';
+    background: transparent url('/img/quem-somos/curvas-secao-parcerias.png') no-repeat left 35% top 0;
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      align-self: center;
+    }
   }
 
   h2 {

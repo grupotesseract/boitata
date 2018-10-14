@@ -109,7 +109,7 @@
         </div>
 
         <div class="quem-somos-tarefas">
-            <div class="container-fluid">
+            <div class="container">
                 <h1>O que fazemos</h1>
 
                 <div class="tarefas">
