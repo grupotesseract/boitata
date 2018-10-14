@@ -32,7 +32,7 @@
   }
 
   hr {
-    border-top: 1px solid rgba(0,0,0,.25);
+    border-top: 1px solid rgba(0,0,0,0.25);
     margin: 40px auto;
     width: 75%;
   }
@@ -97,7 +97,7 @@
 }
 
 .quem-somos-membros {
-  padding: 50px 0 75px;
+  padding: 50px 0;
   position: relative;
   text-align: center;
 
@@ -166,13 +166,23 @@
 .quem-somos-tarefas {
   background-color: #c9d3d9;
   background-image: linear-gradient(to right, #c9d3d9 0%, #fdfdfe 50%, #c9d3d9 100%);
-  padding: 75px 0 150px;
+  padding: 85px 0 150px;
   position: relative;
 
   &::before {
     content: '';
     background: transparent url('/img/quem-somos/gotas-secao-tarefas.png') no-repeat top left;
     background-size: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    content: '';
+    background: transparent url('/img/quem-somos/curvas-secao-tarefas.png') no-repeat left 55% top 0;
     position: absolute;
     top: 0;
     left: 0;
