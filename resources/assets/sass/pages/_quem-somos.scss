@@ -190,6 +190,7 @@
     height: 100%;
   }
 
+  // TODO: Melhorar essa regra, está se repetindo
   > div {
     position: relative;
     z-index: 1;
@@ -205,33 +206,39 @@
 
     .item {
       flex: 1 0 0;
+      position: relative;
       text-align: center;
-    }
 
-    p {
-      font-size: 10px;
-      margin-top: 15px;
-      margin-bottom: 0;
-      text-align: center;
-    }
+      &::before {
+        $border: 3px;
+        $size: 106px;
 
-    .circle {
-      $border: 3px;
-      $size: 106px;
-
-      border: $border solid #93d2ed;
-      border-radius: 50%;
-      margin: 0 auto;
-      text-transform: uppercase;
-      line-height: $size - 2 * $border;
-      width: $size;
-      height: $size;
+        content: '';
+        border: $border solid #93d2ed;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: absolute;
+        top: -($size / 2);
+        left: 0;
+        text-transform: uppercase;
+        line-height: $size - 2 * $border;
+        width: $size;
+        height: $size;
+      }
     }
 
     .title {
       font-size: 14px;
       line-height: 1.4;
       text-transform: uppercase;
+    }
+
+    .text {
+      display: none;
+      font-size: 10px;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: center;
     }
   }
 }

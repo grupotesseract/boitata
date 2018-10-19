@@ -116,7 +116,7 @@
                     <div class="item">
                         <div class="title">Identidade Visual</div>
 
-                        <p>
+                        <p class="text">
                             Lorem ipsum dolor sit amet
                             consectetur adipisicing elit,
                             sed diam cacildis mussum ipsum
@@ -125,27 +125,69 @@
                     </div>
 
                     <div class="item">
-                        <div class="circle">Editorial</div>
+                        <div class="title">Editorial</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Ilustração</div>
+                        <div class="title">Ilustração</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Posters</div>
+                        <div class="title">Posters</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Motion</div>
+                        <div class="title">Motion</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Webdesign</div>
+                        <div class="title">Webdesign</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Instalações</div>
+                        <div class="title">Instalações</div>
+
+                        <p class="text">
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit,
+                            sed diam cacildis mussum ipsum
+                            das veniam minim
+                        </p>
                     </div>
 
                 </div>
