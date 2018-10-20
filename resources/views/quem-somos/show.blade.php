@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <section class="quem-somos">
-        <div class="quem-somos-header"></div>
+    <main class="quem-somos">
+        <section class="quem-somos-header"></section>
 
-        <div class="quem-somos-info">
+        <section class="quem-somos-info">
             <div class="container">
                 <h1>Quem Somos</h1>
 
@@ -16,16 +16,16 @@
 
                 <p>
                     O Boitatá surgiu em 2012 quando dois amigos, <strong>CAROL</strong> e <strong>THOM</strong>
-                    - na época, estudantes de design -, começaram a perceber que trabalhar juntos era muito mais legal do que enfrentar a vida
-                    de freelancers sozinhos.
+                    - na época, estudantes de design da Unesp de Bauru/SP -, começaram a perceber que trabalhar
+                    juntos era muito mais legal do que enfrentar a vida de freelancers sozinhos.
                 </p>
 
                 <p>
-                    E assim foi durante alguns anos, de dia o trabalho com carteira assinada e de
-                    noite, reuniões e mais reuniões madrugadas à dentro. Além dos 2 amigos, passaram
-                    pelo Boitatá outros(as) designers que foram muito importantes para que pudéssemos
-                    nos estruturar da forma como somos hoje: uma empresa que tem como principais valores
-                    o trabalho coletivo e a criatividade.
+                    E assim foi durante alguns anos: de dia o trabalho com carteira assinada e de
+                    noite, reuniões e mais reuniões madrugadas à dentro. Além dos amigos - que hoje são sócios -,
+                    passaram pelo Boitatá outros(as) designers que foram muito importantes para que pudéssemos
+                    nos estruturar da forma como somos hoje: uma empresa que tem como principais valores o
+                    <b>afeto, força coletiva e a criatividade</b>.
                 </p>
 
                 <p>
@@ -36,9 +36,9 @@
                 </p>
 
                 <p>
-                    Nós acreditamos que o design, além de ser uma ferramenta para solucionar diferentes
-                    tipos de problemas, é acima de todas as suas funções, uma forma de ver e sentir o
-                    mundo. Uma forma de tradução.
+                    Nós acreditamos que o design, além de ser uma ferramenta estratégica e projetual
+                    capaz de solucionar diferentes tipos de problemas, é acima de todas as suas funções,
+                    uma forma de ver e sentir o mundo. Uma forma de tradução e empatia.
                 </p>
 
                 <hr class="gota-hr">
@@ -49,9 +49,9 @@
                     contrastante de dois designers inquietos.
                 </h3>
             </div>
-        </div>
+        </section>
 
-        <div class="quem-somos-membros">
+        <section class="quem-somos-membros">
             <div class="container">
                 <div class="column">
                     <img src="/img/quem-somos/caroline-gomes.png" class="img-circle" />
@@ -59,22 +59,18 @@
                     <h3>Caroline Gomes</h3>
 
                     <p>
-                        Lorem ipsum dolor sit amet adipisicing
-                        elit. Dolore hic enim commodi corrupti sint molestiae,
-                        quasi totam nisi laborum fuga odit veniam quod
-                        corporis.
+                        Mulher, designer, artista, professora...
+                        Ela ainda não sabe se tem uma área do design que gosta mais, enquanto isso, ela vai se aventurando por aí... Das paixões já descobertas estão a diagramação (ela gosta de organizar coisas), a ilustração e essa coisa toda de "dar aulas".
+                        Saudosista, adora um bom material impresso... e quer trazer mais projetos com ilustração para o Boitatá.
+                        No tempo livre ela gosta de desenhar, dançar, ler e escrever.
                     </p>
 
                     <div class="social-links">
-                        <a href="https://www.instagram.com/coletivoboitata/" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.instagram.com/carolgomes.art" target="_blank" rel="noreferrer noopener">
                             <i class="icon-instagram"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/coletivoboitata" target="_blank" rel="noreferrer noopener">
-                            <i class="icon-facebook"></i>
-                        </a>
-
-                        <a href="https://www.behance.net/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.carolinegomes.com.br" target="_blank" rel="noreferrer noopener">
                             <i class="icon-behance"></i>
                         </a>
                     </div>
@@ -106,53 +102,52 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="quem-somos-tarefas">
+        <section class="quem-somos-tarefas">
             <div class="container">
                 <h1>O que fazemos</h1>
 
                 <div class="tarefas">
                     <div class="item">
-                        <div class="title">Identidade Visual</div>
-
-                        <p>
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Identidade Visual</h6>
+                        <p class="text">Criação de logotipo e todo o material necessário para divulgação da sua marca.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Editorial</div>
+                        <h6 class="title">Editorial</h6>
+                        <p class="text">Livros, catálogos, revistas e materiais informativos, impressos e digitais.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Ilustração</div>
+                        <h6 class="title">Ilustração</h6>
+                        <p class="text">Criação de ilustração personalizada para o seu projeto.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Posters</div>
+                        <h6 class="title">Posters</h6>
+                        <p class="text">Cartazes impressos e digital para diferentes tipos eventos.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Motion</div>
+                        <h6 class="title">Motion</h6>
+                        <p class="text">Desenvolvimento de animações, vinhetas para vídeos em geral.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Webdesign</div>
+                        <h6 class="title">Webdesign</h6>
+                        <p class="text">Desenvolvimento de layouts para sites e aplicativos.</p>
                     </div>
 
                     <div class="item">
-                        <div class="circle">Instalações</div>
+                        <h6 class="title">Instalações</h6>
+                        <p class="text">Criação de projetos de ambientação, instalações e cenografia para eventos.</p>
                     </div>
-
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="quem-somos-parcerias">
+        <section class="quem-somos-parcerias">
             <div class="container">
                 <h2>Parcerias</h2>
 
@@ -164,7 +159,7 @@
                     <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Eduardo Kenji Fotógrafo" />
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 @endsection

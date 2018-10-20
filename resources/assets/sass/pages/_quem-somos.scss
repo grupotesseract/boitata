@@ -36,6 +36,11 @@
     margin: 40px auto;
     width: 75%;
   }
+
+  > section > .container {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .quem-somos-header {
@@ -82,17 +87,16 @@
     height: 100%;
   }
 
-  > div {
-    position: relative;
-    z-index: 1;
-  }
-
   .container {
     width: 700px;
   }
 
   p:first-of-type {
     font-weight: 400;
+  }
+
+  b {
+    font-weight: 500;
   }
 }
 
@@ -142,11 +146,6 @@
     }
   }
 
-  > div {
-    position: relative;
-    z-index: 1;
-  }
-
   h3 {
     font-weight: 400;
   }
@@ -190,48 +189,70 @@
     height: 100%;
   }
 
-  > div {
-    position: relative;
-    z-index: 1;
-  }
-
   h1 {
     margin-bottom: 75px;
   }
 
+  .container {
+    width: 90vw;
+  }
+
   .tarefas {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 
     .item {
-      flex: 1 0 0;
-      text-align: center;
-    }
-
-    p {
-      font-size: 10px;
-      margin-top: 15px;
-      margin-bottom: 0;
-      text-align: center;
-    }
-
-    .circle {
       $border: 3px;
       $size: 106px;
 
+      display: flex;
+      align-items: baseline;
+      flex-direction: column;
+      justify-content: center;
+
       border: $border solid #93d2ed;
       border-radius: 50%;
-      margin: 0 auto;
-      text-transform: uppercase;
-      line-height: $size - 2 * $border;
+      text-align: center;
+      transition: border ease 0.2s;
+      transition-delay: 0.25s;
       width: $size;
       height: $size;
+
+      &:hover {
+        border-color: transparent;
+        transition-delay: 0s;
+
+        .text {
+          margin-top: 10px;
+          max-height: 100%;
+          opacity: 1;
+          transition-delay: 0s, 0s, 0s;
+          transition-duration: 0s, 0.4s, 0.2s;
+          transition-property: margin-top, max-height, opacity;
+          transition-timing-function: linear;
+        }
+      }
     }
 
     .title {
       font-size: 14px;
+      font-weight: 300;
       line-height: 1.4;
+      margin: 0 auto;
       text-transform: uppercase;
+    }
+
+    .text {
+      font-size: 11px;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-height: 0;
+      opacity: 0;
+      text-align: center;
+      transition-delay: 0s, 0s, 0.2s;
+      transition-duration: 0.4s, 0.4s, 0.2s;
+      transition-property: max-height, opacity, margin-top;
+      transition-timing-function: ease;
     }
   }
 }
@@ -249,11 +270,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  > div {
-    position: relative;
-    z-index: 1;
   }
 
   .logo-container {
