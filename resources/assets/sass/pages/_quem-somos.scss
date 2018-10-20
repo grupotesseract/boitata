@@ -36,6 +36,11 @@
     margin: 40px auto;
     width: 75%;
   }
+
+  > section > .container {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .quem-somos-header {
@@ -80,11 +85,6 @@
     right: 0;
     width: 100%;
     height: 100%;
-  }
-
-  > div {
-    position: relative;
-    z-index: 1;
   }
 
   .container {
@@ -142,11 +142,6 @@
     }
   }
 
-  > div {
-    position: relative;
-    z-index: 1;
-  }
-
   h3 {
     font-weight: 400;
   }
@@ -188,12 +183,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  // TODO: Melhorar essa regra, está se repetindo
-  > div {
-    position: relative;
-    z-index: 1;
   }
 
   h1 {
