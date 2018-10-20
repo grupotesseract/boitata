@@ -16,16 +16,16 @@
 
                 <p>
                     O Boitatá surgiu em 2012 quando dois amigos, <strong>CAROL</strong> e <strong>THOM</strong>
-                    - na época, estudantes de design -, começaram a perceber que trabalhar juntos era muito mais legal do que enfrentar a vida
-                    de freelancers sozinhos.
+                    - na época, estudantes de design da Unesp de Bauru/SP -, começaram a perceber que trabalhar
+                    juntos era muito mais legal do que enfrentar a vida de freelancers sozinhos.
                 </p>
 
                 <p>
-                    E assim foi durante alguns anos, de dia o trabalho com carteira assinada e de
-                    noite, reuniões e mais reuniões madrugadas à dentro. Além dos 2 amigos, passaram
-                    pelo Boitatá outros(as) designers que foram muito importantes para que pudéssemos
-                    nos estruturar da forma como somos hoje: uma empresa que tem como principais valores
-                    o trabalho coletivo e a criatividade.
+                    E assim foi durante alguns anos: de dia o trabalho com carteira assinada e de
+                    noite, reuniões e mais reuniões madrugadas à dentro. Além dos amigos - que hoje são sócios -,
+                    passaram pelo Boitatá outros(as) designers que foram muito importantes para que pudéssemos
+                    nos estruturar da forma como somos hoje: uma empresa que tem como principais valores o
+                    <b>afeto, força coletiva e a criatividade</b>.
                 </p>
 
                 <p>
@@ -36,9 +36,9 @@
                 </p>
 
                 <p>
-                    Nós acreditamos que o design, além de ser uma ferramenta para solucionar diferentes
-                    tipos de problemas, é acima de todas as suas funções, uma forma de ver e sentir o
-                    mundo. Uma forma de tradução.
+                    Nós acreditamos que o design, além de ser uma ferramenta estratégica e projetual
+                    capaz de solucionar diferentes tipos de problemas, é acima de todas as suas funções,
+                    uma forma de ver e sentir o mundo. Uma forma de tradução e empatia.
                 </p>
 
                 <hr class="gota-hr">
