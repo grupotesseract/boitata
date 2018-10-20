@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <section class="quem-somos">
-        <div class="quem-somos-header"></div>
+    <main class="quem-somos">
+        <section class="quem-somos-header"></section>
 
-        <div class="quem-somos-info">
+        <section class="quem-somos-info">
             <div class="container">
                 <h1>Quem Somos</h1>
 
@@ -49,9 +49,9 @@
                     contrastante de dois designers inquietos.
                 </h3>
             </div>
-        </div>
+        </section>
 
-        <div class="quem-somos-membros">
+        <section class="quem-somos-membros">
             <div class="container">
                 <div class="column">
                     <img src="/img/quem-somos/caroline-gomes.png" class="img-circle" />
@@ -106,9 +106,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="quem-somos-tarefas">
+        <section class="quem-somos-tarefas">
             <div class="container">
                 <h1>O que fazemos</h1>
 
@@ -146,8 +146,12 @@
                     <div class="item">
                         <h6 class="title">Instalações</h6>
                         <p class="text">Criação de projetos de ambientação, instalações e cenografia para eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="quem-somos-parcerias">
+        <section class="quem-somos-parcerias">
             <div class="container">
                 <h2>Parcerias</h2>
 
@@ -159,7 +163,7 @@
                     <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Eduardo Kenji Fotógrafo" />
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 @endsection
