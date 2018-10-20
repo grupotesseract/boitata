@@ -59,22 +59,18 @@
                     <h3>Caroline Gomes</h3>
 
                     <p>
-                        Lorem ipsum dolor sit amet adipisicing
-                        elit. Dolore hic enim commodi corrupti sint molestiae,
-                        quasi totam nisi laborum fuga odit veniam quod
-                        corporis.
+                        Mulher, designer, artista, professora...
+                        Ela ainda não sabe se tem uma área do design que gosta mais, enquanto isso, ela vai se aventurando por aí... Das paixões já descobertas estão a diagramação (ela gosta de organizar coisas), a ilustração e essa coisa toda de "dar aulas".
+                        Saudosista, adora um bom material impresso... e quer trazer mais projetos com ilustração para o Boitatá.
+                        No tempo livre ela gosta de desenhar, dançar, ler e escrever.
                     </p>
 
                     <div class="social-links">
-                        <a href="https://www.instagram.com/coletivoboitata/" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.instagram.com/carolgomes.art" target="_blank" rel="noreferrer noopener">
                             <i class="icon-instagram"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/coletivoboitata" target="_blank" rel="noreferrer noopener">
-                            <i class="icon-facebook"></i>
-                        </a>
-
-                        <a href="https://www.behance.net/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.carolinegomes.com.br" target="_blank" rel="noreferrer noopener">
                             <i class="icon-behance"></i>
                         </a>
                     </div>
