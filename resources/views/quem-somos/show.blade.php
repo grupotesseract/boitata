@@ -114,85 +114,38 @@
 
                 <div class="tarefas">
                     <div class="item">
-                        <div class="title">Identidade Visual</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Identidade Visual</h6>
+                        <p class="text">Criação de logotipo e todo o material necessário para divulgação da sua marca.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Editorial</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Editorial</h6>
+                        <p class="text">Livros, catálogos, revistas e materiais informativos, impressos e digitais.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Ilustração</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Ilustração</h6>
+                        <p class="text">Criação de ilustração personalizada para o seu projeto.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Posters</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Posters</h6>
+                        <p class="text">Cartazes impressos e digital para diferentes tipos eventos.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Motion</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Motion</h6>
+                        <p class="text">Desenvolvimento de animações, vinhetas para vídeos em geral.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Webdesign</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
+                        <h6 class="title">Webdesign</h6>
+                        <p class="text">Desenvolvimento de layouts para sites e aplicativos.</p>
                     </div>
 
                     <div class="item">
-                        <div class="title">Instalações</div>
-
-                        <p class="text">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit,
-                            sed diam cacildis mussum ipsum
-                            das veniam minim
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+                        <h6 class="title">Instalações</h6>
+                        <p class="text">Criação de projetos de ambientação, instalações e cenografia para eventos.</p>
 
         <div class="quem-somos-parcerias">
             <div class="container">
