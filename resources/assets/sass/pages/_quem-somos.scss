@@ -236,7 +236,7 @@
 
     .title {
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.4;
       margin: 0 auto;
       text-transform: uppercase;
@@ -275,14 +275,6 @@
   .container-small {
     @extend .container;
     width: 700px;
-  }
-
-  .container {
-    // width: 90vw;
-    @media (max-width: 767px) {}
-    @media (min-width: 768px) {}
-    @media (min-width: 992px) {}
-    @media (min-width: 1200px) {}
   }
 
   .logo-container {
