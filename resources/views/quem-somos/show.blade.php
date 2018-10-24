@@ -60,9 +60,13 @@
 
                     <p>
                         Mulher, designer, artista, professora...
-                        Ela ainda não sabe se tem uma área do design que gosta mais, enquanto isso, ela vai se aventurando por aí... Das paixões já descobertas estão a diagramação (ela gosta de organizar coisas), a ilustração e essa coisa toda de "dar aulas".
-                        Saudosista, adora um bom material impresso... e quer trazer mais projetos com ilustração para o Boitatá.
-                        No tempo livre ela gosta de desenhar, dançar, ler e escrever.
+                        Ela ainda não sabe se tem uma área do design que gosta mais,
+                        enquanto isso, ela vai se aventurando por aí... Das paixões
+                        já descobertas estão a diagramação (ela gosta de organizar coisas),
+                        a ilustração e essa coisa toda de "dar aulas". Saudosista,
+                        adora um bom material impresso... e quer trazer mais projetos
+                        com ilustração para o Boitatá. No tempo livre ela gosta
+                        de desenhar, dançar, ler e escrever.
                     </p>
 
                     <div class="social-links">
@@ -82,9 +86,14 @@
                     <h3>Thomas Musmann</h3>
 
                     <p>
-                        Repellendus illum suscipit nam aut consequuntur
-                        deleniti possimus corrupti minima pariatur obcaecati
-                        quisquam odio, rerum perferendis numquam excepturi.
+                        Designer, experimenta com trabalhos manuais nos momentos
+                        livre. Apaixonado por design desde o primeiro dia de faculdade,
+                        nunca questionou se esse era o seu caminho certo mesmo.
+                        Curioso, sempre se aventura em novos caminhos dentro da área.
+                        No momento, nadando no mundo da animação e do branding, mas
+                        sempre em busca de novos desafios, áreas a serem descobertas.
+                        Sem limites na vontade de inovar e fazer diferente. Acredita
+                        que é com o trabalho coletivo que os melhores projetos são criados.
                     </p>
 
                     <div class="social-links">
