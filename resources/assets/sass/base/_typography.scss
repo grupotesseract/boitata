@@ -36,7 +36,10 @@ body {
   font-weight: 300;
 }
 
-a:hover {
+a:focus,
+a:hover,
+a:link,
+a:visited {
   text-decoration: none;
 }
 

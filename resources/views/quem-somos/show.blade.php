@@ -86,27 +86,27 @@
                     <h3>Thomas Musmann</h3>
 
                     <p>
-                        Designer, experimenta com trabalhos manuais nos momentos
-                        livre. Apaixonado por design desde o primeiro dia de faculdade,
-                        nunca questionou se esse era o seu caminho certo mesmo.
+                        Apaixonado por design desde o primeiro dia de faculdade,
+                        nunca questionou se esse era mesmo o seu caminho certo.
                         Curioso, sempre se aventura em novos caminhos dentro da área.
-                        No momento, nadando no mundo da animação e do branding, mas
-                        sempre em busca de novos desafios, áreas a serem descobertas.
-                        Sem limites na vontade de inovar e fazer diferente. Acredita
-                        que é com o trabalho coletivo que os melhores projetos são criados.
+                        No momento, nadando no mundo da animação e do branding,
+                        mas sempre em busca de novos desafios, áreas a serem descobertas.
+                        Sem limites na vontade de inovar e fazer diferente.
+                        Acredita que é com o trabalho coletivo que os melhores
+                        projetos são criados.
                     </p>
 
                     <div class="social-links">
-                        <a href="https://www.instagram.com/coletivoboitata/" target="_blank" rel="noreferrer noopener">
-                            <i class="icon-instagram"></i>
+                        <a href="https://www.behance.net/thomasmusmann" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-behance"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/coletivoboitata" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.facebook.com/thomasmusmannc" target="_blank" rel="noreferrer noopener">
                             <i class="icon-facebook"></i>
                         </a>
 
-                        <a href="https://www.behance.net/coletivoboitata" target="_blank" rel="noreferrer noopener">
-                            <i class="icon-behance"></i>
+                        <a href="https://www.instagram.com/thomasmusmann/" target="_blank" rel="noreferrer noopener">
+                            <i class="icon-instagram"></i>
                         </a>
                     </div>
                 </div>
