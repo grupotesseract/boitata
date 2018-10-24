@@ -157,15 +157,27 @@
         </section>
 
         <section class="quem-somos-parcerias">
-            <div class="container">
+            <div class="container-small">
                 <h2>Parcerias</h2>
+            </div>
 
+            <div class="container">
                 <div class="logo-container">
-                    <img src="/img/parcerias/grupo-tesseract.png" alt="Grupo Tesseract" />
-                    <img src="/img/parcerias/oficina-desmanche.png" alt="Oficina Desmanche" />
-                    <img src="/img/parcerias/prototipo-topico.png" alt="Protótipo Tópico" />
-                    <img src="/img/parcerias/zame.png" alt="Zame" />
-                    <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Eduardo Kenji Fotógrafo" />
+                    <a href="https://www.facebook.com/" class="item" target="_blank" rel="noreferrer noopener">
+                        <img src="/img/parcerias/grupo-tesseract.png" alt="Logo do Grupo Tesseract" />
+                    </a>
+                    <a href="https://www.facebook.com/oficinadesmanche/" class="item" target="_blank" rel="noreferrer noopener">
+                        <img src="/img/parcerias/oficina-desmanche.png" alt="Logo da Oficina Desmanche" />
+                    </a>
+                    <a href="https://www.facebook.com/prototipo.topico" class="item" target="_blank" rel="noreferrer noopener">
+                        <img src="/img/parcerias/prototipo-topico.png" alt="Logo do Protótipo Tópico" />
+                    </a>
+                    <a href="https://www.facebook.com/ZAMEAme" class="item" target="_blank" rel="noreferrer noopener">
+                        <img src="/img/parcerias/zameame.png" alt="Logo do ZAMEAme" />
+                    </a>
+                    <a href="https://www.instagram.com/keenjinsta/" class="item" target="_blank" rel="noreferrer noopener">
+                        <img src="/img/parcerias/eduardo-kenji-fotografo.png" alt="Logo do Eduardo Kenji Fotógrafo" />
+                    </a>
                 </div>
             </div>
         </section>
