@@ -41,9 +41,12 @@ footer {
     width: 300px;
 
     @media (max-width: 767px) {
-      margin-top: -40px!important;
       display: flex;
       width: auto;
+      text-align: center;
+      margin-top:-10%;
+      margin-left:25%;
+      
 
       .social-icon-container {
         margin: 15px;
@@ -64,7 +67,7 @@ footer {
     @media (max-width: 767px) {
       max-height: 65px;
       position: inherit;
-      margin-left:15px;
+      margin-left:8%;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
