@@ -9,7 +9,7 @@
             <div class="col-xs-12 col-sm-3">&nbsp;</div>
             <div class="col-xs-12 col-sm-9 voltar-cc">
                 <div class="container-btn-voltar">
-                    <a href="/portfolio" class="voltar social-icon-container "><img class="invert" src="/fonts/arrow-left-solid.svg" alt=""> Voltar </a>
+                    <a href="/portfolio" class="voltar social-icon-container "> Voltar &nbsp; <img class="invert" src="/fonts/arrow-left-solid.svg" alt=""></a>
                 </div>
             </div>
         </div>

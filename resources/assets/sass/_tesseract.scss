@@ -145,7 +145,7 @@ footer {
     font-weight: 600;
     outline: none;
 
-    &.active {
+    &.active, &:active, &:hover {
       text-decoration: underline;
     }
   }
