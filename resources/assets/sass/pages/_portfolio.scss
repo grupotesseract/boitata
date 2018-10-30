@@ -18,8 +18,12 @@
 }
 
 a.voltar {
-  text-transform: uppercase;
-  color: white;
+    img {
+        width: 20px;
+    }
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
 }
 
 .voltar-cc {
