@@ -48,17 +48,18 @@
       margin-right: 0;
     }
 
-    [class^='icon'] {
-      opacity: 1;
-      transition: opacity ease 0.25s;
-      zoom: 0.6;
+    [class^='navbar-icon'] {
+      opacity: 0.9;
+      filter: grayscale(100%);
+      transition: all ease 0.25s;
     }
 
     > a {
-      padding: 14px 8px;
+      padding: 16px 14px;
 
-      &:hover [class^='icon'] {
-        opacity: 0.8;
+      &:hover [class^='navbar-icon'] {
+        opacity: 1;
+        filter: grayscale(0);
       }
     }
 
