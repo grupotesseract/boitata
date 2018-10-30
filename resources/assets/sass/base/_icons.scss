@@ -1,0 +1,31 @@
+.navbar-icon-behance,
+.navbar-icon-facebook,
+.navbar-icon-instagram,
+.navbar-icon-youtube {
+  background: url('/img/icons/icons-sprites.png') no-repeat;
+  display: block;
+}
+
+.navbar-icon-behance {
+  background-position: -51px 0;
+  width: 22px;
+  height: 14px;
+}
+
+.navbar-icon-facebook {
+  background-position: -15px 0;
+  width: 14px;
+  height: 14px;
+}
+
+.navbar-icon-instagram {
+  background-position: 0 0;
+  width: 14px;
+  height: 14px;
+}
+
+.navbar-icon-youtube {
+  background-position: -31px 2px;
+  width: 19px;
+  height: 16px;
+}

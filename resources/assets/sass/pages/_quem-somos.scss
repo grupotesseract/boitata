@@ -194,7 +194,9 @@
   }
 
   .container {
-    width: 90vw;
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 90vw;
+    }
   }
 
   .tarefas {
@@ -202,21 +204,32 @@
     justify-content: space-between;
 
     .item {
-      $border: 3px;
-      $size: 106px;
+      @media (max-width: 767px) {
+        width: 96px;
+        height: 96px;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media (min-width: 992px) {
+        width: 106px;
+        height: 106px;
+      }
 
       display: flex;
       align-items: baseline;
       flex-direction: column;
+      flex-shrink: 0;
       justify-content: center;
 
-      border: $border solid #93d2ed;
+      border: 3px solid #93d2ed;
       border-radius: 50%;
       text-align: center;
       transition: border ease 0.2s;
       transition-delay: 0.25s;
-      width: $size;
-      height: $size;
 
       &:hover {
         border-color: transparent;
@@ -243,7 +256,7 @@
     }
 
     .text {
-      font-size: 11px;
+      font-size: 12px;
       margin-top: 0;
       margin-bottom: 0;
       max-height: 0;
