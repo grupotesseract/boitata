@@ -16,10 +16,19 @@ window.playAnimacaoMenu = function() {
 
 
 $(function () {
-    $(window).scroll(function () {
-       var scrollTop = $(window).scrollTop();
-       if (scrollTop > 400) {
-           playAnimacaoMenu();
-       }
-    });
+    //Se estiver acessando algo diferente da HOME, o efeito é no Onload
+    if (location.pathname != "/") {
+        setTimeout(playAnimacaoMenu(), 1500);
+    }
+
+    //Se for a HOME, bindar no scroll
+    else {
+        $(window).scroll(function () {
+           var scrollTop = $(window).scrollTop();
+           if (scrollTop > 400) {
+               playAnimacaoMenu();
+           }
+        });
+    }
+        
 });

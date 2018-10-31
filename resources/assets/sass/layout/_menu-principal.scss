@@ -40,8 +40,9 @@
     margin-right: 8rem;
     margin-left: 2rem;
 
-    @media (max-width: 767px) {
-      display: none;
+    // Até antes de tablet-landscape, nao mostrar a borda do menu principal
+    @media (max-width: 1023px) {
+        display: none!important;
     }
 
     @media (min-width: 768px) and (max-width: 1200px) {

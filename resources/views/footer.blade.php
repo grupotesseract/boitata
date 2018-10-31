@@ -7,13 +7,13 @@
                 <div class="container-texto-rodape desktop">
                     <a href="mailto:contato@coletivoboitata.com.br"><b>contato@coletivoboitata.com.br</b></a>
                     <div class="wrapper-social-links">
-                        @include('partials.social-media-links')
+                        @include ("partials.social-media-links", ['extraClasses' => 'filtro-preto'])
                     </div>
                 </div>
 
                 <div class="container-texto-rodape mobile">
                     <div class="wrapper-social-links">
-                        @include('partials.social-media-links')
+                        @include ("partials.social-media-links", ['extraClasses' => 'filtro-preto'])
                     </div>
                 </div>
             </div>

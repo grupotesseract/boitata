@@ -4,7 +4,7 @@
     <!--contatos do boitatá-->
     <div class="bloco-contato text-right">
         <div class="wrapper-social-midias">
-            @include ("partials.social-media-links", ['links' => true])
+            @include ("partials.social-media-links", ['extraClasses' => 'filtro-branco mr-1'])
             <span>/coletivoboitatá</span>
         </div>
         <br>
