@@ -25,7 +25,7 @@ footer {
   position: relative;
   background-position: 80% bottom;
   min-height: 240px;
-  margin-top: -240px;
+  margin-top: -260px;
 
   @media (max-width: 767px) {
     background-image: url('/img/footer/rodape-mobile-2.png');
@@ -39,6 +39,7 @@ footer {
 
   .wrapper-social-links {
     width: 300px;
+
 
     @media (max-width: 767px) {
       display: flex;
@@ -88,7 +89,7 @@ footer {
     left: 45%;
     position: absolute;
     bottom: 0;
-    height: 30px;
+    height: 20px;
 
     @media (max-width: 767px) {
       margin: 0;
@@ -157,4 +158,16 @@ footer {
 
 .invert {
   filter: invert(100%);
+}
+
+.filtro-branco {
+    filter: brightness(0) invert(1);
+}
+
+.filtro-preto {
+    filter: brightness(0);
+}
+
+.mr-1 {
+    margin-right:0.5rem;
 }

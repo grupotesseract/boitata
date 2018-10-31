@@ -1,8 +1,8 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/admin.css": "/css/admin.css",
-    "/css/dropzone.css": "/css/dropzone.css",
-    "/css/summernote.css": "/css/summernote.css",
-    "/js/summernote.js": "/js/summernote.js"
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css",
+  "/css/admin.css": "/css/admin.css",
+  "/css/dropzone.css": "/css/dropzone.css",
+  "/css/summernote.css": "/css/summernote.css",
+  "/js/summernote.js": "/js/summernote.js"
 }

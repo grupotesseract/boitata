@@ -106,7 +106,7 @@ div.container-portfolio .container-texto h3 {
 
 .img-portfolio {
   background-position: 50% 50%;
-  background-size: 100%;
+  background-size: 112%;
   height: 26vh;
   overflow: hidden;
   position: relative;
@@ -114,7 +114,7 @@ div.container-portfolio .container-texto h3 {
 }
 
 .img-portfolio:hover {
-  background-size: 120%;
+  background-size: 160%;
 }
 
 .img-portfolio .titulo {
@@ -164,6 +164,9 @@ div.container-portfolio .container-texto h3 {
       width: 50%;
       .img-portfolio {
         height: 18vh;
+        @media (orientation: landscape) {
+            height:55vh
+        }
         h4 {
           font-size: 1.1em;
         }
@@ -173,7 +176,9 @@ div.container-portfolio .container-texto h3 {
       width: 50%;
       .img-portfolio {
         height: 20vh;
-        min-height: 200px;
+        @media (orientation: landscape) {
+            height:55vh
+        }
         h4 {
           font-size: 1.1em;
         }
@@ -182,6 +187,9 @@ div.container-portfolio .container-texto h3 {
     @media screen and (min-width:641px) and (max-width: 960px) {
       width: 50%;
       .img-portfolio {
+        @media (orientation: landscape) {
+            height:55vh
+        }
         height: 25vh;
       }
     }
