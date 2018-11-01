@@ -13,15 +13,28 @@
   h1 {
     margin-bottom: 40px;
     margin-top: 0;
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
   }
 
   h2 {
     margin-bottom: 50px;
     line-height: 1.3;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   h3 {
     line-height: 1.6;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+      padding: 0 30px;
+    }
   }
 
   p {
@@ -29,12 +42,20 @@
     font-size: 18px;
     line-height: 1.3;
     margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 
   hr {
     border-top: 1px solid rgba(0,0,0,0.25);
     margin: 40px auto;
     width: 75%;
+
+    @media (max-width: 767px) {
+      width: 96%;
+    }
   }
 
   > section > .container {
@@ -75,6 +96,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 767px) {
+      content: '';
+      background-position: calc(50% - #{$image-width} / 2) 0;
+      background-size: 100%;
+    }
   }
 
   &::after {
@@ -88,7 +115,14 @@
   }
 
   .container {
-    width: 700px;
+    @media (min-width: 768px) {
+      width: 700px;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   p:first-of-type {

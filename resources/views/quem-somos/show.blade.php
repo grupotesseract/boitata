@@ -43,11 +43,13 @@
 
                 <hr class="gota-hr">
 
-                <h3 class="quotes">
-                    Esse é o Boitatá, uma mistura doida de<br>
-                    várias coisas resultantes da soma de ideias<br>
-                    contrastante de dois designers inquietos.
-                </h3>
+                <div class="quotes">
+                    <h3>
+                        Esse é o Boitatá, uma mistura doida de<br>
+                        várias coisas resultantes da soma de ideias<br>
+                        contrastante de dois designers inquietos.
+                    </h3>
+                </div>
             </div>
         </section>
 
@@ -163,7 +165,7 @@
 
             <div class="container">
                 <div class="logo-container">
-                    <a href="https://www.facebook.com/" class="item" target="_blank" rel="noreferrer noopener">
+                    <a href="https://www.facebook.com/grupotesseract/" class="item" target="_blank" rel="noreferrer noopener">
                         <img src="/img/parcerias/grupo-tesseract.png" alt="Logo do Grupo Tesseract" />
                     </a>
                     <a href="https://www.facebook.com/oficinadesmanche/" class="item" target="_blank" rel="noreferrer noopener">
