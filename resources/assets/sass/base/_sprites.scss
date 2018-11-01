@@ -21,6 +21,10 @@
     height: 79px;
     top: 30px;
     zoom: 0.6;
+
+    @media (max-width: 767px) {
+      zoom: 0.32;
+    }
   }
 
   &::before {
@@ -38,6 +42,11 @@
   background-size: 32%;
   height: 12px;
   width: 235px;
+
+  @media (max-width: 767px) {
+    background-size: 30%;
+    background-position: right -4px top -39px;
+  }
 }
 
 .icon-behance {
