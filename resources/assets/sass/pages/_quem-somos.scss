@@ -74,6 +74,10 @@
   @media (min-width: 1200px) {
     height: 125vh;
   }
+
+  @media (max-width: 767px) {
+    height: 58vh;
+  }
 }
 
 .quem-somos-info {
@@ -155,11 +159,20 @@
   .container {
     width: 700px;
     display: flex;
+
+    @media (max-width: 767px) {
+      width: initial;
+      flex-direction: column;
+    }
   }
 
   .column {
     flex: 1 0 0;
     margin: 0 50px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   }
 
   .social-links {
@@ -237,10 +250,17 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+      width: initial;
+    }
+
     .item {
       @media (max-width: 767px) {
-        width: 96px;
-        height: 96px;
+        margin: 5px auto;
+        width: 106px;
+        height: 106px;
+        cursor: pointer;
       }
 
       @media (min-width: 768px) and (max-width: 991px) {
@@ -262,22 +282,45 @@
       border: 3px solid #93d2ed;
       border-radius: 50%;
       text-align: center;
-      transition: border ease 0.2s;
-      transition-delay: 0.25s;
 
-      &:hover {
-        border-color: transparent;
-        transition-delay: 0s;
+      @media (min-width: 768px) {
+        transition: border ease 0.2s;
+        transition-delay: 0.25s;
+      }
 
-        .text {
-          margin-top: 10px;
-          max-height: 100%;
-          opacity: 1;
-          transition-delay: 0s, 0s, 0s;
-          transition-duration: 0s, 0.4s, 0.2s;
-          transition-property: margin-top, max-height, opacity;
-          transition-timing-function: linear;
+      @media (min-width: 768px) {
+        &:hover {
+          border-color: transparent;
+          transition-delay: 0s;
+
+          .text {
+            margin-top: 10px;
+            max-height: 100%;
+            opacity: 1;
+            transition-delay: 0s, 0s, 0s;
+            transition-duration: 0s, 0.4s, 0.2s;
+            transition-property: margin-top, max-height, opacity;
+            transition-timing-function: linear;
+          }
         }
+      }
+    }
+
+    .clicked {
+      border-color: transparent;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .title {
+        width: 35%;
+        margin: 0 50px;
+      }
+
+      .text {
+        text-align: left;
+        margin: 0 30px;
       }
     }
 
@@ -296,10 +339,21 @@
       max-height: 0;
       opacity: 0;
       text-align: center;
-      transition-delay: 0s, 0s, 0.2s;
-      transition-duration: 0.4s, 0.4s, 0.2s;
-      transition-property: max-height, opacity, margin-top;
-      transition-timing-function: ease;
+      z-index: -1;
+
+      @media (min-width: 768px) {
+        transition-delay: 0s, 0s, 0.2s;
+        transition-duration: 0.4s, 0.4s, 0.2s;
+        transition-property: max-height, opacity, margin-top;
+        transition-timing-function: ease;
+      }
+    }
+
+    .show-text {
+      margin-top: 10px;
+      max-height: 100%;
+      opacity: 1;
+      z-index: 1;
     }
   }
 }
@@ -322,11 +376,19 @@
   .container-small {
     @extend .container;
     width: 700px;
+
+    @media (max-width: 767px) {
+      width: initial;
+    }
   }
 
   .logo-container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
 
     .item {
       align-self: center;
