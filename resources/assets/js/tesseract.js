@@ -30,5 +30,26 @@ $(function () {
            }
         });
     }
-        
+
+    // Quem Somos
+    let quemSomos = $('.quem-somos');
+    if (quemSomos.length) {
+        let quemSomosTarefas = $('.quem-somos-tarefas');
+        quemSomosTarefas.find('.item').on('click', function (event) {
+            let item;
+            if ($(event.target).is('.item')) {
+                item = $(event.target);
+            } else {
+                item = $(event.target).parents('.item');
+            }
+
+            if (item.hasClass('clicked')) {
+                item.find('.text').removeClass('show-text');
+                item.removeClass('clicked');
+            } else {
+                item.addClass('clicked');
+                item.find('.text').addClass('show-text');
+            }
+        });
+    }
 });
