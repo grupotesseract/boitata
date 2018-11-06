@@ -42,9 +42,16 @@
                 <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Infos Gerais</a></li>
                 <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Conteudo</a></li>
                 <li class="pull-right"> <a href="{!! route('trabalhoPortfolios.index') !!}" class="btn btn-primary"> 
-                        <i class="fa fa-angle-left"></i> Voltar</a> </li>
+                        <i class="fa fa-angle-left"></i> Voltar</a>
+                </li>
+                <li class="pull-right"> <a target="_blank" href="/portfolio/{{$trabalhoPortfolio->slug}}" class="btn btn-primary"> 
+                        <i class="fa fa-eye"></i> Ver pagina do Trabalho</a>
+                </li>
             </ul>
             <div class="tab-content">
+                @include('adminlte-templates::common.errors')
+                @include('flash::message')
+                
                 <div class="tab-pane active" id="tab_1">
                     {!! Form::model($trabalhoPortfolio, ['route' => ['trabalhoPortfolios.update', $trabalhoPortfolio->id], 'method' => 'patch']) !!}
 

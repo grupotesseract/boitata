@@ -15,7 +15,7 @@ class Foto extends Model
     use SoftDeletes;
 
     public $table = 'fotos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -48,7 +48,7 @@ class Foto extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
@@ -100,7 +100,7 @@ class Foto extends Model
      */
     public function getURLCloudinaryAttribute()
     {
-        return "//res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/q_auto,c_scale,g_center,h_450,w_800/$this->cloudinary_id.jpeg";
+        return "https://res.cloudinary.com/".env('CLOUDINARY_CLOUD_NAME')."/image/upload/q_auto,c_scale,g_center,h_450,w_800/$this->cloudinary_id.jpeg";
     }
 
 

@@ -21,6 +21,11 @@
     {!! Form::text('url_behance', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Url Amigavel Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('slug', "Url Amigavel (como vai ficar na barra do browser:  coletivoboitata.com.br/portfolio/$trabalhoPortfolio->slug") !!}
+    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
+</div>
 
 <!-- Descricao Field -->
 <div class="form-group col-sm-12">

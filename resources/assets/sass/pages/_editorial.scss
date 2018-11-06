@@ -1,0 +1,66 @@
+#secao-editorial {
+  color: #179A62;
+  background-image: url('/img/home/formas-fundo-editorial.png'), linear-gradient(to right, #BBCBD3, white 30%, #BACAD2);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 950px;
+  padding-bottom: 21vw;
+
+  .tags {
+    font-weight:bold;
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  .borda-top {
+    background-image: url('/img/home/borda-editorial-top.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 184px;
+    margin-top: -10px;
+    width: 100%;
+    float: right;
+  }
+
+  .container-editorial {
+    margin-top: 12em;
+
+    .container-texto {
+      h3 {
+        width: 160px;
+        margin: auto;
+        font-size: 3em;
+        font-weight: 800;
+      }
+    }
+
+    .container-item-editorial {
+      margin-bottom:30px;
+
+      img {
+        width: 100%;
+        max-width:450px;
+        box-shadow: 4px 4px black;
+      }
+
+      h4 {
+        font-size: 1em;
+        color: white;
+        margin-top: -30px;
+        margin-left: 15px;
+        max-width: 90%;
+        min-height: 30px;
+        text-align:left;
+      }
+    }
+
+    .bottom-editorial {
+      background-image: url('/img/footer/rodape-fotos-editorial.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width:100%;
+    }
+
+  }
+
+}

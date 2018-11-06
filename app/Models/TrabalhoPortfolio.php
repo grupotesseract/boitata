@@ -28,6 +28,7 @@ class TrabalhoPortfolio extends Model
         'titulo',
         'descricao',
         'ordem',
+        'slug',
         'url_behance',
         'json_behance',
         'covers'
@@ -53,7 +54,13 @@ class TrabalhoPortfolio extends Model
      */
     public static $rules = [
         'titulo' => 'required',
-        'descricao' => 'required'
+        'slug' => 'required',
+    ];
+
+
+    public $appends = [
+        'listaCategorias',
+        'lastSync',
     ];
 
 
@@ -137,6 +144,28 @@ class TrabalhoPortfolio extends Model
         return $htmlFinal;
     }
     
+    /**
+     * Acessor para Lista de categorias separadas por virgula
+     */
+    public function getListaCategoriasAttribute()
+    {
+        return implode($this->categorias->pluck('nome')->all(), ', ');
+    }
 
+    /**
+     * Acessor para a data de ultima atualizacao
+     */
+    public function getUpdatedAtAttribute()
+    {
+        return (new \Carbon\Carbon($this->attributes['updated_at']))->format('d/m/Y h:i:s');
+    }
+
+    /**
+     * Acessor para a data de ultima syncronização com behance
+     */
+    public function getLastSyncAttribute()
+    {
+        return (new \Carbon\Carbon($this->attributes['data_sync']))->format('d/m/Y h:i:s');
+    }
     
 }

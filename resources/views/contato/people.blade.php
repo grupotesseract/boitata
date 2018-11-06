@@ -1,29 +1,43 @@
 <!-- pessoas para contato: boitatá, thom, carol -->
 
 <div class="infcontatos">
-    <div class="text-right">
-        <!--contatos do boitatá-->
-        @include ("partials.social-media-links")
-        <a href="/" class="texto-inline"><strong> /coletivo boitatá </strong></a></br> 
-        <a href="mailto:"> <i class="fa fa-envelope"></i> contato@coletivoboitata.com.br </a>
+    <!--contatos do boitatá-->
+    <div class="bloco-contato text-right">
+        <div class="wrapper-social-midias">
+            @include ("partials.social-media-links", ['extraClasses' => 'filtro-branco mr-1'])
+            <span>/coletivoboitatá</span>
+        </div>
+        <br>
+        <a href="mailto:contato@coletivoboitata.com.br" class="fa-icon-container"> 
+            <img src="/fonts/envelope-solid.svg" alt=""> contato@coletivoboitata.com.br 
+        </a>
     </div>
 
     </br>
 
-    <div class="text-right">	
-        <!--contatos thomas-->
-        <p>Thomas Musmann</p>
-        <a href="phoneto:5514988095605"><i class="fa fa-whatsapp"></i> 55 14 988 095 605</a></br>
-        <a href="mailto:thomas@coletivoboitata.com.br"><i class="fa fa-envelope"></i> thomas@coletivoboitata.com.br</a>
+    <!--contatos thomas-->
+    <div class="bloco-contato text-right">	
+        <p class="nome text-right">Thomas Musmann</p>
+        <a href="https://wa.me/5514988095605" class="fa-icon-container"> 
+           <img src="/fonts/whatsapp-brands.svg" alt=""> 55 14 988 095 605
+        </a>
+        <a href="mailto:thomas@coletivoboitata.com.br" class="fa-icon-container">
+            <img src="/fonts/envelope-solid.svg" alt=""> thomas@coletivoboitata.com.br
+        </a>
     </div>
 
     </br>
 
-    <div class="text-left">
-        <!--contatos carol-->	
-        <p>Caroline Gomes</p>
-        <a href="phoneto:5514988013273"><i class="fa fa-whatsapp"></i> 55 14 988 013 273</a></br>
-        <a href="mailto:caroline@coletivoboitata.com.br"><i class="fa fa-envelope"></i> caroline@coletivoboitata.com.br</a>
+    <!--contatos carol-->	
+    <div class="bloco-contato text-left">
+        <p class="nome">Caroline Gomes</p>
+
+        <a href="https://wa.me/5514988013273" class="fa-icon-container"> 
+           <img src="/fonts/whatsapp-brands.svg" alt="">  55 14 988 013 273
+        </a>
+        <a href="mailto:caroline@coletivoboitata.com.br" class="fa-icon-container">
+            <img src="/fonts/envelope-solid.svg" alt="">  caroline@coletivoboitata.com.br
+        </a>
     </div>
 
 </div>

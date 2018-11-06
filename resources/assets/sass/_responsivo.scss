@@ -1,411 +1,245 @@
 /*********
- * Aqui ficam os estilos e gambiarras de responsividade
- * Media queries divididas em:
- * menor que 767px
- * entre 768px e 1200px
- * maior que 1201px
- */
+* Aqui ficam os estilos e gambiarras de responsividade
+* Media queries divididas em:
+* menor que 767px
+* entre 768px e 1200px
+* maior que 1201px
+*/
 
-/* Até antes de tablet */ 
-@media only screen and (max-width: 767px) {
+/* Até antes de tablet */
+@media (max-width: 767px) {
+  footer {
 
-    footer {
-        background-image:url('/rodape_mobile_2.png');
-        background-position: 80% bottom;
-        min-height: 240px;
-        
-        img.logo-rodape {
-            max-height: 65px;
-            position: inherit;
-            margin-bottom:-100px;
+    .container-texto-rodape {
+      display: -webkit-inline-box;
+      font-size: 13px;
+      height:30px;
+
+      &.desktop {
+        display:none;
+      }
+
+      &.mobile {
+        display:block;
+        footer .wrapper-social-links {
+          margin-bottom: 5px;
         }
-
-        div.container-texto-rodape {
-            display: -webkit-inline-box;
-            font-size: 13px;
-            margin-top: 32px;
-            margin-left: 45%;
-            margin-bottom:15px;
-
-            &.desktop {
-                display:none;
-            }
-
-            &.mobile {
-                display:block;
-                footer div.wrapper-social-links {
-                    margin-bottom: 5px;
-                }
-            }
-        }
-
-        #infos-rodape {
-            font-size:1em;
-            position:absolute;
-            a {
-                i.fa {
-                    font-size: 1.2em;
-                }
-            }
-        }
-        
-        div.wrapper-social-links {
-            text-align: center;
-            margin-top: 10px;
-        }
-
+      }
     }
 
-    nav#menu-principal {
-
-        /** Escondendo a animacao do menu no mobile **/
-        div.esconde-borda, img.borda-menu-principal { 
-            display:none;
+    #infos-rodape {
+      font-size:1em;
+      position:absolute;
+      a {
+        i.fa {
+          font-size: 1.2em;
         }
-
-        /** Escondendo a margem dos itens do menu no mobile **/
-        li~li {
-            margin-left: 0rem;
-        }
-
-        li.wrapper-social-media-menu {
-            display: flex;
-            margin: 0;
-        }
-
-        div.navbar-header {
-            img.logo-menu-principal {
-                height: 75px;
-                left: -8px;
-            }
-        }
-   
-    }
-
-    #secao-trabalhos-recentes {
-        padding: 0em 0em 3em 0em;
-        
-        .borda-top img {
-            height:40px;
-        }
-
-        .texto-vertical {
-            transform: none;
-            height: 60px;
-            line-height:25px;
-            width: 290px;
-            font-size: 2.5em;
-            float: none;
-            margin: 1em auto 0 auto;
-        }
-
-        #tesseract-carousel {
-            max-width: 290px;
-            width: 290px;
-            margin: auto;
-
-            .carousel-inner {
-                height:285px;
-            }
-            
-            ol.carousel-indicators {
-                bottom:10px;
-                max-width:90px;
-            }
-
-            div.item  {
-                > img {
-                    width:100%;
-                    max-width: 300px;
-                    height:auto;
-                }
-
-                h3 {
-                    color: white;
-                    max-width: 70%;
-                    font-size: 14px;
-                }
-            }
-        }
+      }
     }
 
 
-    #secao-motion {
-        background-position: 35%;
+  }
 
-        .tags {
-            display: inline;
-            margin-left: 10px;
-        }
+  #secao-trabalhos-recentes {
+    padding: 0em 0em 3em 0em;
 
-        > h3 {
-            text-align: center;
-            margin: auto;
-            font-size: 2.5em;
-        }
-
-        div.borda-top {
-            height: 100px;
-            margin-top: -20px;
-        }
-
-        div#container-youtube-motion {
-            margin-top:1em;
-            margin-bottom:1em;
-            iframe {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-
-        div#container-texto-motion {
-            margin-left: 0;
-            padding-left: 15px;
-            margin-bottom:1em;
-
-            h4 {
-                max-width:100%;
-                text-align:center;
-            }
-        }
-
+    .borda-top img {
+      height:40px;
     }
 
-
-    #secao-editorial {
-
-        div.borda-top {
-            height: 65px;
-            margin-top:-1px;
-        }
-
-        div.container-editorial {
-            margin-top: 2em;
-
-            .container-texto {
-                h3 {
-                    margin: 0 0 15px;
-                    font-size: 2.5em;
-                }
-            }
-
-            div.container-item-editorial {
-                img {
-                    width: 100%;
-                }
-            }
-
-            div#fix-altura-mobile {
-                min-height:200px;
-            }
-        }
-    }
-}
-
-/* Tablets e alguns Celulares */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-    footer {
-        div.container-texto-rodape {
-            display: -webkit-inline-box;
-            font-size: 16px;
-            margin-top: 15px;
-            margin-bottom: 20px;
-            margin-left: 11%;
-        }
-        img.logo-rodape {
-            max-height: 75px;
-            position: absolute;
-            right: 39%;
-            bottom: 145%;
-        }
+    div#lista-tags {
+      padding: 0 8%;
+      margin: -2rem 0;
     }
 
-    nav#menu-principal {
-        /** Escondendo a animacao do menu no mobile **/
-        div.esconde-borda {
-            display:block;
-            margin-top: 0px;
-        }
-
-        img.borda-menu-principal { 
-            display:block;
-            margin-top: 9px;
-        }
-
-        li~li {
-            margin-left: 1.5rem;
-        }
-    }
-
-    #secao-trabalhos-recentes {
-
-        .texto-vertical {
-            margin-top: 4.5em;
-            font-size: 2.4em;
-            height: 20px;
-            width: 90px;
-            line-height: 25px;
-        }
-
-
-        #tesseract-carousel {
-            max-width: 630px;
-            width: 630px;
-
-            .carousel-inner {
-                height:460px;
-            }
-
-            ol.carousel-indicators {
-                bottom:10px;
-                max-width:90px;
-                left: 115%;
-            }
-
-            div.item  {
-                > img {
-                    width:100%;
-                    height:auto;
-                }
-
-                h3 {
-                    color: white;
-                    max-width: 80%;
-                    font-size: 24px;
-                }
-            }
-        }
-    }
-
-    #secao-motion {
-
-        .tags {
-            display: inline;
-            margin-left: 10px;
-        }
-
-        
-        background-position: 35%;
-
-        > h3 {
-            text-align: center;
-            margin: auto;
-            font-size: 2.5em;
-        }
-
-        div.borda-top {
-            height: 100px;
-            margin-top: -20px;
-        }
-
-        div#container-youtube-motion {
-            margin-top:1em;
-            margin-bottom:1em;
-            iframe {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-
-        div#container-texto-motion {
-            margin-left: 0;
-            padding-left: 15px;
-            margin-bottom:1em;
-
-            h4 {
-                max-width:100%;
-                text-align:center;
-            }
-        }
-
-    }
-    
-
-    #secao-editorial {
-        min-height: 780px;
-
-        div.container-editorial {
-            div.container-item-editorial {
-                h4 {
-                    margin-top: -30px;
-                    margin-left: 10px;
-                    text-align: center;
-                }
-            }
-        }
-
-        div#fix-altura-mobile {
-            min-height:100px;
-        }
-        
-    }
-
-}
-
-/* Desktop */
-@media only screen and (min-width: 1201px) {
-
-    nav#menu-principal {
-
-        li~li {
-            margin-left: 3rem;
-        }
-
-        li.wrapper-social-media-menu {
-            display: flex;
-            margin-left: 5rem;
-        }
+    .texto-vertical {
+      transform: none;
+      height: 60px;
+      line-height:25px;
+      width: 290px;
+      font-size: 2.5em;
+      float: none;
+      margin: 1em auto 0 auto;
     }
 
     #tesseract-carousel {
-        max-width: 950px;
-        width: 950px;
-        height: 530px;
-        padding-right: 150px;
-        padding-bottom: 30px;
-        background: url('/teste-container-caroulsel.png');
+      max-width: 290px;
+      width: 290px;
+      margin: auto;
 
-        a.right.carousel-control {
-            right: 150px;
+      .carousel-inner {
+        height:285px;
+      }
+
+      .carousel-control {
+        height: 55%;
+      }
+
+      ol.carousel-indicators {
+        bottom:10px;
+        max-width:90px;
+      }
+
+      .item  {
+        > img {
+          width:100%;
+          max-width: 300px;
+          height:auto;
         }
-        
-    }
 
-    #secao-editorial {
-        min-height: 700px;
-    }
-    
-    
-    footer {
-        background-position: 100% bottom;
-    }
-}
-
-
-@media only screen and (min-width: 1440px) {
-    .col-xlg-3 { width: 25%; }
-    .col-xlg-9 { width: 75%; }
-
-    footer {
-        img.logo-rodape {
-            max-height: 80px;
-            position: absolute;
-            right: 28%;
-            bottom: 100%;
+        h3 {
+          color: white;
+          max-width: 70%;
+          font-size: 14px;
         }
-        div.container-texto-rodape {
-            font-size: 18px;
-            margin-left: 55%;
-        }    
+      }
     }
-    
+  }
+
+  #secao-editorial {
+
+    .borda-top {
+      height: 65px;
+      margin-top:-1px;
+    }
+
+    .container-editorial {
+      margin-top: 2em;
+
+      .container-texto {
+        h3 {
+          margin: 0 0 15px;
+          font-size: 2.5em;
+        }
+      }
+
+      .container-item-editorial {
+        img {
+          width: 100%;
+        }
+      }
+
+      div#fix-altura-mobile {
+        min-height:200px;
+      }
+    }
+  }
 }
 
+/* Tablets e alguns Celulares */
+@media (min-width: 768px) and (max-width: 1200px) {
+  #secao-trabalhos-recentes {
 
-@media only screen and (min-width: 1200px) and (max-width:1800px)  {
-    footer {
-        background-size:contain;
-
+    .texto-vertical {
+      margin-top: 4.5em;
+      font-size: 2.4em;
+      height: 20px;
+      width: 90px;
+      line-height: 25px;
     }
+
+
+    #tesseract-carousel {
+      max-width: 630px;
+      width: 630px;
+
+      .carousel-inner {
+        height:460px;
+      }
+
+      ol.carousel-indicators {
+        bottom:10px;
+        max-width:90px;
+        left: 115%;
+      }
+
+      .item  {
+        > img {
+          width:100%;
+          height:auto;
+        }
+
+        h3 {
+          color: white;
+          max-width: 80%;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  #secao-editorial {
+    min-height: 780px;
+
+    .container-editorial {
+      .container-item-editorial {
+        h4 {
+          margin-top: -30px;
+          margin-left: 10px;
+          text-align: center;
+        }
+      }
+    }
+
+    div#fix-altura-mobile {
+      min-height:100px;
+    }
+
+  }
+
+  #secao-portfolio {
+    div#lista-tags {
+      padding: 0rem 5rem;
+    }
+  }
 }
 
+/* Desktop */
+@media (min-width: 1201px) {
+  #tesseract-carousel {
+    max-width: 950px;
+    width: 950px;
+    height: 530px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+    background: url('/teste-container-caroulsel.png');
+
+    a.right.carousel-control {
+      right: 150px;
+    }
+
+  }
+
+  #secao-editorial {
+    min-height: 700px;
+  }
+
+  footer {
+    background-position: 100% bottom;
+  }
+}
+
+@media (min-width: 1440px) {
+  .col-xlg-3 { width: 25%; }
+  .col-xlg-9 { width: 75%; }
+
+  footer {
+    .logo-rodape {
+      max-height: 80px;
+      position: absolute;
+      right: 28%;
+      bottom: 100%;
+    }
+
+    .container-texto-rodape {
+      font-size: 18px;
+    }
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width:1800px)  {
+  footer {
+    background-size: contain;
+  }
+}

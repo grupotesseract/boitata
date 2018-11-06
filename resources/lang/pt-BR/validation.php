@@ -141,6 +141,7 @@ return [
     */
 
     'attributes' => [
+        'slug'                  => 'Url Amigavel',
         'address'               => 'endereço',
         'age'                   => 'idade',
         'body'                  => 'conteúdo',

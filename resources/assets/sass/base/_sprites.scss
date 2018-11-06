@@ -1,0 +1,74 @@
+.quotes::after,
+.quotes::before,
+.gota-hr,
+.icon-behance,
+.icon-facebook,
+.icon-instagram,
+.icon-youtube {
+  background: url('/img/icons/sprites.png') no-repeat center center;
+  display: block;
+}
+
+.quotes {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-position: -144px 0;
+    width: 97px;
+    height: 79px;
+    top: 30px;
+    zoom: 0.6;
+
+    @media (max-width: 767px) {
+      zoom: 0.32;
+    }
+  }
+
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.gota-hr {
+  background-position: right -55px;
+  background-origin: border-box;
+  background-size: 32%;
+  height: 12px;
+  width: 235px;
+
+  @media (max-width: 767px) {
+    background-size: 115px;
+    background-position: right -39px;
+  }
+}
+
+.icon-behance {
+  background-position: -67px -48px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-facebook {
+  background-position: 0 -48px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-instagram {
+  background-position: -33px -48px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-youtube {
+  background-position: -101px -49px;
+  width: 41px;
+  height: 30px;
+}

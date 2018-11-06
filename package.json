@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.0",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^3.2.3",
     "font-awesome": "^4.7.0",

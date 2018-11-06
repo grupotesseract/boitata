@@ -1,0 +1,145 @@
+#menu-principal {
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
+
+  .borda-menu-principal {
+    display: block;
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+
+    &.escondida {
+      margin-top: -100px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    // Escondendo a animação do menu no mobile
+    .esconde-borda,
+    .borda-menu-principal {
+      display: none;
+    }
+
+    .navbar-header {
+      .logo-menu-principal {
+        height: 75px;
+        left: -8px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .esconde-borda {
+      display: block;
+      margin-top: 0;
+    }
+
+    .borda-menu-principal {
+      display: block;
+      margin-top: 9px;
+    }
+  }
+
+  .wrapper-social-media-menu {
+    display: flex;
+    align-items: center;
+    margin-right: 8rem;
+    margin-left: 2rem;
+
+    // Até antes de tablet-landscape, nao mostrar a borda do menu principal
+    @media (max-width: 1023px) {
+        display: none!important;
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+      margin-right: 0;
+    }
+
+    [class^='navbar-icon'] {
+      opacity: 0.9;
+      filter: grayscale(100%);
+      transition: all ease 0.25s;
+    }
+
+    > a {
+      padding: 16px 14px;
+
+      &:hover [class^='navbar-icon'] {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+    }
+
+  }
+
+  .esconde-borda {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background: #fff;
+    width: 260px;
+  }
+
+  // Escondendo logo inicialmente
+  .logo-menu-principal {
+    display: block;
+    position: fixed;
+    top: 0;
+
+    &.escondida {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .navbar-collapse {
+    border-color: transparent;
+  }
+
+  li ~ li {
+    margin-left: 3rem;
+    @media (min-width: 768px) and (max-width: 1200px) {
+      margin-left: 1.5rem;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+
+  .navbar-right {
+    @media (width: 768px) {
+      margin-right: 75px;
+    }
+  }
+
+}
+
+.navbar-default .navbar-nav > li {
+  > a {
+    color: #121212;
+    transition: color ease 0.25s;
+  }
+
+  // Cores de destaque diferentes para cada página
+  > a[href="/contato"] {
+    &:hover,
+    &.active {
+      color: #e7b401;
+    }
+  }
+
+  > a[href="/quem-somos"] {
+    &:hover,
+    &.active {
+      color: #c51a1b;
+    }
+  }
+
+  > a[href="/portfolio"] {
+    &:hover,
+    &.active {
+      color: #52bad7;
+    }
+  }
+
+}

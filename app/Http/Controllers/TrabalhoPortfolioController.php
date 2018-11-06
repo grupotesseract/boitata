@@ -28,14 +28,17 @@ class TrabalhoPortfolioController extends AppBaseController
     {
         if (\Request::get('categoria')) {
             $trabalhos = $this->trabalhoPortfolioRepository
-                ->getPorCategoria(\Request::get('categoria'))->get();
+                ->getPorCategoria(\Request::get('categoria'))
+                ->orderBy('updated_at', 'desc')->get();
 
             return view('portfolio')->with([
                 'trabalhos' => $trabalhos
             ]);
         }
 
-        $trabalhos = $this->trabalhoPortfolioRepository->all();
+        $trabalhos = $this->trabalhoPortfolioRepository
+                ->orderBy('updated_at', 'desc')->get();
+        
         return view('portfolio')->with([
             'trabalhos' => $trabalhos
         ]);
@@ -50,9 +53,11 @@ class TrabalhoPortfolioController extends AppBaseController
     public function showToVisitor($id)
     {
         $trabalhoPortfolio = $this->trabalhoPortfolioRepository->findWithoutFail($id);
+        $trabalhoPortfolio = $trabalhoPortfolio ? $trabalhoPortfolio : 
+            $this->trabalhoPortfolioRepository->findBySlugWithoutFail($id);        
+            
         if (empty($trabalhoPortfolio)) {
             Flash::error('Trabalho do portfólio não encontrado');
-
             return redirect(route('portfolio.list'));
         }
 

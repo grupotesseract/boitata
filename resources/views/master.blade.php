@@ -10,13 +10,11 @@
         <link rel="canonical" href="https://coletivoboitata.com.br" />
 
         <meta property="og:type" content="website" />
-
         <meta property="og:title" content="Boitatá - Design & Projetos - Ideias que tomam forma"/>
         <meta property="og:image" content="https://coletivoboitata.com.br/og_image_boitata.jpeg"/>
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="800">
         <meta property="og:image:height" content="410">
-
         <meta property="og:url" content="https://coletivoboitata.com.br"/>
         <meta property="og:description" content="Você tem uma ideia e não sabe por onde começar? Vem falar com a gente.  Consultoria - Criação de marca - Cartão de visitas e papelaria em geral - Ilustração - Motion - Site - Aplicativos - Instalações."/>
 
@@ -41,14 +39,28 @@
         <meta name="msapplication-TileImage" content="/favicon-144.png">
         <meta name="msapplication-config" content="/browserconfig.xml">
 
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{time()}}">
+        <script src="{{ asset('js/app.js') }}?v={{time()}}"></script>
 
         @yield('css')
     </head>
 
     <body>
-        @include('googletagmanager::script')
+        @if (env('APP_ENV') === 'production')
+            @include('googletagmanager::script')
+
+            <!-- Hotjar Tracking Code for coletivoboitata.com.br -->
+            <script>
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:1071338,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            </script>
+        @endif
 
         @include('menu-principal')
 
@@ -57,7 +69,7 @@
         @include('footer')
 
         @if (env('APP_ENV') === 'local')
-            <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.24.7"></script>
+            <script src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.26.0"></script>
         @endif
 
         @yield('js')

@@ -1,0 +1,68 @@
+// Custom Fonts
+// ==============================================
+@font-face {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Avenir LT Std 35 Light'), url('/fonts/AvenirLTStd-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Avenir LT Std 65 Medium'), url('/fonts/AvenirLTStd-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Avenir LT Std 85 Heavy'), url('/fonts/AvenirLTStd-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Avenir LT Std 95 Black'), url('/fonts/AvenirLTStd-Black.woff') format('woff');
+}
+
+
+// Site Typography
+// ==============================================
+body {
+  font-family: 'Avenir LT Std', sans-serif;
+  font-weight: 300;
+}
+
+a:focus,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+}
