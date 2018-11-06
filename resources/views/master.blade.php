@@ -10,13 +10,11 @@
         <link rel="canonical" href="https://coletivoboitata.com.br" />
 
         <meta property="og:type" content="website" />
-
         <meta property="og:title" content="Boitatá - Design & Projetos - Ideias que tomam forma"/>
         <meta property="og:image" content="https://coletivoboitata.com.br/og_image_boitata.jpeg"/>
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="800">
         <meta property="og:image:height" content="410">
-
         <meta property="og:url" content="https://coletivoboitata.com.br"/>
         <meta property="og:description" content="Você tem uma ideia e não sabe por onde começar? Vem falar com a gente.  Consultoria - Criação de marca - Cartão de visitas e papelaria em geral - Ilustração - Motion - Site - Aplicativos - Instalações."/>
 
@@ -41,8 +39,8 @@
         <meta name="msapplication-TileImage" content="/favicon-144.png">
         <meta name="msapplication-config" content="/browserconfig.xml">
 
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{time()}}">
+        <script src="{{ asset('js/app.js') }}?v={{time()}}"></script>
 
         @yield('css')
     </head>
