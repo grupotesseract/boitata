@@ -38,7 +38,7 @@ class TrabalhoPortfolioController extends AppBaseController
 
         $trabalhos = $this->trabalhoPortfolioRepository
                 ->orderBy('updated_at', 'desc')->get();
-        
+
         return view('portfolio')->with([
             'trabalhos' => $trabalhos
         ]);
@@ -53,12 +53,12 @@ class TrabalhoPortfolioController extends AppBaseController
     public function showToVisitor($id)
     {
         $trabalhoPortfolio = $this->trabalhoPortfolioRepository->findWithoutFail($id);
-        $trabalhoPortfolio = $trabalhoPortfolio ? $trabalhoPortfolio : 
-            $this->trabalhoPortfolioRepository->findBySlugWithoutFail($id);        
-            
+        $trabalhoPortfolio = $trabalhoPortfolio ? $trabalhoPortfolio :
+            $this->trabalhoPortfolioRepository->findBySlugWithoutFail($id);
+
         if (empty($trabalhoPortfolio)) {
             Flash::error('Trabalho do portfólio não encontrado');
-            return redirect(route('portfolio.list'));
+            return redirect('/portfolio');
         }
 
         return view('portfolio.view')->with([
@@ -220,7 +220,7 @@ class TrabalhoPortfolioController extends AppBaseController
         Flash::success('Trabalhos atualizados com sucesso!.');
         return redirect(route('trabalhoPortfolios.index'));
     }
-    
+
 
     /**
      * postAtualizarTrabalho - Sync de 1 trabalho com o Behance'
@@ -239,6 +239,6 @@ class TrabalhoPortfolioController extends AppBaseController
         Flash::success('Trabalho atualizado com sucesso!');
         return redirect(route('trabalhoPortfolios.index'));
     }
-    
-    
+
+
 }
