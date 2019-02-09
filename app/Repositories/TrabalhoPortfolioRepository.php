@@ -20,7 +20,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        
+
     ];
 
     /**
@@ -95,7 +95,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
         $ordem = TrabalhoPortfolio::max('ordem')+1;
 
         foreach ($idsNovos as $idProjBehance) {
-            
+
             $Proj = collect($obj->projects)->where('id', $idProjBehance)->first();
             if ( !$Proj ) {
                 \Log::info("\n## Erro Nao encontrou projeto $idProjBehance");
@@ -140,10 +140,10 @@ class TrabalhoPortfolioRepository extends BaseRepository
     public function getPorCategoria($categoriaID)
     {
         return $this->model->whereHas('categorias', function($qCat) use ($categoriaID){
-            $qCat->where('categorias.id', $categoriaID);        
+            $qCat->where('categorias.id', $categoriaID);
         });
     }
-    
+
 
     /**
      * undocumented function
@@ -167,7 +167,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
         }
         return null;
     }
-    
+
 
     /**
      * Metodo para fazer update de todas as Slugs de acordo com o titulo
@@ -190,7 +190,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
         $Trabalho->slug = $slug;
         $Trabalho->save();
     }
-    
+
     /**
      * Metodo para buscar pela Slug sem quebrar
      *
@@ -198,9 +198,10 @@ class TrabalhoPortfolioRepository extends BaseRepository
      */
     public function findBySlugWithoutFail($slug)
     {
-        return $this->model->where('slug', $slug)->first(); 
+        $slug = urldecode($slug);
+        return $this->model->where('slug', $slug)->first();
     }
-    
+
 
     /**
      * undocumented function
@@ -210,7 +211,7 @@ class TrabalhoPortfolioRepository extends BaseRepository
     public function trataTituloParaSlug($titulo)
     {
         $slug = strtolower($titulo);
-        $slug = str_replace(' ', '-', $titulo);
+        $slug = str_replace(' ', '-', $slug);
         $slug = str_replace([',', '.', 'º', 'ª', '---', '-|-', '∆'], ['', '', '', '', '-', '-', 'a'], $slug);
         $slug = str_replace(['á', 'é', 'í', 'ó', 'ú'],['a','e','i','o','u'],$slug);
         $slug = str_replace(['â', 'ê', 'î', 'ô', 'û'],['a','e','i','o','u'],$slug);

@@ -1,11 +1,13 @@
 <nav id="menu-principal" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">
-                <img class="borda-menu-principal escondida" src="/borda-menu-principal.png" alt="Logo Boitatá">
-                <div class="esconde-borda"></div>
-                <img class="logo-menu-principal escondida" src="/logo-menu-principal.png" alt="Logo Boitatá">
-            </a>
+            <h1 style="margin:0;">
+                <a class="navbar-brand" href="/">
+                    <img class="borda-menu-principal escondida" src="/borda-menu-principal.png" alt="Coletivo Boitatá">
+                    <div class="esconde-borda"></div>
+                    <img class="logo-menu-principal escondida" src="/logo-menu-principal.png" alt="Coletivo Boitatá">
+                </a>
+            </h1>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>

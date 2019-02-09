@@ -9,6 +9,8 @@
         <meta name="description" content="Você tem uma ideia e não sabe por onde começar? Vem falar com a gente.  Consultoria - Criação de marca - Cartão de visitas e papelaria em geral - Ilustração - Motion - Site - Aplicativos - Instalações.">
         <link rel="canonical" href="https://coletivoboitata.com.br" />
 
+        <meta name="keywords" content="Design,Bauru,Illustração,WebDesign,Posters,Motion,Editorial,Identidade visual,Teaser,Projetos">
+
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Boitatá - Design & Projetos - Ideias que tomam forma"/>
         <meta property="og:image" content="https://coletivoboitata.com.br/og_image_boitata.jpeg"/>
