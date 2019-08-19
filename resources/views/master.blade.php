@@ -44,6 +44,8 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{time()}}">
         <script src="{{ asset('js/app.js') }}?v={{time()}}"></script>
 
+        <script src="//code.jivosite.com/widget.js" data-jv-id="S4XDgWdKhk" async></script>
+
         @yield('css')
     </head>
 
@@ -51,17 +53,6 @@
         @if (env('APP_ENV') === 'production')
             @include('googletagmanager::script')
 
-            <!-- Hotjar Tracking Code for coletivoboitata.com.br -->
-            <script>
-                (function(h,o,t,j,a,r){
-                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:1071338,hjsv:6};
-                    a=o.getElementsByTagName('head')[0];
-                    r=o.createElement('script');r.async=1;
-                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                    a.appendChild(r);
-                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            </script>
         @endif
 
         @include('menu-principal')
